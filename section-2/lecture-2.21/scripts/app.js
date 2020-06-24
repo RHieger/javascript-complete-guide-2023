@@ -1,1 +1,0 @@
-let currentResult = 0;
