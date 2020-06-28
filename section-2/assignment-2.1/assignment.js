@@ -11,4 +11,7 @@
 
  let calcResult;
 
- 
+// STEP 2: Set result variable (calcResult) to 18 + value
+// of USER_INPUT constant.
+
+calcResult = 18 + USER_INPUT;
