@@ -15,3 +15,16 @@
 // of USER_INPUT constant.
 
 calcResult = 18 + USER_INPUT;
+
+// STEP 3: Add 3 lines of code that change result variable
+// (calcResult) by substraction, multiplication and division.
+
+calcResult -= 2   // result = 45
+
+calcResult *= 7;  // result is 315
+
+calcResult /= 3;  // result is 105
+
+// STEP 4: Did value in USER_INPUT change? NO, because it
+// is a constant of primitive integer type and therefore
+// not mutable.
