@@ -17,4 +17,10 @@ const task3Element = document.getElementById('task-3');
  const myName = (name) => {
   alert(`Hi, my name is ${name}!`);
  };
+
+ // Task 2: Directly call functions declared in Task 1
+
+ greet();
+
+ myName('Bobby');
  
