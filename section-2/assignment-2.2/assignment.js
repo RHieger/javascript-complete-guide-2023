@@ -32,4 +32,30 @@ const task3Element = document.getElementById('task-3');
  */
 
  task3Element.addEventListener('click', greet);
+
+ /**
+  * Task 4: Declare function with 3 string parameters that returns
+  * the three strings concatenated.
+  * 
+  * @function concatStrings(str1, str2, str3) -- return concatenated string
+  * 
+  */
+
+  const concatStrings = (str1, str2, str3) => {
+    const completestring = str1 + str2 + str3;
+    return completestring;
+  };
+
+  
+  // Task 5: Call concatStrings within an alert()
+
+ const string1 = 'Time present and time past\n';
+ const string2 = 'Are both perhaps present in time future\n';
+ const string3 = 'And time future contained in time past.';
  
+  alert(
+    concatStrings(
+      string1,
+      string2,
+      string3)
+  );
