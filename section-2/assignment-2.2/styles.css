@@ -47,3 +47,7 @@ li:active {
   color: white;
   background: #fa923f;
 }
+
+#task-3 {
+  cursor: pointer;
+}

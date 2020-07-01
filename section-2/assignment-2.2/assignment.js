@@ -23,4 +23,13 @@ const task3Element = document.getElementById('task-3');
  greet();
 
  myName('Bobby');
+
+/**
+ * Task 3: Add Event Listener to Task 3 element
+ * 
+ * @event task3Element.addEventListener('click') -- alerts greeting
+ * 
+ */
+
+ task3Element.addEventListener('click', greet);
  
