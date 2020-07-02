@@ -29,7 +29,10 @@ function subtract() {
 }
 
 function multiply() {
-
+  const enteredNumber = getUserNumberInput();
+  const initialResult = currentResult;  // Value prior to calculation
+  currentResult *= enteredNumber;
+  createAndWriteOutput('*', initialResult, enteredNumber);
 }
 
 function divide() {
@@ -38,3 +41,4 @@ function divide() {
 
 addBtn.addEventListener('click', add);
 subtractBtn.addEventListener('click', subtract);
+multiplyBtn.addEventListener('click', multiply);
