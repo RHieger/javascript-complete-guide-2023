@@ -5,15 +5,24 @@ function getUserNumberInput() {
   return parseInt(userInput.value);
 }
 
-function add(num1, num2) {
-  const enteredNumber = getUserNumberInput();
-  const calcDescription = `${currentResult} + ${enteredNumber}`
-  currentResult += enteredNumber;
+function createAndWriteOutput(
+  operator,
+  resultBeforeCalc,
+  operand  // NOTE: instructor named this calcNumber
+) {
+  const calcDescription = `${resultBeforeCalc} ${operator} ${operand}`;
   outputResult(currentResult, calcDescription);
 }
 
-function subtract() {
+function add(num1, num2) {
+  const enteredNumber = getUserNumberInput();
+  const initialResult = currentResult;  // Value prior to calculation
+  currentResult += enteredNumber;
+  createAndWriteOutput('+', initialResult, enteredNumber);
+}
 
+function subtract() {
+  
 }
 
 function multiply() {
@@ -21,7 +30,7 @@ function multiply() {
 }
 
 function divide() {
-  
+
 }
 
 addBtn.addEventListener('click', add);
