@@ -36,9 +36,14 @@ function multiply() {
 }
 
 function divide() {
-
+  const enteredNumber = getUserNumberInput();
+  const initialResult = currentResult;  // Value prior to calculation
+  currentResult /= enteredNumber;
+  createAndWriteOutput('/', initialResult, enteredNumber);
 }
+
 
 addBtn.addEventListener('click', add);
 subtractBtn.addEventListener('click', subtract);
 multiplyBtn.addEventListener('click', multiply);
+divideBtn.addEventListener('click', divide);
