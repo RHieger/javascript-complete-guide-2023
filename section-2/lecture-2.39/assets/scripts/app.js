@@ -22,7 +22,10 @@ function add(num1, num2) {
 }
 
 function subtract() {
-  
+  const enteredNumber = getUserNumberInput();
+  const initialResult = currentResult;  // Value prior to calculation
+  currentResult -= enteredNumber;
+  createAndWriteOutput('-', initialResult, enteredNumber);
 }
 
 function multiply() {
