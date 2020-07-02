@@ -12,4 +12,16 @@ function add(num1, num2) {
   outputResult(currentResult, calcDescription);
 }
 
+function subtract() {
+
+}
+
+function multiply() {
+
+}
+
+function divide() {
+  
+}
+
 addBtn.addEventListener('click', add);
