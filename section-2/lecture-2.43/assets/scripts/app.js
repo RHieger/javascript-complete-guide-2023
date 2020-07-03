@@ -22,6 +22,8 @@ function add(num1, num2) {
   const initialResult = currentResult;  // Value prior to calculation
   currentResult += enteredNumber;
   createAndWriteOutput('+', initialResult, enteredNumber);
+  logEntries.push(enteredNumber);
+  console.log(logEntries[0]);
 }
 
 function subtract() {
