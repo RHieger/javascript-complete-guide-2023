@@ -34,6 +34,15 @@ function writeToLog(
 }
 
 function calculateResult(calculationType) {
+  if (
+    calculationType !== 'ADD' &&
+    calculationType !== "SUBTRACT" &&
+    calculationType !== "MULTIPLY" &&
+    calculationType !== "DIVIDE"
+  ) {
+    return; // escape from error state
+  }
+    
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;  // Value prior to calculation
   let mathOperator;  // Symbol for math operation
