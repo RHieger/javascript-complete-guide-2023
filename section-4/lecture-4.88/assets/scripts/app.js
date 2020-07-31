@@ -6,12 +6,23 @@ const HEAL_VALUE = 20;  // extent to which player is healed
 let chosenMaxLife = 100;  // hard-coded health points for player
 let currentMonsterHealth = chosenMaxLife;
 let currentPlayerHealth = chosenMaxLife;
+let hasBonusLife = true;  // Does play have bonus life?
 
 adjustHealthBars(chosenMaxLife);
 
 function endRound()  {
+  const initialPlayerHealth = currentPlayerHealth;
   const playerDamage = dealPlayerDamage(MONSTER_ATTACK_VALUE);
   currentPlayerHealth -= playerDamage;
+
+  if (currentPlayerHealth <= 0 && hasBonusLife) {
+    hasBonusLife = false; // bonus life has been used
+    removeBonusLife();  // called from vendor.js
+    currentPlayerHealth = initialPlayerHealth;  // reset to pre-attach value
+    alert('You would be dead, but the bonus life saved you!');
+    setPlayerHealth(initialPlayerHealth);  // update health display
+  }
+
   if (
       currentMonsterHealth <= 0 &&
       currentPlayerHealth > 0
