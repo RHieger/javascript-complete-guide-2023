@@ -132,6 +132,10 @@ function healPlayerHandler() {
   endRound();
 }
 
+function printLogHandler() {
+  console.log(battleLog);
+}
+
 attackBtn.addEventListener('click', attackHandler);
 strongAttackBtn.addEventListener('click', strongAttackHandler);
 healBtn.addEventListener('click', healPlayerHandler);
