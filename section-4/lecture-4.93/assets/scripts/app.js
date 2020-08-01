@@ -42,7 +42,7 @@ function writeToLog(
   };
   if (logEvent === LOG_EVENT_PLAYER_ATTACK) {
     logEntry.target = 'MONSTER';
-  } else if (logEvent === LOG_EVENT_PLAYER_STRONG_ATTACK)  {
+  } else if (logEvent === LOG_EVENT_PLAYER_STRONG_ATTACK) {
     logEntry.target = 'MONSTER';
   } else if (logEvent = LOG_EVENT_MONSTER_ATTACK) {
     logEntry.target = 'PLAYER';
@@ -127,15 +127,19 @@ function endRound() {
 }
 
 function attackMonster(mode) {
-  let maxDamage;  // value of attack strength
-  let logAttackMode; // type of chosen attack
-  if (mode === MODE_ATTACK) {
-    maxDamage = ATTACK_VALUE;
-    logAttackMode = LOG_EVENT_PLAYER_ATTACK;
-  } else if (mode === MODE_STRONG_ATTACK) {
-    maxDamage = STRONG_ATTACK_VALUE;
-    logAttackMode = LOG_EVENT_PLAYER_STRONG_ATTACK;
-  }
+  const maxDamage = mode === MODE_ATTACK ?
+    ATTACK_VALUE :
+    STRONG_ATTACK_VALUE;
+  const logAttackMode = mode === MODE_ATTACK ?
+    LOG_EVENT_PLAYER_ATTACK :
+    LOG_EVENT_PLAYER_STRONG_ATTACK;
+  // if (mode === MODE_ATTACK) {
+  //   maxDamage = ATTACK_VALUE;
+  //   logAttackMode = LOG_EVENT_PLAYER_ATTACK;
+  // } else if (mode === MODE_STRONG_ATTACK) {
+  //   maxDamage = STRONG_ATTACK_VALUE;
+  //   logAttackMode = LOG_EVENT_PLAYER_STRONG_ATTACK;
+  // }
   const damage = dealMonsterDamage(maxDamage);
   currentMonsterHealth -= damage;
   writeToLog(
