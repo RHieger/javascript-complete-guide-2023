@@ -3,9 +3,14 @@ const STRONG_ATTACK_VALUE = 17; // strength of strong attack
 const MONSTER_ATTACK_VALUE = 14; // strength of monster attack
 const HEAL_VALUE = 20;  // extent to which player is healed
 
-prompt('Maximum life for you and the monster:', '100');
+const enteredValue = prompt('Maximum life for you and the monster:', '100');
 
-let chosenMaxLife = 100;  // hard-coded health points for player
+let chosenMaxLife = parseInt(enteredValue);  // hard-coded health points for player
+
+if ( isNaN(chosenMaxLife || chosenMaxLife <= 0) ) {
+  chosenMaxLife = 100;
+}
+
 let currentMonsterHealth = chosenMaxLife;
 let currentPlayerHealth = chosenMaxLife;
 let hasBonusLife = true;  // Does play have bonus life?
