@@ -161,14 +161,18 @@ function healPlayerHandler() {
 }
 
 function printLogHandler() {
-  // for (let i = 0; i < 3; i++) {
-  //   console.log('------------');
-  // }
-  let j = 0; // while loops do not support indexes
-  while (j < 3) {
-    console.log('----------');
-    j++;
+  for (let i = 0; i < 3; i++) {
+    console.log('------------');
   }
+  let j = 0; // while loops do not support indexes
+  // while (j < 3) {
+  //   console.log(j);
+  //   j++;
+  // }
+  do {
+    console.log(j);
+    j++;
+  } (while j < 3);
   let i = 0;
   for (const logEntry of battleLog) {
     console.log(`#${i}`);
