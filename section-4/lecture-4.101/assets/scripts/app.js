@@ -186,8 +186,14 @@ function printLogHandler() {
   // for (let i = 0; i < battleLog.length; i++) {
   //   console.log(battleLog[i]);
   // }
+  let i = 0;  // event counter; for...of and for...in do not support indexes
   for (const logEntry of battleLog) {
-    console.log(logEntry);
+    console.log(`#${i}`);
+    for (const key in logEntry) {
+      console.log(key);
+      console.log(logEntry[key]);
+      }
+    i++;  // increment event counter
   }
 }
 
