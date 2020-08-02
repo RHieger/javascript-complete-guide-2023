@@ -64,22 +64,6 @@ function writeToLog(
     default:
       logEntrey = {};
   }
-  // if (logEvent === LOG_EVENT_PLAYER_ATTACK) {
-  //   logEntry.target = 'MONSTER';
-  // } else if (logEvent === LOG_EVENT_PLAYER_STRONG_ATTACK) {
-  //   logEntry.target = 'MONSTER';
-  // } else if (logEvent = LOG_EVENT_MONSTER_ATTACK) {
-  //   logEntry.target = 'PLAYER';
-  // } else if (logEvent === LOG_EVENT_PLAYER_HEAL) {
-  //   logEntry.target = 'PLAYER';
-  // } else if (logEvent === LOG_EVENT_GAME_OVER) {
-  //   logEntry = {
-  //     event: logEvent,
-  //     value: logVal,
-  //     finalMonsterHealth: monsterHealth,
-  //     finalPlayerHealth: playerHealth
-  //   }
-  // }
   battleLog.push(logEntry);
 }
 
@@ -196,6 +180,9 @@ function healPlayerHandler() {
 }
 
 function printLogHandler() {
+  for (let i = 0; i < 3; i++) {
+    console.log('----------');
+  }
   console.log(battleLog);
 }
 
