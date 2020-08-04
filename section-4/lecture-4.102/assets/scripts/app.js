@@ -169,6 +169,9 @@ function printLogHandler() {
   //   console.log(j);
   //   j++;
   // }
+  // do...while loop will always execute at least once
+  // because condition is checked after the loop is
+  // executed, not before.
   do {
     console.log(j);
     j++;
