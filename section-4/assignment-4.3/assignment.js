@@ -2,6 +2,7 @@ const randomNumber = Math.random(); // produces random number between 0 (includi
 
 const task1Btn = document.getElementById('task1');
 const task2Btn = document.getElementById('task2');
+const task3Btn = document.getElementById('task3');
 
 const numbers = [
   25,
@@ -32,6 +33,10 @@ This is not greater than 0.7.`);
   }
 }
 
+// STEP 2: Create an array of numbers (any numbers of your choice) and
+// loop through the array in two different ways - outputting the numbers
+// inside of the loop.
+
 function arrayLoop() {
   console.log(`PASS #1 (Original Order):\n-----------------------\n`);
   let i = 0;
@@ -46,9 +51,13 @@ function arrayLoop() {
   reverseSortNums.forEach(element => {
     console.log(`Element #${j} => ${element}`);
   });
-} // STEP 2: Create an array of numbers (any numbers of your choice) and
-// loop through the array in two different ways - outputting the numbers
-// inside of the loop.
+}
+
+function reverseArrayLoop() {
+  const reversedArray = numbers.reverse();
+  console.table(reversedArray);
+}
 
 task1Btn.addEventListener('click', isGreaterThanPoint7);
 task2Btn.addEventListener('click', arrayLoop);
+task3Btn.addEventListener('click', reverseArrayLoop);
