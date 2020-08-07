@@ -40,20 +40,11 @@ This is not greater than 0.7.`);
 // inside of the loop.
 
 function arrayLoop() {
-  console.log(`PASS #1 (Original Order):\n------------------------\n`);
-  let i = 0;
-  numbers.forEach(element => {
-    console.log(`Element #${i} => ${element}`);
-    i++;
-  });
-  console.log(`\nPASS #2 (Ascending Sort Order):
+  console.log(`Loop Through numbers using for:
 ------------------------------\n`);
-  let j = 0;
-  const sortNums = numbers.sort( (a, b) => a-b );
-  sortNums.forEach(element => {
-    console.log(`Element #${j} => ${element}`);
-    j++;
-  });
+  for (let i = 0; i < numbers.length; i++) {
+    console.log(`Element #${i} => ${numbers[i]}`);
+  }
 }
 
 // STEP 3: Adjust one of the loops from the last task such
