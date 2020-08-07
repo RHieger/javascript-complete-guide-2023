@@ -62,19 +62,14 @@ function arrayLoop() {
 
 // STEP 3: Adjust one of the loops from the last task such
 // that it actually starts at the end (last element) of the
-//array and loops to the first element. (As I wanted to
-// preserve the loops from Step 3, I created a new
-// loop that satisfies the requirements.
+// array and loops to the first element.
 
 function reverseArrayLoop() {
-  let k = 0;
-  console.log('Reverse Sort of numbers[]:\n' +
-  '--------------------------\n');
-  const newArray = numbers.sort( (a, b) => b-a);
-  newArray.forEach(element => {
-    console.log(`Element #${k} => ${element}`);
-    k++;
-  });
+  console.log(`\nLoop Backwards Through numbers[] Using for:
+------------------------------------------\n`);
+  for (let i = numbers.length -1; i >= 0; i--) {
+    console.log(`Element #${i} => ${numbers[i]}`);
+  }
 }
 
 // Create another random number (in a separate constant) and
