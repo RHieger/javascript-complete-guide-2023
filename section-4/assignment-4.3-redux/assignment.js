@@ -51,6 +51,13 @@ function arrayLoop() {
   for (const number of numbers) {
     console.log(`Element #${j} => ${number}`);
   }
+  console.log(`\nLoop Through numbers[] with while:
+---------------------------------\n`);
+  j = 0;
+  while (j < numbers.length) {
+    console.log(`Element #${j} => ${numbers[j]}`);
+    j++;
+  }
 }
 
 // STEP 3: Adjust one of the loops from the last task such
