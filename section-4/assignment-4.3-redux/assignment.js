@@ -40,10 +40,16 @@ This is not greater than 0.7.`);
 // inside of the loop.
 
 function arrayLoop() {
-  console.log(`Loop Through numbers using for:
-------------------------------\n`);
+  console.log(`Loop Through numbers[] using for:
+--------------------------------\n`);
   for (let i = 0; i < numbers.length; i++) {
     console.log(`Element #${i} => ${numbers[i]}`);
+  }
+  console.log(`\nLoop Through numbers[] using for...of:
+-------------------------------------\n`);
+  let j;
+  for (const number of numbers) {
+    console.log(`Element #${j} => ${number}`);
   }
 }
 
