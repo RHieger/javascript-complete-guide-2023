@@ -44,7 +44,7 @@ function arrayLoop() {
     console.log(`Element #${i} => ${element}`);
     i++;
   });
-  console.log(`PASS #2 (Descending Order Sort):\n
+  console.log(`\nPASS #2 (Descending Order Sort):
 -----------------------------\n`);
   let j = 0;
   const reverseSortNums = numbers.sort( (a, b) => b-a );
