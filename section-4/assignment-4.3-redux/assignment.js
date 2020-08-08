@@ -72,7 +72,7 @@ function reverseArrayLoop() {
   }
 }
 
-// Create another random number (in a separate constant) and
+// STEP 4: Create another random number (in a separate constant) and
 // show an alert in two different scenarios: Both are greater
 // 0.7 OR at least one of the two is NOT greater than 0.2.
 
