@@ -1,18 +1,21 @@
 const ATTACK_VALUE = 10;  // value of normal attack
-const STRONG_ATTACK_VALUE = 17; // value of strong attack
-const MONSTER_ATTACK_VALUE = 14; // value of monster attack
-const HEAL_VALUE = 20; // value of heal event
+const STRONG_ATTACK_VALUE = 17;  // value of strong attack
+const MONSTER_ATTACK_VALUE = 14;  // value of monster attack
+const HEAL_VALUE = 20;  // value of heal event
 
 const MODE_ATTACK = 'ATTACK'; // Attack Mode
 const MODE_STRONG_ATTACK = 'STRONG_ATTACK'; // Strong Attack Mode
-const LOG_EVENT_PLAYER_ATTACK = 'PLAYER_ATTACK'; // Normal Player Attack
+const LOG_EVENT_PLAYER_ATTACK = 'PLAYER_ATTACK';  // Normal Player Attack
 // Strong Player Attack
 const LOG_EVENT_PLAYER_STRONG_ATTACK = 'PLAYER_STRONG_ATTACK';
-const LOG_EVENT_MONSTER_ATTACK = 'MONSTER_ATTACK'; // Monster Attack
-const LOG_EVENT_PLAYER_HEAL = 'PLAYER_HEAL'; // Player Heal Event
-const LOG_EVENT_GAME_OVER = 'GAME_OVER'; // Game Over Event
+const LOG_EVENT_MONSTER_ATTACK = 'MONSTER_ATTACK';  // Monster Attack
+const LOG_EVENT_PLAYER_HEAL = 'PLAYER_HEAL';  // Player Heal Event
+const LOG_EVENT_GAME_OVER = 'GAME_OVER';  // Game Over Event
 
-function getMaxLifeValue () {
+let battleLog = [];
+let lastLoggedEntry;
+
+function getMaxLifeValues() {
   const enteredValue = prompt('Maximum life for you and the monster.', '100');
 
   const parsedValue = parseInt(enteredValue);
@@ -22,11 +25,15 @@ function getMaxLifeValue () {
   return parsedValue;
 }
 
-let chosenMaxLife = getMaxLifeValue();
+let chosenMaxLife;
 
-let battleLog = [];
-let lastLoggedEntry;
-
+try {
+  chosenMaxLife = getMaxLifeValues();
+} catch (error) {
+  console.log(error);
+  chosenMaxLife = 100;
+  alert('You entered something wrong, default value of 100 was used.');
+}
 
 let currentMonsterHealth = chosenMaxLife;
 let currentPlayerHealth = chosenMaxLife;
@@ -39,12 +46,12 @@ function writeToLog(
   attackVal,
   monsterHealth,
   playerHealth) {
-  let logEntry = {
-    event: attackEvent,
-    value: attackVal,
-    finalMonsterHealth: monsterHealth,
-    finalPlayerHealth: playerHealth
-  };
+    let logEntry = {
+      event: attackEvent,
+      value: attackVal,
+      finalMonsterHealth: monsterHealth,
+      finalPlayerHealth: playerHealth
+    };
   switch (attackEvent) {
     case LOG_EVENT_PLAYER_ATTACK:
       logEntry.target = 'MONSTER';
@@ -171,25 +178,10 @@ function printLogHandler() {
   for (let i = 0; i < 3; i++) {
     console.log('------------');
   }
-  let j = 0; // while loops do not support indexes
-  // while (j < 3) {
-  //   console.log(j);
-  //   j++;
-  // }
-  // do...while loop will always execute at least once
-  // because condition is checked after the loop is
-  // executed, not before.
-  do {
-    console.log(j);
-    j++;
-  } while (j < 3);
-  // do {
-  //   console.log(j);
-  //   j++;
-  // } (while j < 3);
+  let j = 0;
   let i = 0;
   for (const logEntry of battleLog) {
-    if (!lastLoggedEntry && lastLoggedEntry !== 0 || lastLoggedEntry < i) {
+    if ((!lastLoggedEntry && lastLoggedEntry !== 0) || lastLoggedEntry < i) {
       console.log(`#${i}`);
       for (const key in logEntry) {
         console.log(`${key} => ${logEntry[key]}`);
