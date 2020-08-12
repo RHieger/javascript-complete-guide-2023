@@ -30,3 +30,15 @@ console.log('hobbies[] => ', hobbies);
 
 console.log('Accessing element at empty index...');
 console.log('hobbies[4] => ', hobbies[4]);
+
+console.log('Inserting element betwwen hobbies[0] and hobbies[1]...');
+hobbies.splice(1, 0, 'Good Food');
+console.log('hobbies[] => ', hobbies);
+
+console.log('Deleting first element of hobbies[] using splice()...');
+hobbies.splice(0, 1);
+console.log('hobbies[] => ', hobbies);
+
+console.log('Deleting last element of hobbies[] using splice()...');
+hobbies.splice(-1, 1);
+console.log('hobbies[] => ', hobbies);
