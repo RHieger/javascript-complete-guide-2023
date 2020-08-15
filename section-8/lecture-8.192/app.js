@@ -32,3 +32,19 @@ const indexOfCarl = personData.indexOf({ name: 'Carl' });
 
 // This will return -1.
 console.log(`personData.indexOf({ name: 'Carl' }) => ${indexOfCarl}`);
+
+
+// HERE'S HOW TO SOLVE THE PROBLEM OF NOT BEING
+// ABLE TO ACCESS A VALUE IN A REFERENCE TYPE:
+
+const carl = personData.find(
+  (person, index, persons) => {
+    return person.name === 'Carl';
+  }
+);
+
+console.log('Value of carl => ', carl);
+
+// HERE'S HOW TO ACCESS THE INDEX OF A VALUE IN
+// A REFERENCE TYPE:
+
