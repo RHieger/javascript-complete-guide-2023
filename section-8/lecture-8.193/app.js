@@ -55,3 +55,8 @@ const carlIndex = personData.findIndex(
 );
 
 console.log('Index of carl => ', carlIndex);
+
+// Use includes() method to check for presence of
+// element in array:
+
+console.log(`10.99 is included in testResults[] => ${testResults.includes(10.99)}`);
