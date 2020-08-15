@@ -16,3 +16,19 @@ console.log(`Index of value 1.5 => ${storedResults.indexOf(1.5)}`);
 // of its search parameter, searching from the end of the
 // array backward until it finds a match.
 console.log(`Index last value instance of 1.5 => ${storedResults.lastIndexOf(1.5)}`);
+
+const personData = [
+  { name: 'Bobby' },
+  { name: 'Carl' }
+];
+
+// NOTE: indexOf() and lastIndexOf does not work with
+// reference values, i.e. properties within objects
+// and will return -1, indicating that no index has
+// been found that contains the value for which the
+// seearch was initiated.
+
+const indexOfCarl = personData.indexOf({ name: 'Carl' });
+
+// This will return -1.
+console.log(`personData.indexOf({ name: 'Carl' }) => ${indexOfCarl}`);
