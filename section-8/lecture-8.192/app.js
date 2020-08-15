@@ -48,3 +48,10 @@ console.log('Value of carl => ', carl);
 // HERE'S HOW TO ACCESS THE INDEX OF A VALUE IN
 // A REFERENCE TYPE:
 
+const carlIndex = personData.findIndex(
+  (person, index, persons) => {
+    return person.name = 'Carl';
+  }
+);
+
+console.log('Index of carl => ', carlIndex);
