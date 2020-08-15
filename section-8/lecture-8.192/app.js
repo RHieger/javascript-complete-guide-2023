@@ -50,7 +50,7 @@ console.log('Value of carl => ', carl);
 
 const carlIndex = personData.findIndex(
   (person, index, persons) => {
-    return person.name = 'Carl';
+    return person.name === 'Carl';
   }
 );
 
