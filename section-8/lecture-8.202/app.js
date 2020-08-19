@@ -1,3 +1,5 @@
+const prices = [10.99, 5.99, 3.99, 6.59];
+
 const nameFragments = ['Robert', 'Hieger'];
 
 // Spread operator copies contents of nameFragments
@@ -15,3 +17,10 @@ nameFragments.push('Mr.');
 
 console.log('Updated nameFragments[] => ', nameFragments);
 console.log('copiedNameFragments[] => ', copiedNameFragments);
+
+// Use spread operator to extract number values from
+// array and use Math method to manipulate them.
+
+console.log('prices[] => ', prices);
+console.log( 'minimum price in prices[] =>',
+Math.min(...prices) );
