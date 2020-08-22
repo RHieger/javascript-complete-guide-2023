@@ -10,6 +10,10 @@ const personData = new Map(
       [ { date: 'yesterday', price: 10 } ]
     ],
     [
+      // NOTE: This personData() will never log
+      // to console because later setting of the
+      // value for person2 is hoisted and thus,
+      // the value below is overwritten.
       person2,
       [ { date: 'tomorrow', price: 20 } ]
     ]
@@ -29,3 +33,17 @@ console.log(personData);
 
 console.log('Getting person1() from personData()...');
 console.log( personData.get(person1) );
+
+// Setting data of person2() within personData()
+
+console.log('Setting new value for person2 data in personData()...');
+
+personData.set(
+  person2,
+  [
+    { date: 'last week', price: 100 }
+  ]
+);
+
+console.log('Getting new value for person2() data =>');
+console.log( personData.get(person2) );
