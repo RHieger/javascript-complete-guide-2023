@@ -73,3 +73,7 @@ console.log('Log all values of personData using values() =>');
 for ( const value of personData.values() ) {
   console.log(value);
 }
+
+// Method #5: Log number of key-value pairs in personData() using size()
+console.log('Number of key-value pairs in personData() =>',
+  personData.size);
