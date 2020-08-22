@@ -55,3 +55,9 @@ console.log('Log all personData using entries() method =>');
 for ( const entry of personData.entries() ) {
   console.log(entry);
 }
+
+// Method #2: Array Destructuring
+console.log('Log all personData using Array Destructuring =>');
+for ( const [ key, value ] of personData.entries() ) {
+  console.log(key, value);
+}
