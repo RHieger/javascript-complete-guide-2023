@@ -47,3 +47,11 @@ personData.set(
 
 console.log('Getting new value for person2() data =>');
 console.log( personData.get(person2) );
+
+// 3 DIFFERENT METHODS TO OUTPUT ALL CONTENTS OF MAP:
+
+// Method #1: personData.entries()
+console.log('Log all personData using entries() method =>');
+for ( const entry of personData.entries() ) {
+  console.log(entry);
+}
