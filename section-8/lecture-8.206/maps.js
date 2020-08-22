@@ -19,3 +19,8 @@ const personData = new Map(
 console.log('person1 =>\n', person1);
 
 console.log('person2 =>\n', person2);
+
+console.log('Declared Map() personData()...');
+
+console.log('personData() =>\n');
+console.log(personData);
