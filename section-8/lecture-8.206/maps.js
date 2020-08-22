@@ -48,7 +48,7 @@ personData.set(
 console.log('Getting new value for person2() data =>');
 console.log( personData.get(person2) );
 
-// 3 DIFFERENT METHODS TO OUTPUT ALL CONTENTS OF MAP:
+// 4 DIFFERENT METHODS TO OUTPUT DATA OF MAP:
 
 // Method #1: personData.entries()
 console.log('Log all personData using entries() method =>');
@@ -60,4 +60,10 @@ for ( const entry of personData.entries() ) {
 console.log('Log all personData using Array Destructuring =>');
 for ( const [ key, value ] of personData.entries() ) {
   console.log(key, value);
+}
+
+// Method #3: Logging all keys ONLY in personData()
+console.log('Log all keys of personData using keys() =>');
+for ( const key of personData.keys() ) {
+  console.log(key);
 }
