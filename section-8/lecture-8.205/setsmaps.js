@@ -19,3 +19,10 @@ console.log('Values in ids set =>');
 for ( const value of ids.values() ) {
   console.log(value);
 }
+
+console.log('Adding value to ids...');
+ids.add('Hi');
+
+for ( const value of ids.values() ) {
+  console.log(value);
+}
