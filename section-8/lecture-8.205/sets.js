@@ -20,8 +20,15 @@ for ( const value of ids.values() ) {
   console.log(value);
 }
 
-console.log('Adding value to ids...');
+console.log('Adding value to ids{}...');
 ids.add('Hi');
+
+for ( const value of ids.values() ) {
+  console.log(value);
+}
+
+console.log('Deleting value \'Hi\' from ids{}...')
+ids.delete('Hi');
 
 for ( const value of ids.values() ) {
   console.log(value);
