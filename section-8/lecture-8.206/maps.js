@@ -24,3 +24,8 @@ console.log('Declared Map() personData()...');
 
 console.log('personData() =>\n');
 console.log(personData);
+
+// Getting data from personData():
+
+console.log('Getting person1() from personData()...');
+console.log( personData.get(person1) );
