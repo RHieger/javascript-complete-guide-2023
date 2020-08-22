@@ -1,0 +1,49 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 5rem;
+  color: #521751;
+}
+
+h1 {
+  background: #fa923f;
+  color: white;
+  padding: 1rem;
+}
+
+ol {
+  counter-reset: list-counter;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid #fa923f;
+}
+
+li {
+  counter-increment: list-counter;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 3.5rem;
+  border: 1px solid #521751;
+  position: relative;
+}
+
+li:before {
+  content: counter(list-counter);
+  margin-right: 0.5rem;
+  padding: 1rem;
+  background: #521751;
+  color: white;
+  position: absolute;
+  left: -2.75rem;
+  top: -1px;
+  border: 1px solid #521751;
+}
+
+li:hover,
+li:active {
+  border-color: #fa923f;
+  color: white;
+  background: #fa923f;
+}
