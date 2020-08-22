@@ -5,3 +5,11 @@ console.log('ids >', ids);
 // Does ids have 1?
 
 console.log('Does ids have 1? => ', ids.has(1));
+
+// Iterate through entries of set:
+
+console.log('Entries in ids set =>');
+
+for ( const entry of ids.entries() ) {
+  console.log(entry);
+}
