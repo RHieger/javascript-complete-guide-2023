@@ -13,3 +13,9 @@ console.log('Entries in ids set =>');
 for ( const entry of ids.entries() ) {
   console.log(entry);
 }
+
+console.log('Values in ids set =>');
+
+for ( const value of ids.values() ) {
+  console.log(value);
+}
