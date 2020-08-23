@@ -33,18 +33,30 @@ const task1Handler = () => {
   console.log('product of numbers[] =>');
   console.log(product);
 
-}
+};
 
 const task2Handler = () => {
-  console.log('Finding the Maximum Number in numbers[] =>');
+  console.log('Finding the Maximum Number in numbers[]...');
   const maxNumber = numbers.filter(
     (number, index, numbers) => {
       return number === Math.max(...numbers);
   });
   console.log('maxNumber => ', maxNumber);
-}
+};
+
+const task3Handler = () => {
+  console.log('Finding the Minimum and Maximum Number in numbers[]...');
+  const minMaxNumbers = numbers.filter(
+    (number, index, numbers) => {
+      return number === Math.min(...numbers) ||
+        number === Math.max(...numbers);
+  });
+  [ min, max ] = minMaxNumbers;
+  console.log('minMaxNumbers => ', `${max}, ${min}`);
+};
 
 // EVENT LISTENERS:
 
 task1.addEventListener('click', task1Handler);
 task2.addEventListener('click', task2Handler);
+task3.addEventListener('click', task3Handler);
