@@ -12,3 +12,11 @@ const moreNumbers = new Array(4, 5);
 
 console.log('moreNumbers[] array created using Array() constructor =>');
 console.table(moreNumbers);
+
+// Create array with Array() Constructor
+// Omitting new keyword: Method #3
+const andMoreNumbers = Array(10, 12);
+
+console.log('andMoreNumbers[] created with Array() constructor and' +
+' omitting new keyword =>');
+console.table(andMoreNumbers);
