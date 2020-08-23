@@ -15,6 +15,25 @@ h1 {
   text-shadow: 2px 2px skyblue;
 }
 
+h2 {
+  font-family: 'Raleway', Helvetica, sans-serif;
+  margin-left: 35px;
+  font-weight: 800;
+  color: #1515e0;
+}
+
+ul {
+  font-family: 'Noto Sans', 'Helvetica', sans-serif;
+  margin-left: 35px;
+  font-size: 22px;
+  color: #1515e0;
+  list-style: square;
+}
+
+ul li:before {
+  (content: '\27A3')
+}
+
 p {
   font-family: 'Noto Sans', 'Helvetica', sans-serif;
   margin-left: 35px;

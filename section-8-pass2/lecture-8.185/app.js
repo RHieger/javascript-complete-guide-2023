@@ -27,3 +27,21 @@ const yetMoreNumbers = Array.of(-10, -12);
 
 console.log('yetMoreNumbers[] created using Array.of() =>');
 console.table(yetMoreNumbers);
+
+// Create array with Array.from(): Method #5
+const myString = Array.from('Hello World!');
+
+console.log('myString =>');
+console.table(myString);
+
+// Create Array from NodeList: Method #6
+const listItems = document.querySelectorAll('li');
+
+console.log('listItems =>');
+console.log(listItems);
+console.log('Converting listItems to array...');
+
+const listArray = Array.from(listItems);
+
+console.log('listArray[] =>');
+console.log(listArray);
