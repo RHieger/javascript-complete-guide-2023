@@ -32,8 +32,19 @@ const task1Handler = () => {
     }, 1);
   console.log('product of numbers[] =>');
   console.log(product);
+
 }
 
-  // EVENT LISTENERS:
+const task2Handler = () => {
+  console.log('Finding the Maximum Number in numbers[] =>');
+  const maxNumber = numbers.filter(
+    (number, index, numbers) => {
+      return number === Math.max(...numbers);
+  });
+  console.log('maxNumber => ', maxNumber);
+}
+
+// EVENT LISTENERS:
 
 task1.addEventListener('click', task1Handler);
+task2.addEventListener('click', task2Handler);
