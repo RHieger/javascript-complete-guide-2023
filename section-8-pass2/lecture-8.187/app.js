@@ -28,3 +28,8 @@ console.table(hobbies);
 
 // Deleting an Element from an Array: Method #4
 // shift() -- deletes the element at index 0
+console.log('Deleting the first element from hobbies[]: shift()...');
+
+hobbies.shift();
+console.log('hobbies[] =>');
+console.table(hobbies);
