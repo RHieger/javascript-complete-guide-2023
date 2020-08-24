@@ -50,7 +50,7 @@ kbd {
 }
 
 .masthead {
-  height: 85px;
+  /*height: 85px;*/
   width: 85%;
   padding: 15px 35px;
   background-color: rgba(128, 128, 128, 0.25);
