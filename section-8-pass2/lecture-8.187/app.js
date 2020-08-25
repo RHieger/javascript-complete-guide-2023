@@ -51,3 +51,4 @@ console.log('Resulting hobbies[] =>');
 console.table(hobbies);
 console.log('Proof of empty elements in hobbies[] =>');
 console.log(`Value of hobbies[3] => ${hobbies[3]}`);
+console.warn('VERY RARELY USED');
