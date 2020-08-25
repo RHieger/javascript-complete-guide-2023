@@ -40,3 +40,14 @@ console.log('Changing value of hobbies[1]...');
 hobbies[1] = 'Coding';
 console.log('hobbies[] =>');
 console.table(hobbies);
+
+// Adding an element at specified index beyond the
+// scope of the array => new value + x empty
+// elements before it:
+console.log('Setting value of element beyond last index of hobbies[]...');
+
+hobbies[5] = 'Sports';
+console.log('Resulting hobbies[] =>');
+console.table(hobbies);
+console.log('Proof of empty elements in hobbies[] =>');
+console.log(`Value of hobbies[3] => ${hobbies[3]}`);
