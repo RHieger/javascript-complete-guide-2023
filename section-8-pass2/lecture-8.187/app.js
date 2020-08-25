@@ -33,3 +33,10 @@ console.log('Deleting the first element from hobbies[]: shift()...');
 hobbies.shift();
 console.log('hobbies[] =>');
 console.table(hobbies);
+
+// Changing value of element by index
+console.log('Changing value of hobbies[1]...');
+
+hobbies[1] = 'Coding';
+console.log('hobbies[] =>');
+console.table(hobbies);
