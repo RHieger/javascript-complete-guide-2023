@@ -1,4 +1,5 @@
 const hobbies = ['Sports', 'Coding'];
+
 console.log('hobbies =>');
 console.table(hobbies);
 
@@ -15,4 +16,10 @@ console.log('Shift \'Good Food\' one index to the right using splice()...');
 hobbies.splice(0, 1); // first delete item at index 0
 hobbies.splice(1, 0, 'Good Food'); // add back in at index 1
 console.log('hobbies[] =>');
+console.table(hobbies);
+
+// Delete element at index 0 with splice()
+console.log('Deleting hobbies[0]...');
+
+hobbies.splice(0, 1);
 console.table(hobbies);
