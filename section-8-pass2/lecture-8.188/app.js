@@ -21,5 +21,9 @@ console.table(hobbies);
 // Delete element at index 0 with splice()
 console.log('Deleting hobbies[0]...');
 
-hobbies.splice(0, 1);
+const deletedElement = hobbies.splice(0, 1);
 console.table(hobbies);
+
+// Show deletedElement
+console.log('deletedElement =>');
+console.log(deletedElement);
