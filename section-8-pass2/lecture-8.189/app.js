@@ -37,3 +37,7 @@ console.log('Copying testResults[] from index 2 to end...');
 const storedResults3 = testResults.slice(2);
 console.log('storedResults3[] =>');
 console.table(storedResults3);
+
+// Prove inequality of all 4 arrays
+console.log(`testResults !== storedResults !== storedResults2
+!== storedResults3: ${testResults !== storedResults !== storedResults2 !== storedResults3}`);
