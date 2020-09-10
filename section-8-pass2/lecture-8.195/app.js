@@ -1,7 +1,8 @@
 const prices = [10.99, 5.99, 3.99, 6.59];
 const tax = 0.19;
 
-prices.forEach( (price, index, array) => {
+const taxAdjustedPrices = prices.map( (price, index, array) => {
+  
   // NOTE: 2nd property is how this was treated in the
   // lecture material. I took it one step further by
   // using parseFloat() and toFixed() to limit output
@@ -14,7 +15,7 @@ prices.forEach( (price, index, array) => {
     rawTotal: price * (1 + tax),
     total: Number.parseFloat(price * (1 + tax)).toFixed(2)
   };
-  taxAdjustedPrices.push(adjustedPrice);
+  return adjustedPrice;
 });
 
 console.log('prices[] =>');
