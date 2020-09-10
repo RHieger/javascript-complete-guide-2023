@@ -49,6 +49,13 @@ kbd {
   color: slategray;
 }
 
+code {
+  font-family: 'Lucida Sans', monospace;
+  font-size: 24px;
+  font-weight: bold;
+  color: purple;
+}
+
 .masthead {
   /*height: 85px;*/
   width: 85%;
