@@ -8,7 +8,6 @@ const filteredPrices = prices.filter(
     return price > 6.00;
 });
 */
-
 const filteredPrices = prices.filter(price => price > 6.00);
 
 console.log('prices[] =>');
