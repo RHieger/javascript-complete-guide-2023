@@ -15,3 +15,6 @@ new Map(
 
 console.log('personData{} =>\n');
 console.log(personData);
+
+console.log('Extracting Map data by referencing key object from personData()...\n');
+console.log(personData.get(person1));
