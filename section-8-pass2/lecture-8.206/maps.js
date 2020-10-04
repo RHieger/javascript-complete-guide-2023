@@ -56,3 +56,10 @@ console.log('Output personData keys...\n');
 for ( const key of personData.keys() ) {
   console.log(key);
 }
+
+// METHOD #4:
+console.log('Output personData values...\n');
+
+for ( const value of personData.values() ) {
+  console.log(value);
+}
