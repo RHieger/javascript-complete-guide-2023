@@ -34,12 +34,18 @@ console.log('Adding to personData()...\n');
 console.log('Extracting person2 data...\n');
 console.log(personData.get(person2));
 
-// Output all person data in 3 different ways.
-
-// METHOD #1:
+// Output person data in 4 different ways.
 
 console.log('Output all personData using entries()...\n');
 
 for ( const entry of personData.entries() ) {
   console.log(entry);
+}
+
+// METHOD #2:
+console.log('Output all personData using entries() and ' +
+'array destructuring...\n');
+
+for ( const [key, value] of personData.entries() ) {
+  console.log(key, value);
 }
