@@ -49,3 +49,10 @@ console.log('Output all personData using entries() and ' +
 for ( const [key, value] of personData.entries() ) {
   console.log(key, value);
 }
+
+// METHOD #3:
+console.log('Output personData keys...\n');
+
+for ( const key of personData.keys() ) {
+  console.log(key);
+}
