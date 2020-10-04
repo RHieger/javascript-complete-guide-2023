@@ -63,3 +63,7 @@ console.log('Output personData values...\n');
 for ( const value of personData.values() ) {
   console.log(value);
 }
+
+// Output number of key-value pairs in personData() map:
+
+console.log(`Number of entries in personData(): ${personData.size}`);
