@@ -7,13 +7,33 @@ alert(`Contents of myNumbers[] Array:\n${myNumbers}`);
 
 const greaterThan5 = myNumbers.filter(number => number > 5);
 
+const numberObject = myNumbers.map( number => {
+  return {number: number};
+});
+
+const nextTask = () => {
+  alert("PROCEED TO NEXT TASK.");
+  console.table(greaterThan5);
+}
+
+const printTaskHeader = (taskNumber) => {
+  console.log(`TASK #${taskNumber}:\n`);
+}
+
+const printMappedNumbers = () => {
+  numberObject.forEach(object => console.log(object));
+}
+
 // EVENT LISTENERS:
 
-const item1 = document.getElementById("task1");
-item1.addEventListener("click", () => {
-  console.log("TASK #1:\n");
+const task1 = document.getElementById("task1");
+task1.addEventListener("click", () => {
+  printTaskHeader(1);
   console.log("myNumbers[] filtered for number > 5...");
-  console.table(greaterThan5);
-  alert("PROCEED TO NEXT TASK.");
-  console.clear()
+  nextTask();
+  printTaskHeader(1);
+  console.log("myNumbers[] mapped to array of objects...\n");
+  printMappedNumbers();
+  nextTask();
+  printTaskHeader(1);
 });
