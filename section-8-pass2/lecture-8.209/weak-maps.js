@@ -1,16 +1,16 @@
 let person = { name: 'Bobby' };
-const persons = new WeakSet();
+const personData = new WeakMap();
 
-persons.add(person);
+personData.set(person, "male");
 
 // GIVEN: Some operations on above object added
-// to persons WeakSet().
+// to personData WeakMap().
 
 person = null;  // clear value from person.
 
-// GIVEN: With WeakSet(), if an object is nulled
+// GIVEN: With WeakMap(), if an object is nulled
 // and is not used elsewhere in the code, it will
 // be cleared from the JavaScript heap, i.e. it
-// will be garbage collected. Not so with Set().
+// will be garbage collected. Not so with Map().
 
-console.log(persons);
+console.log(personData);
