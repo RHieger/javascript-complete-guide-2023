@@ -87,3 +87,6 @@ task2.addEventListener("click", () => {
 });
 
 const task3 = document.getElementById("task3");
+task3.addEventListener("click", () => {
+
+});
