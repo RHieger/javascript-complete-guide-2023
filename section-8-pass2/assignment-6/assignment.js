@@ -23,6 +23,22 @@ const findMaximum = ( (...myNumbers) => {
   return curMaximum;
 });
   
+const findMaxMin = ( (...myNumbers) => {
+  let curMaximum = myNumbers[0];
+  let curMinimum = myNumbers[0];
+  const MaxAndMin = [];
+  myNumbers.forEach( (number) => {
+    if (number > curMaximum) {
+      curMaximum = number;
+      MaxAndMin.push( {maximum: curMaximum} );
+    } else if (number < curMinimum) {
+      curMinimum = number;
+      MaxAndMin.push( {minimum: curMinimum} );
+    }
+  });
+  return MaxAndMin;
+});
+
 const nextTask = () => {
   alert("PROCEED TO NEXT TASK.");
   console.clear();
