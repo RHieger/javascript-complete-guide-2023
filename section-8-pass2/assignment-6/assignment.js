@@ -66,4 +66,6 @@ task2.addEventListener("click", () => {
   printTaskHeader(2);
   console.log("Find maximum value in myNumbers[]...\n");
   console.log(`Maximum value: ${findMaximum(...myNumbers)}`);
+  exit();
+  console.clear();
 });
