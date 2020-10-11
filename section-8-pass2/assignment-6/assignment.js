@@ -13,6 +13,16 @@ const myNumbersProduct = myNumbers.reduce( (lastValue, currentValue) => {
   return lastValue * currentValue;
 });
 
+const findMaximum = ( (...myNumbers) => {
+  let curMaximum = myNumbers[0];
+  myNumbers.forEach( (number) => {
+    if (number > curMaximum) {
+      curMaximum = number;
+    }
+  });
+  return curMaximum;
+});
+  
 const nextTask = () => {
   alert("PROCEED TO NEXT TASK.");
   console.clear();
@@ -49,4 +59,11 @@ task1.addEventListener("click", () => {
   console.table(myNumbersProduct);
   exit();
   console.clear();
+});
+
+const task2 = document.getElementById("task2");
+task2.addEventListener("click", () => {
+  printTaskHeader(2);
+  console.log("Find maximum value in myNumbers[]...\n");
+  console.log(`Maximum value: ${findMaximum(...myNumbers)}`);
 });
