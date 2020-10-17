@@ -3,6 +3,19 @@ const myNumbers = [
   -39.78, 10, 1.55, 3, -66.23
 ];
 
+const myNumberSet = new Set();
+
+myNumberSet.add(1);
+myNumberSet.add(22);
+myNumberSet.add(37);
+myNumberSet.add(65.32);
+myNumberSet.add(-47);
+myNumberSet.add(14);
+myNumberSet.add(-3);
+myNumberSet.add(-7);
+myNumberSet.add(58);
+myNumberSet.add(34.27);
+
 const greaterThan5 = myNumbers.filter(number => number > 5);
 
 const numberObject = myNumbers.map( number => {
@@ -45,7 +58,7 @@ const [maximum, minimum] = findMaxMin(...myNumbers);
 const nextTask = () => {
   alert("PROCEED TO NEXT TASK.");
   console.clear();
-}
+};
 
 const printTaskHeader = (taskNumber) => {
   console.log(`TASK #${taskNumber}:\n`);
@@ -58,6 +71,17 @@ const printMappedNumbers = () => {
 const exit = () => {
   alert("CLICK OK TO EXIT.");
 }
+
+const addToSet = (set, item) => {
+  if ( set.has(item) ) {
+    throw "ERROR: You have attempted to add a duplicate item to Set() object.";
+  }
+  try {
+    set.add(item);
+  } catch (err) {
+    console.error(e);
+  }
+};
 
 alert(`Contents of myNumbers[] Array:\n${myNumbers}`);
 
@@ -101,5 +125,13 @@ task3.addEventListener("click", () => {
 
 const task4 = document.getElementById("task4");
 task4.addEventListener("click", () => {
-
+  printTaskHeader(4);
+  console.log("myNumberSet{} =>\n");
+  console.log("{\n");
+  myNumberSet.forEach(number => {
+    console.log(`\t${number}`);
+  });
+  console.log("}\n");
+  console.log("Attempting to add duplicate to myNumberSet{}...\n");
+  addToSet(myNumberSet, -7);
 });
