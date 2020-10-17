@@ -22,6 +22,8 @@ const findMaximum = ( (...myNumbers) => {
   });
   return curMaximum;
 });
+
+const maxNumber = findMaximum(...myNumbers);
   
 const findMaxMin = ( (...numbers) => {
   let curMaximum = numbers[0];
@@ -82,7 +84,7 @@ const task2 = document.getElementById("task2");
 task2.addEventListener("click", () => {
   printTaskHeader(2);
   console.log("Find maximum value in myNumbers[]...\n");
-  console.log(`Maximum value: ${findMaximum(...myNumbers)}`);
+  console.log(`Maximum value: ${maxNumber}`);
   exit();
   console.clear();
 });
