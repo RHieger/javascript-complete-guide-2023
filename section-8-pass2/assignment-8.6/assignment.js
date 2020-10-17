@@ -23,21 +23,22 @@ const findMaximum = ( (...myNumbers) => {
   return curMaximum;
 });
   
-const findMaxMin = ( (...myNumbers) => {
-  let lastMaximum = myNumbers[0];
-  let curMaximum = myNumbers[0];
-  let lastMinimum = myNumbers[0];
-  let curMinimum = myNumbers[0];
+const findMaxMin = ( (...numbers) => {
+  let curMaximum = numbers[0];
+  let curMinimum = numbers[0];
   myNumbers.forEach( (number) => {
-    if (number > lastMaximum) {
-      curMaximum = number;
-    } 
-    if (number < lastMinimum) {
-      curMinimum = number;
+    for (number of numbers) {
+      if (number > curMaximum) {
+        curMaximum = number;
+      } else if (number < curMinimum) {
+        curMinimum = number;
+      }
     }
   });
-  return [curMaximum, CurMinimum];
+  return [curMaximum, curMinimum];
 });
+
+const [maximum, minimum] = findMaxMin(...myNumbers);
 
 const nextTask = () => {
   alert("PROCEED TO NEXT TASK.");
@@ -89,6 +90,9 @@ task2.addEventListener("click", () => {
 const task3 = document.getElementById("task3");
 task3.addEventListener("click", () => {
   printTaskHeader(3);
-  console.log("Find maximum and minimum value in myNumbers[]...\n");
-  console.log(findMaxMin(...myNumbers));
+  console.log("Find maximum and minimum values in myNumbers[]...\n");
+  console.log(`Maximum value: ${maximum}`);
+  console.log(`Minimum value: ${minimum}`);
+  exit();
+  console.clear();
 });
