@@ -100,3 +100,6 @@ task3.addEventListener("click", () => {
 });
 
 const task4 = document.getElementById("task4");
+task4.addEventListener("click", () => {
+
+});
