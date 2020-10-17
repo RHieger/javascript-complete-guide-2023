@@ -98,3 +98,5 @@ task3.addEventListener("click", () => {
   exit();
   console.clear();
 });
+
+const task4 = document.getElementById("task4");
