@@ -8,7 +8,6 @@ function greet() {
 }
 
 console.log("name =>\n");
-
 console.log(greet());
 
 // Task #2: Demonstrate Local Scope
@@ -30,7 +29,6 @@ function logAge()  {
     console.warn(error);
   }
 }
-
 logAge();
 
 // Task 3: Demonstrate Peculiar Behavior of var Keyword
@@ -55,5 +53,33 @@ function greet3() {
 
 console.log("\naccess myName and hobbies[] from within function below...\n");
 console.log( "\n", greet3.toString() );
-
 greet3();
+
+// Task #4: Demonstrate Corrective Behavior of let Keyword
+console.log("\nTask #4: Demonstrate Corrective\nBehavior of let Keyword...\n");
+
+if (myName === "Bobbyski") {
+  let myHobbies = ["Piano", "Reading"];
+  console.log(`\nmyName: ${myName}\nmyHobbies:\n${myHobbies}`);
+}
+
+console.warn(
+  "\nThe above data was logged from an if statement" +
+  " and the let keyword was used\nto declare myHobbies[]\n"
+);
+
+console.log(
+  "\nNOW try to log both myName and myHobbies\n" +
+  "from outside of the if statement...\n"
+  );
+
+try {
+  console.log(`myName: ${myName}\nmyHobbies[]:\n${myHobbies}\n`);
+} catch (error) {
+  console.warn("\n", error);
+}
+
+console.warn(
+  "\nNOTE: Now local scope is respected.\n" +
+  "This kind of scope is called Block Scope.\n"
+  );
