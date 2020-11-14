@@ -46,7 +46,8 @@ const getComputerChoice = function() {
   }
 };
 
-const getWinner = function(compChoice, playerChoice) {
+// Converted to Arrow Function
+const getWinner = (compChoice, playerChoice) => {
   if (compChoice === playerChoice) {
     return RESULT_DRAW;
   } else if (
