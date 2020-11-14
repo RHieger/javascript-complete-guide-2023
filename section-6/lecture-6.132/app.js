@@ -1,9 +1,19 @@
+/**
+ * 
+ *  OFFICIAL RULES OF ROCK PAPER SCISSORS:
+ *  https://www.wrpsa.com/the-official-rules-of-rock-paper-scissors/
+ * 
+ */
+
 const startGameBtn = document.getElementById('start-game-btn');
 
 const ROCK = "ROCK";
 const PAPER = "PAPER";
 const SCISSORS = "SCISSORS";
 const DEFAULT_USER_CHOICE = ROCK;
+const RESULT_DRAW = "It's a draw!";
+const RESULT_PLAYER_WINS = "You won!";
+const RESULT_COMPUTER_WINS = "Computer won!";
 
 let gameIsRunning = false;
 
@@ -36,13 +46,38 @@ const getComputerChoice = function() {
   }
 };
 
+const getWinner = function(compChoice, playerChoice) {
+  if (compChoice === playerChoice) {
+    return RESULT_DRAW;
+  } else if (
+    compChoice === ROCK && playerChoice === PAPER ||
+    compChoice === PAPER && playerChoice === SCISSORS ||
+    compChoice === SCISSORS && playerChoice === ROCK
+  ) {
+    return RESULT_PLAYER_WINS;
+  } else {
+    return RESULT_COMPUTER_WINS;
+  }
+};
+
+// This function was not in instructor's code. It enables
+// starting a new game without reloading the page, as
+// it resets the gamIsRunning boolean.
+const gameReset = function() {
+  gameIsRunning = false;
+};
+
 startGameBtn.addEventListener('click', function() {
   if (gameIsRunning) {
     return;
   }
+  //console.log(`Player Selection: ${ selection }\n`);
   gameIsRunning = true;
   console.log("\nGame is starting...\n");
-  const playerSelection = getPlayerChoice();
+  const playerChoice = getPlayerChoice();
   const computerChoice = getComputerChoice();
-  console.log(`Player Selection: ${ playerSelection }\n`);
+  const winner = getWinner(computerChoice, playerChoice);
+  console.log(winner, "\n");
+  // As above, this function did not exist in instructor code.
+  gameReset();
 });
