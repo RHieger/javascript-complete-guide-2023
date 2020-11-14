@@ -47,19 +47,26 @@ const getComputerChoice = function() {
 };
 
 // Converted to Arrow Function
-const getWinner = (compChoice, playerChoice) => {
-  if (compChoice === playerChoice) {
-    return RESULT_DRAW;
-  } else if (
-    compChoice === ROCK && playerChoice === PAPER ||
-    compChoice === PAPER && playerChoice === SCISSORS ||
-    compChoice === SCISSORS && playerChoice === ROCK
-  ) {
-    return RESULT_PLAYER_WINS;
-  } else {
-    return RESULT_COMPUTER_WINS;
-  }
-};
+const getWinner = (compChoice, playerChoice) => 
+  // if-if else-else block refactored as ternary statement
+  compChoice === playerChoice
+    ? RESULT_DRAW 
+    : compChoice === ROCK && playerChoice === PAPER
+    || compChoice === PAPER && playerChoice === SCISSORS
+    || compChoice === SCISSORS && playerChoice === ROCK
+    ? RESULT_PLAYER_WINS : RESULT_COMPUTER_WINS;
+  // if (compChoice === playerChoice) {
+  //   return RESULT_DRAW;
+  // } else if (
+  //   compChoice === ROCK && playerChoice === PAPER ||
+  //   compChoice === PAPER && playerChoice === SCISSORS ||
+  //   compChoice === SCISSORS && playerChoice === ROCK
+  // ) {
+  //   return RESULT_PLAYER_WINS;
+  // } else {
+  //   return RESULT_COMPUTER_WINS;
+//   // }
+// };
 
 // This function was not in instructor's code. It enables
 // starting a new game without reloading the page, as
