@@ -28,7 +28,8 @@ const getPlayerChoice = () => {
     alert(
       `Invalid Choice! We chose ${ DEFAULT_USER_CHOICE } for you!`
       );
-      return DEFAULT_USER_CHOICE;
+     //return DEFAULT_USER_CHOICE;
+     return;
   }
   return selection;
 };
@@ -46,7 +47,7 @@ const getComputerChoice = () => {
 };
 
 // Converted to Arrow Function
-const getWinner = (compChoice, playerChoice) => 
+const getWinner = (compChoice, playerChoice = DEFAULT_USER_CHOICE) => 
   // if-else if-else block refactored as ternary statement
   compChoice === playerChoice
     ? RESULT_DRAW 
@@ -68,9 +69,14 @@ startGameBtn.addEventListener('click', () => {
   console.log("\nGame is starting...\n");
   const playerChoice = getPlayerChoice();
   const computerChoice = getComputerChoice();
-  const winner = getWinner(computerChoice, playerChoice);
-  let message = `You picked ${playerChoice}\nThe computer picked ${computerChoice}\n`;
-  if (winner === RESULT_DRAW) {
+  let winner;
+   if (playerChoice) {
+    winner = getWinner(computerChoice, playerChoice);
+  } else {
+    winner = getWinner(computerChoice);
+  }
+  let message = `You picked ${playerChoice || DEFAULT_USER_CHOICE}\nThe computer picked ${computerChoice}\n`;
+ if (winner === RESULT_DRAW) {
     message += "You have a draw!";
   } else if (winner === RESULT_PLAYER_WINS) {
     message += "You won!";
