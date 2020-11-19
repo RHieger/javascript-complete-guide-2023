@@ -1,7 +1,10 @@
 const sumUp = (...numbers) => {
+  const validateNumber= (number) => {
+    return isNaN(number) ? 0 : number;
+  };
   let sum = 0;
   for (const number of numbers) {
-    sum += number;
+    sum += validateNumber(number);
   }
   return sum;
 };
