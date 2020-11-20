@@ -20,7 +20,7 @@ const getDifference = (...numbers) => {
 console.log(
   "SUM OF: [5, 7, 10, -27, 14, 36, -2, 22, 96, -30] =>\n"
   );
-  console.log(`${  sumUp(5, 7, 10, -27, 14, 36, -2, 22, 96, -30)}\n`);
+  console.log(`${  sumUp(5, 7, 10, -27, 'my text',14, 36, -2, 22, 96, -30)}\n`);
 
   console.log(
     "\nDIFFERENCE OF: [5, -7, 36, -22, 34, 78, -102, 22, -50] =>\n"
