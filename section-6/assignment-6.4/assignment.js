@@ -23,12 +23,17 @@ const sayHello3 = () =>  {
   console.log("Hello, Soda!");
 };
 
+const sayHello4 = (greeting) => {
+  return greeting;
+}
+
+
 //  EVENT LISTENERS
 task1.addEventListener("click", () => {
   console.clear();
   console.log('\nsayHello() Function:\n');
   console.log("\n", sayHello.toString(), "\n\n");
-  sayHello("Bobby");  
+  sayHello("Bobby"); 
 });
 
 task2.addEventListener("click",  () => {
@@ -36,10 +41,10 @@ task2.addEventListener("click",  () => {
   console.log("\nsayHello2() Function:\n");
   console.log("\n", sayHello2.toString(), "\n\n");
   sayHello2("Hello there", "Bobby");
-  setTimeout( () => {
-    console.clear();
-    console.log("\nsayHello3() Function:\n");
-    console.log("\n", sayHello3.toString(), "\n\n");
-    sayHello3();
-  }, 3000);
+  console.log("\nsayHello3() Function:\n");
+  console.log("\n", sayHello3.toString(), "\n\n");
+  sayHello3();
+  console.log("\nsayHello4() Function:\n");
+  console.log("\n", sayHello4.toString(), "\n\n");
+  console.log(sayHello4("Good morrow to you both.\n"));
 });
