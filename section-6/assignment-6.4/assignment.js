@@ -19,7 +19,9 @@ const sayHello2 = (greeting, name) => {
   console.log(`${greeting}, ${name}!\n`);
 };
 
-
+const sayHello3 = () =>  {
+  console.log("Hello, Soda!");
+};
 
 //  EVENT LISTENERS
 task1.addEventListener("click", () => {
@@ -34,4 +36,10 @@ task2.addEventListener("click",  () => {
   console.log("\nsayHello2() Function:\n");
   console.log("\n", sayHello2.toString(), "\n\n");
   sayHello2("Hello there", "Bobby");
+  setTimeout( () => {
+    console.clear();
+    console.log("\nsayHello3() Function:\n");
+    console.log("\n", sayHello3.toString(), "\n\n");
+    sayHello3();
+  }, 3000);
 });
