@@ -65,6 +65,13 @@ function divide() {
   writeToLog('DIVIDE', initialResult, enteredNumber, currentResult);
 }
 
+function calculate(operation) {
+  if (operation === "ADD") {
+    currentResult += enteredNumber;
+    createAndWriteOutput('+', initialResult, enteredNumber);
+    writeToLog('ADD', initialResult, enteredNumber, currentResult);
+  } 
+}
 
 addBtn.addEventListener('click', add);
 subtractBtn.addEventListener('click', subtract);
