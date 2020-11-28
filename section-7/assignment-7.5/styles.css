@@ -27,6 +27,7 @@ li {
   margin: 1rem 1rem 1rem 3.5rem;
   border: 1px solid #521751;
   position: relative;
+  cursor: pointer;  /* My addition for UX improvement */
 }
 
 li:before {
