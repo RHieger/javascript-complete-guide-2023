@@ -79,6 +79,10 @@ function calculate(operation) {
     currentResult *= enteredNumber;
     createAndWriteOutput('*', initialResult, enteredNumber);
     writeToLog('MULTIPLY', initialResult, enteredNumber, currentResult);
+  } else {
+    currentResult /= enteredNumber;
+    createAndWriteOutput('/', initialResult, enteredNumber);
+    writeToLog('DIVIDE', initialResult, enteredNumber, currentResult);
   }
 }
 
