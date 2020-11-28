@@ -74,6 +74,11 @@ function calculate(operation) {
     currentResult -= enteredNumber;
     createAndWriteOutput('-', initialResult, enteredNumber);
     writeToLog('SUBTRACT', initialResult, enteredNumber, currentResult);
+  } else if (operation === "MULTIPLY") {
+    const initialResult = currentResult;  // Value prior to calculation
+    currentResult *= enteredNumber;
+    createAndWriteOutput('*', initialResult, enteredNumber);
+    writeToLog('MULTIPLY', initialResult, enteredNumber, currentResult);
   }
 }
 
