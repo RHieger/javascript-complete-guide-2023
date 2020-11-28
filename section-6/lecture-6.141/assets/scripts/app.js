@@ -70,7 +70,11 @@ function calculate(operation) {
     currentResult += enteredNumber;
     createAndWriteOutput('+', initialResult, enteredNumber);
     writeToLog('ADD', initialResult, enteredNumber, currentResult);
-  } 
+  }  else if (operation === "SUBTRACT") {
+    currentResult -= enteredNumber;
+    createAndWriteOutput('-', initialResult, enteredNumber);
+    writeToLog('SUBTRACT', initialResult, enteredNumber, currentResult);
+  }
 }
 
 addBtn.addEventListener('click', add);
