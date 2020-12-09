@@ -10,3 +10,9 @@ const liFirst = document.querySelector('li');
 
 console.log("First Instance of <li> element =>\n");
 console.log(liFirst, "\n");
+
+// Task #2 Select parent node of first instance of <li>
+const firstLiParent = liFirst.parentNode;
+
+console.log("Parent Node to first instance of <li> =>\n");
+console.log(firstLiParent, "\n");
