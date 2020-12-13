@@ -16,3 +16,7 @@ const firstLiParent = liFirst.parentNode;
 
 console.log("Parent Node to first instance of <li> =>\n");
 console.log(firstLiParent, "\n");
+
+// Task #3: Select nearest ancestor node
+console.log("Select nearest ancestor to liFirst = <body> =>\n")
+console.log(liFirst.closest("body"));
