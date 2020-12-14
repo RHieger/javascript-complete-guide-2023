@@ -5,18 +5,6 @@ const uList = document.querySelector("ul");
 mainHead.style.color = "#ffffff";  // white
 mainHead.style.backgroundColor = "#000000";  // black
 
-// Task #1: Capture first instance of <li>
+// Capture first instance of <li>
 const liFirst = document.querySelector('li');
 
-console.log("First Instance of <li> element =>\n");
-console.log(liFirst, "\n");
-
-// Task #2 Select parent node of first instance of <li>
-const firstLiParent = liFirst.parentNode;
-
-console.log("Parent Node to first instance of <li> =>\n");
-console.log(firstLiParent, "\n");
-
-// Task #3: Select nearest ancestor node
-console.log("Select nearest ancestor to liFirst = <body> =>\n")
-console.log(liFirst.closest("body"));
