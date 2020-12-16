@@ -20,6 +20,8 @@ console.log(ulFromChild, "\n");
 
 // TASK #2: Select sibling element of <ul> (<heading>)
 console.log("Sibling to <header>: <ul>\n");
-console.log(ulFromChild, "\n");
+console.log(uList, "\n");
+
+// TASK #3: Select previous element sibling to <ul>
 console.log("Select previous element sibling of <ul> =>\n");
-console.log(ulFromChild.previousElemenSibling, "\n")
+console.log(uListPrevSibling, "\n");
