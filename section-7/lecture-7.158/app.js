@@ -1,6 +1,8 @@
 const mainHead = document.getElementById("main-title");
 const uList = document.querySelector("ul");
 const uListPrevSibling = uList.previousElementSibling;
+const uListNextSibling = uList.nextElementSibling;
+
 
 // Change Style on mainHead
 mainHead.style.color = "#ffffff";  // white
@@ -25,3 +27,7 @@ console.log(uList, "\n");
 // TASK #3: Select previous element sibling to <ul>
 console.log("Select previous element sibling of <ul> =>\n");
 console.log(uListPrevSibling, "\n");
+
+// TASK #4: Select next sibling element of <ul>
+console.log("Select next element sibling of <ul> =>\n");
+console.log(uListNextSibling, "\n")
