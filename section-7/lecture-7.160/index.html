@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Styling DOM Elements</title>
+    <style>
+      .red-bg {
+        background-color: red;
+        color: white;
+      }
+
+      .visible {
+        display: block;
+      }
+
+      .invisible {
+        display: none;
+      }
+    </style>
     <script src="app.js" defer></script>
   </head>
   <body>
     <header>
       <h1 id="main-title">Styling DOM Elements</h1>
     </header>
-    <section>
+    <section class="red-bg">
       <ul>
         <li class="list-item">Item 1</li>
         <li class="list-item">Item 2</li>
         <li class="list-item">Item 3</li>
       </ul>
-    </section>
+      </section>
     <input type="text" placeholder="Enter some text" />
   </body>
 </html>
