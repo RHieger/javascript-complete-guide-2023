@@ -11,6 +11,11 @@
         color: white;
       }
 
+      .blue-bg {
+        background-color: blue;
+        color: white;
+      }
+
       .white-fg {
         color: white;
       }
@@ -27,18 +32,17 @@
         cursor: pointer;
       }
 
-      button#reset {
+      button#reset,
+      button#redBg,
+      button#toggle {
         display: inline-table;
         cursor: pointer;
         margin-bottom: 15px;
         margin-right: 25px;
       }
 
-      button#redBg {
-        display: inline-table;
-        cursor: pointer;
-        margin-bottom: 15px;
-        margin-right: 25px;
+      button#toggle {
+        margin-right: 0;
       }
 
       input {
@@ -52,7 +56,7 @@
     <header>
       <h1 id="main-title">Styling DOM Elements</h1>
     </header>
-    <section class="red-bg attribChange">
+    <section class="red-bg attribChange visible">
       <ul>
         <li class="list-item">Item 1</li>
         <li class="list-item">Item 2</li>
@@ -63,6 +67,7 @@
       <p>Click buttons below from left to right in succession</p>
       <button type="reset" id="reset">Reset Background</button>
       <button type="button" id="redBg">Change Background Color</button>
+      <button type="button" id="toggle">Toggle List display</button>
     <input type="text" placeholder="Enter some text" />
   </body>
 </html>
