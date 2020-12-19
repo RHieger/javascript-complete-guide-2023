@@ -11,12 +11,26 @@
         color: white;
       }
 
+      .white-fg {
+        color: white;
+      }
+
       .visible {
         display: block;
       }
 
       .invisible {
         display: none;
+      }
+
+      .attribChange {
+        cursor: pointer;
+      }
+
+      button {
+        display: block;
+        cursor: pointer;
+        margin-bottom: 15px;
       }
     </style>
     <script src="app.js" defer></script>
@@ -25,13 +39,15 @@
     <header>
       <h1 id="main-title">Styling DOM Elements</h1>
     </header>
-    <section class="red-bg">
+    <section class="red-bg attribChange">
       <ul>
         <li class="list-item">Item 1</li>
         <li class="list-item">Item 2</li>
         <li class="list-item">Item 3</li>
       </ul>
       </section>
+      <p>Click above to remove background</p>
+      <button type="reset">Reset Background</button>
     <input type="text" placeholder="Enter some text" />
   </body>
 </html>
