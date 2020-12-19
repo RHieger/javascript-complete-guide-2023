@@ -27,11 +27,24 @@
         cursor: pointer;
       }
 
-      button {
-        display: block;
+      button#reset {
+        display: inline-table;
         cursor: pointer;
         margin-bottom: 15px;
+        margin-right: 25px;
       }
+
+      button#redBg {
+        display: inline-table;
+        cursor: pointer;
+        margin-bottom: 15px;
+        margin-right: 25px;
+      }
+
+      input {
+        display: block;
+      }
+
     </style>
     <script src="app.js" defer></script>
   </head>
@@ -47,7 +60,9 @@
       </ul>
       </section>
       <p>Click above to remove background</p>
-      <button type="reset">Reset Background</button>
+      <p>Click buttons below from left to right in succession</p>
+      <button type="reset" id="reset">Reset Background</button>
+      <button type="button" id="redBg">Change Background Color</button>
     <input type="text" placeholder="Enter some text" />
   </body>
 </html>

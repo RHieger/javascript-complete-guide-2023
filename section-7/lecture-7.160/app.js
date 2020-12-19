@@ -1,5 +1,6 @@
 const section = document.querySelector('section');
-const btnReset = document.querySelector('button');
+const btnReset = document.getElementById('reset');
+const btnChange = document.getElementById('redBg');
 
 // TASK #1: Override .red-bg class to make section
 // background-color blue
@@ -25,4 +26,12 @@ section.addEventListener('click', () => {
 btnReset.addEventListener('click', () => {
   section.style.backgroundColor = 'blue';
   section.classList.add('white-fg');
+});
+
+// TASK #4: Add event listener tied to button using
+// classList property of <section> to change background
+// to red.
+
+btnChange.addEventListener('click', () => {
+  section.style.backgroundColor = '';
 });
