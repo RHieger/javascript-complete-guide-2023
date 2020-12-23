@@ -5,5 +5,6 @@ const addElement = document.getElementById('add');
 addElement.addEventListener('click', () => {
   const newItem = document.createElement('li');
   newItem.textContent = 'New Item';
-  uList.appendChild(newItem);
+  // TASK #1: Prepend newItem:
+  uList.prepend(newItem);
 });
