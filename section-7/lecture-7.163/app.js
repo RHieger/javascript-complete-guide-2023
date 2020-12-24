@@ -18,3 +18,9 @@ addBeforeLast.addEventListener('click', () => {
   // before() method:
   uList.lastElementChild.before(newItem);
 });
+
+replaceFirst.addEventListener('click', () => {
+  // TASK #3 Replace first <ul> list item with
+  // newItem DOM element.
+  uList.firstElementChild.replaceWith(newItem);
+});
