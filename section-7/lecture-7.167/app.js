@@ -5,6 +5,8 @@ const addBeforeLast = document.getElementById('beforeLast');
 const replaceFirst = document.getElementById('replaceFirstItem');
 const addLi4 = document.getElementById('addItem4');
 const cloneLastLi = document.getElementById('cloneItem4');
+const listRemove = document.getElementById('removeList');
+
 const newItem = document.createElement('li');
 newItem.textContent = 'New Item';
 
@@ -40,4 +42,9 @@ cloneLastLi.addEventListener('click', () => {
   // the end of undordered list:
   const cloneNewListItem = newListItem.cloneNode(true);
   uList.append(newListItem, cloneNewListItem);
+});
+
+listRemove.addEventListener('click', () => {
+  // TASK #6 Remove Unordered List from DOM:
+  uList.remove();
 });
