@@ -9,7 +9,6 @@ const listRemove = document.getElementById('removeList');
 
 const newItem = document.createElement('li');
 newItem.textContent = 'New Item';
-
 const newListItem = document.createElement('li');
 newListItem.textContent = 'Item 4';
 
@@ -46,5 +45,13 @@ cloneLastLi.addEventListener('click', () => {
 
 listRemove.addEventListener('click', () => {
   // TASK #6 Remove Unordered List from DOM:
-  uList.remove();
+  // Method #1: remove()
+  //uList.remove();
+
+  // NOTE: The remove() method is not compatible with
+  // older browsers such as Internet Explorer 9. It is
+  // therefore safer to use Method #2 below:
+
+  // Method #2: removeChild()
+  uList.parentElement.removeChild(uList);
 });
