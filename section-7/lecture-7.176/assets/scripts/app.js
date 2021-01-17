@@ -7,6 +7,10 @@ const userInputs = addMovieModal.querySelectorAll('input');
 
 const movies = [];
 
+const updateUI = () {
+
+};
+
 const toggleBackDrop = () => {
   backdrop.classList.toggle('visible');
 };
