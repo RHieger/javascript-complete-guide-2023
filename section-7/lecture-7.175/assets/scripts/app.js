@@ -24,6 +24,7 @@ const clearMovieInput = () => {
 
 const cancelAddMovieHandler = () => {
   toggleMovieModal();
+  clearMovieInput();
 };
 
 const addMovieHandler = () => {
@@ -63,7 +64,7 @@ const addMovieHandler = () => {
     movies[0].rating, '\n'
   );
   toggleMovieModal();
-
+  clearMovieInput();
 };
 
 const backdropClickHandler = () => {
