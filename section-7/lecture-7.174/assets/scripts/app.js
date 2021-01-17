@@ -24,3 +24,4 @@ const backdropClickHandler = () => {
 startAddMovieButton.addEventListener('click', toggleMovieModal);
 backdrop.addEventListener('click', toggleMovieModal);
 cancelAddMovieButton.addEventListener('click', cancelAddMovie);
+confirmAddMovieButton.addEventListener('click', addMovieHandler);
