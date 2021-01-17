@@ -17,6 +17,10 @@ const cancelAddMovie = () => {
   toggleMovieModal();
 };
 
+const addMovieHandler = () => {
+
+};
+
 const backdropClickHandler = () => {
   toggleMovieModal();
 };
