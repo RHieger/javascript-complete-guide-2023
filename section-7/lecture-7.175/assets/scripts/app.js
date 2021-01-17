@@ -16,6 +16,12 @@ const toggleMovieModal = () => {
   toggleBackDrop();
 };
 
+const clearMovieInput = () => {
+  for (const userInput of userInputs) {
+    userInput.value = '';
+  }
+};
+
 const cancelAddMovieHandler = () => {
   toggleMovieModal();
 };
