@@ -35,7 +35,29 @@ const addMovieHandler = () => {
     alert(
       'Please enter valid values and rating between 1 and 5.'
       );
+      return;
   }
+
+  const newMovie = {
+    title: titleValue,
+    image: imageUrlValue,
+    rating: ratingValue
+  };
+
+  movies.push(newMovie);
+  // NOTE: the console log below is more
+  // elaborate than the one provided by
+  // the author, offering a formatted
+  // message with title, image and rating
+  // broken into 3 lines.
+  console.log(
+    '\nMovie Entered:\n' +
+    movies[0].title, '\n' +
+    movies[0].image, '\n' +
+    movies[0].rating, '\n'
+  );
+  toggleMovieModal();
+
 };
 
 const backdropClickHandler = () => {
