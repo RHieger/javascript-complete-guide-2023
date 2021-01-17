@@ -3,6 +3,7 @@ const startAddMovieButton = document.querySelector('header button');
 const backdrop = document.getElementById('backdrop');
 const cancelAddMovieButton = addMovieModal.querySelector('.btn--passive');
 const confirmAddMovieButton = cancelAddMovieButton.nextElementSibling;
+const userInputs = addMovieModal.querySelectorAll('input');
 
 const toggleBackDrop = () => {
   backdrop.classList.toggle('visible');
