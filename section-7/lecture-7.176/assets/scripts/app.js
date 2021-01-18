@@ -74,6 +74,7 @@ const addMovieHandler = () => {
   );
   toggleMovieModal();
   clearMovieInput();
+  updateUI();
 };
 
 const backdropClickHandler = () => {
