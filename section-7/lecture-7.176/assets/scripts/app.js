@@ -16,6 +16,10 @@ const updateUI = () => {
   }
 };
 
+const renderNewMovieElement = () => {
+
+};
+
 const toggleBackDrop = () => {
   backdrop.classList.toggle('visible');
 };
