@@ -5,6 +5,7 @@ const cancelAddMovieButton = addMovieModal.querySelector('.btn--passive');
 const confirmAddMovieButton = cancelAddMovieButton.nextElementSibling;
 const userInputs = addMovieModal.querySelectorAll('input');
 const entryTextSection = document.getElementById('entry-text');
+const deleteMovieModal = document.getElementById('delete-modal');
 
 const movies = [];
 
@@ -32,8 +33,11 @@ const deleteMovie = (movieId) => {
   // listRoot.removeChild(listRoot.children[movieIndex]);
 };
 
+const cancelMovieDeletion = () => {
+
+};
+
 const deleteMovieHandler = (movieId) => {
-  const deleteMovieModal = document.getElementById('delete-modal');
   deleteMovieModal.classList.add('visible');
   toggleBackDrop();
   deleteMovie(movieId);
