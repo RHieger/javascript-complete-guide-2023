@@ -79,7 +79,7 @@ const clearMovieInput = () => {
 };
 
 const cancelAddMovieHandler = () => {
-  toggleMovieModal();
+  showMovieModal();
   clearMovieInput();
 };
 
