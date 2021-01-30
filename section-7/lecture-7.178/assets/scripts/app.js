@@ -33,14 +33,15 @@ const deleteMovie = (movieId) => {
   // listRoot.removeChild(listRoot.children[movieIndex]);
 };
 
-const cancelMovieDeletion = () => {
-
+const closeMovieDeletionModal = () => {
+  toggleBackDrop();
+  deleteMovieModal.classList.remove('visible');
 };
 
 const deleteMovieHandler = (movieId) => {
   deleteMovieModal.classList.add('visible');
   toggleBackDrop();
-  deleteMovie(movieId);
+  //deleteMovie(movieId);
 };
 
 const renderNewMovieElement = (id, title, imageUrl, rating) => {
@@ -117,7 +118,7 @@ const addMovieHandler = () => {
   // elaborate than the one provided by
   // the author, offering a formatted
   // message with title, image and rating
-  // broken into 3 lines.
+  // broken into 4 lines.
   console.log(
     '\nMovie Entered:\n' +
     'ID: ' + movies[0].id, '\n' +
@@ -126,6 +127,7 @@ const addMovieHandler = () => {
     'Rating: ' + movies[0].rating, '\n'
   );
   closeMovieModal();
+  toggleBackDrop();
   clearMovieInput();
   renderNewMovieElement(
     newMovie.id,
@@ -138,9 +140,10 @@ const addMovieHandler = () => {
 
 const backdropClickHandler = () => {
   closeMovieModal();
+  closeMovieDeletionModal();
 };
 
 startAddMovieButton.addEventListener('click', showMovieModal);
-backdrop.addEventListener('click', toggleMovieModal);
+backdrop.addEventListener('click', backdropClickHandler);
 cancelAddMovieButton.addEventListener('click', cancelAddMovieHandler);
 confirmAddMovieButton.addEventListener('click', addMovieHandler);
