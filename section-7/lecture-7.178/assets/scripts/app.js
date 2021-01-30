@@ -16,6 +16,10 @@ const updateUI = () => {
   }
 };
 
+const deleteMovie = (movieId) => {
+
+};
+
 const deleteMovieHandler = (movieId) => {
   let movieIndex = 0;
   for (const movie of movies) {
