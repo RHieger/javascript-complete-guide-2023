@@ -17,10 +17,6 @@ const updateUI = () => {
 };
 
 const deleteMovie = (movieId) => {
-
-};
-
-const deleteMovieHandler = (movieId) => {
   let movieIndex = 0;
   for (const movie of movies) {
     if (movie.id === movieId) {
@@ -34,6 +30,10 @@ const deleteMovieHandler = (movieId) => {
   listRoot.children[movieIndex].remove();
   // ES5 Method (Backward compatibility for older browsers)
   // listRoot.removeChild(listRoot.children[movieIndex]);
+};
+
+const deleteMovieHandler = (movieId) => {
+  
 };
 
 const renderNewMovieElement = (id, title, imageUrl, rating) => {
