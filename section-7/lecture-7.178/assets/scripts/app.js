@@ -33,7 +33,10 @@ const deleteMovie = (movieId) => {
 };
 
 const deleteMovieHandler = (movieId) => {
-  
+  const deleteMovieModal = document.getElementById('delete-modal');
+  deleteMovieModal.classList.add('visible');
+  toggleBackDrop();
+  deleteMovie(movieId);
 };
 
 const renderNewMovieElement = (id, title, imageUrl, rating) => {
