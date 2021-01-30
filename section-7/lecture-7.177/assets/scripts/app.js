@@ -16,11 +16,23 @@ const updateUI = () => {
   }
 };
 
-const deleteMovieHandler = () => {
-
+const deleteMovieHandler = (movieId) => {
+  let movieIndex = 0;
+  for (const movie of movies) {
+    if (movie.id === movieId) {
+      break;
+    }
+    movieIndex++;
+  }
+  movies.splice(movieIndex, 1);
+  const listRoot = document.getElementById('movie-list');
+  // ES6 Method:
+  listRoot.children[movieIndex].remove();
+  // ES5 Method (Backward compatibility for older browsers)
+  // listRoot.removeChild(listRoot.children[movieIndex]);
 };
 
-const renderNewMovieElement = (title, imageUrl, rating) => {
+const renderNewMovieElement = (id, title, imageUrl, rating) => {
   const newMovieElement = document.createElement('li');
   newMovieElement.className = 'movie-element';
   newMovieElement.innerHTML = `
@@ -32,7 +44,10 @@ const renderNewMovieElement = (title, imageUrl, rating) => {
       <p>${rating}/5 stars</p>
     </div>
   `
-  newMovieElement.addEventListener('click', deleteMovieHandler);
+  newMovieElement.addEventListener(
+    'click',
+    deleteMovieHandler.bind(null, id)
+  );
   const listRoot = document.getElementById('movie-list');
   listRoot.append(newMovieElement);
 };
@@ -76,6 +91,7 @@ const addMovieHandler = () => {
   }
 
   const newMovie = {
+    id: Math.random().toString() * 1_000,
     title: titleValue,
     image: imageUrlValue,
     rating: ratingValue
@@ -89,6 +105,7 @@ const addMovieHandler = () => {
   // broken into 3 lines.
   console.log(
     '\nMovie Entered:\n' +
+    movies[0].id, '\n' +
     movies[0].title, '\n' +
     movies[0].image, '\n' +
     movies[0].rating, '\n'
@@ -96,6 +113,7 @@ const addMovieHandler = () => {
   toggleMovieModal();
   clearMovieInput();
   renderNewMovieElement(
+    newMovie.id,
     newMovie.title,
     newMovie.image,
     newMovie.rating
