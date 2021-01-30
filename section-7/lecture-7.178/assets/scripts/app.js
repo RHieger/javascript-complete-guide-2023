@@ -67,8 +67,8 @@ const closeMovieModal = () => {
   addMovieModal.classList.remove('visible');
 };
 
-const toggleMovieModal = () => {
-  addMovieModal.classList.toggle('visible');
+const showMovieModal = () => {
+  addMovieModal.classList.add('visible');
   toggleBackDrop();
 };
 
