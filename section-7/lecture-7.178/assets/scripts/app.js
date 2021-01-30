@@ -79,7 +79,7 @@ const clearMovieInput = () => {
 };
 
 const cancelAddMovieHandler = () => {
-  showMovieModal();
+  closeMovieModal();
   clearMovieInput();
 };
 
@@ -121,7 +121,7 @@ const addMovieHandler = () => {
     'Cover Art URL:\n' + movies[0].image, '\n' +
     'Rating: ' + movies[0].rating, '\n'
   );
-  toggleMovieModal();
+  closeMovieModal();
   clearMovieInput();
   renderNewMovieElement(
     newMovie.id,
@@ -133,10 +133,10 @@ const addMovieHandler = () => {
 };
 
 const backdropClickHandler = () => {
-  toggleMovieModal();
+  closeMovieModal();
 };
 
-startAddMovieButton.addEventListener('click', toggleMovieModal);
+startAddMovieButton.addEventListener('click', showMovieModal);
 backdrop.addEventListener('click', toggleMovieModal);
 cancelAddMovieButton.addEventListener('click', cancelAddMovieHandler);
 confirmAddMovieButton.addEventListener('click', addMovieHandler);
