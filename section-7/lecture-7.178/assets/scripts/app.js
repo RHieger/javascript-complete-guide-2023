@@ -63,6 +63,10 @@ const toggleBackDrop = () => {
   backdrop.classList.toggle('visible');
 };
 
+const closeMovieModal = () => {
+
+};
+
 const toggleMovieModal = () => {
   addMovieModal.classList.toggle('visible');
   toggleBackDrop();
