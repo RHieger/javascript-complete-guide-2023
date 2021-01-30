@@ -91,7 +91,7 @@ const addMovieHandler = () => {
   }
 
   const newMovie = {
-    id: Math.random().toString() * 1_000,
+    id: Math.round(Math.random().toString() * 1_000),
     title: titleValue,
     image: imageUrlValue,
     rating: ratingValue
@@ -105,10 +105,10 @@ const addMovieHandler = () => {
   // broken into 3 lines.
   console.log(
     '\nMovie Entered:\n' +
-    movies[0].id, '\n' +
-    movies[0].title, '\n' +
-    movies[0].image, '\n' +
-    movies[0].rating, '\n'
+    'ID: ' + movies[0].id, '\n' +
+    'Title: ' + movies[0].title, '\n' +
+    'Cover Art URL:\n' + movies[0].image, '\n' +
+    'Rating: ' + movies[0].rating, '\n'
   );
   toggleMovieModal();
   clearMovieInput();
