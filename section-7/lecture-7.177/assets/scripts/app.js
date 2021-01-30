@@ -16,6 +16,10 @@ const updateUI = () => {
   }
 };
 
+const deleteMovieHandler = () => {
+
+};
+
 const renderNewMovieElement = (title, imageUrl, rating) => {
   const newMovieElement = document.createElement('li');
   newMovieElement.className = 'movie-element';
@@ -28,6 +32,7 @@ const renderNewMovieElement = (title, imageUrl, rating) => {
       <p>${rating}/5 stars</p>
     </div>
   `
+  newMovieElement.addEventListener('click', deleteMovieHandler);
   const listRoot = document.getElementById('movie-list');
   listRoot.append(newMovieElement);
 };
