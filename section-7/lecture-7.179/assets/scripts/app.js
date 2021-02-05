@@ -41,6 +41,7 @@ const closeMovieDeletionModal = () => {
 const deleteMovieHandler = (movieId) => {
   deleteMovieModal.classList.add('visible');
   toggleBackDrop();
+  const cancelDeletionButton = deleteMovieModal.querySelector('.btn--passive');
   //deleteMovie(movieId);
 };
 
