@@ -91,6 +91,7 @@ const clearMovieInput = () => {
 
 const cancelAddMovieHandler = () => {
   closeMovieModal();
+  toggleBackDrop();
   clearMovieInput();
 };
 
