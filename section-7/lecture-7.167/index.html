@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Add Elements Using prepend()</title>
+    <style>
+      .red-bg {
+        background-color: red;
+        color: white;
+      }
+
+      .visible {
+        display: block;
+      }
+
+      .invisible {
+        display: none;
+      }
+
+      button#add,
+      button#beforeLast,
+      button#replaceFirstItem,
+      button#addItem4,
+      button#cloneItem4,
+      button#removeList {
+        margin-top: 12px;
+        margin-bottom: 25px;
+        cursor: pointer;
+        padding: 6px 12px;
+        border-style: outset;
+        border-radius: 10px;
+        font-family: 'Gil Sans', 'Tahoma', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: rgb(0, 128, 0); /* Green */
+        color: rgb(255, 250, 250);  /* Snow */
+      }
+
+      button#add,
+      button#beforeLast,
+      button#replaceFirstItem,
+      button#addItem4,
+      button#cloneItem4 {
+        margin-right: 15px;
+      }
+
+      button#add {
+        margin-left: 35px;
+      }
+
+      button#add:hover,
+      button#beforeLast:hover,
+      button#replaceFirstItem:hover,
+      button#addItem4:hover,
+      button#cloneItem4:hover,
+      button#removeList:hover {
+        border-style: inset;
+        background-color: rgb(255, 250, 250); /* Snow */
+        color: rgb(0, 128, 0);  /* Green */
+        transition: all 0.75s;
+      }
+
+      button#add:active,
+      button#beforeLast:active,
+      button#replaceFirstItem:active,
+      button#addItem4:active,
+      button#cloneItem4:active,
+      button#removeList:active {
+        border-style: outset;
+        background-color: rgb(0, 128, 0); /* Green */
+        color: rgb(0, 128, 0);  /* Green */
+        transition: all 0.5s;
+      }
+
+    </style>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="main-title">Inserting DOM Elements</h1>
+    </header>
+    <section class="red-bg attribChange visible">
+      <ul>
+        <li class="list-item">Item 1</li>
+        <li class="list-item">Item 2</li>
+        <li class="list-item">Item 3</li>
+      </ul>
+      </section>
+      <button type="button" id="add">Add List Item</button>
+      <button type="button" id="beforeLast">Add Before Last List Item</button>
+      <button type="button" id="replaceFirstItem">Replace First Item</button>
+      <button type="button" id="addItem4">Add Item 4</button>
+      <button type="button" id="cloneItem4">Clone Item 4</button>
+      <button type="button" id="removeList">Remove List</button>
+  </body>
+</html>
