@@ -20,3 +20,18 @@
  *    "Assignment&mdash;Solved!"
  * 
  */
+
+// Task 1: My Solution
+
+// Oldest means of capturing first list item:
+const listItem = document.getElementById('task-1');
+
+// Newer methods achieving the same end:
+const listItemNew = document.querySelector('li');
+
+const list = document.querySelector('ol');
+const firstItem = list.querySelector('li:first-of-type');
+
+// Change styles of listItemNew according to instructions.
+firstItem.style.color = '#ffffff';
+firstItem.style.backgroundColor = '#000000';
