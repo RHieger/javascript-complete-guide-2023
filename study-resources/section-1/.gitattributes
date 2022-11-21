@@ -1,0 +1,7 @@
+lecture-01.07-host-environment.pdf filter=lfs diff=lfs merge=lfs -text
+lecture-01.08-course-content.pdf filter=lfs diff=lfs merge=lfs -text
+lecture-01.11-java-vs-js.pdf filter=lfs diff=lfs merge=lfs -text
+lecture-01.12-js-history.pdf filter=lfs diff=lfs merge=lfs -text
+lecture-01.02-what-is-javascript.pdf filter=lfs diff=lfs merge=lfs -text
+lecture-01.05-how-is-js-executed.pdf filter=lfs diff=lfs merge=lfs -text
+lecture-01.06-dynamic-vs-weakly-typed.pdf filter=lfs diff=lfs merge=lfs -text
