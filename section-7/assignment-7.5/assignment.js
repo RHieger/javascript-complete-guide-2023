@@ -17,7 +17,7 @@
  *    on the certain property you find in document.
  * 
  * 3. Select the <h1> element in index.html and change it's text to
- *    "Assignment&mdash;Solved!"
+ *    "Assignment—Solved!"
  * 
  */
 
@@ -42,8 +42,12 @@ firstItem.style.backgroundColor = '#000000';
 const documentTitle = document.querySelector('title');
 
 // Capture title element—method 2:
-
 // Thanks to Jost for answer in Q&A given to Tazeen
 const docPropertyTitle = document.getElementsByTagName('head')[0]
                                  .querySelector('title')
                                  .textContent ='Assignment—Solved!';
+
+// Task #3: My Solution
+
+const heading = document.querySelector('h1');
+heading.textContent = 'Assignment—Solved!';
