@@ -21,7 +21,7 @@
  * 
  */
 
-// Task 1: My Solution
+// Task #1: My Solution
 
 // Oldest means of capturing first list item:
 const listItem = document.getElementById('task-1');
@@ -35,3 +35,15 @@ const firstItem = list.querySelector('li:first-of-type');
 // Change styles of listItemNew according to instructions.
 firstItem.style.color = '#ffffff';
 firstItem.style.backgroundColor = '#000000';
+
+// Task #2: My Solution
+
+// Capture title element—method 1:
+const documentTitle = document.querySelector('title');
+
+// Capture title element—method 2:
+
+// Thanks to Jost for answer in Q&A given to Tazeen
+const docPropertyTitle = document.getElementsByTagName('head')[0]
+                                 .querySelector('title')
+                                 .textContent ='Assignment—Solved!';
