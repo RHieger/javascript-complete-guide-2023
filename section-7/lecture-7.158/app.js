@@ -15,7 +15,24 @@ h1.style.backgroundColor = '#000000';   // black
 // first one within the <ul> tags.
 const li = document.querySelector('li');
 
-// Capture previous node
-// NOTE: The previousNode() method returns node
-// regardless of its type, so because the previous
-// node to li is a text node, it is returned.
+// Capture parent node
+const ul = li.parentNode;
+
+// returns previous sibling node
+// NOTE: Because the previous sibling is a text node,
+// previousSibling returns a text node, not the header
+// that was intended. This requires previousElementSibling.
+const header = ul.previousSibling;
+
+// returns previous element sibling node
+const header2 = ul.previousElementSibling;
+
+// returns next sibling node
+// NOTE: Because the next sibling is a text node,
+// nextSibling returns a text node, not the ul
+// element that was intended. This requires the
+// nextElementSibling method.
+const ul1 = ul.nextSibling;
+
+// returns next element sibling node
+const ul2 = ul.nextElementSibling;
