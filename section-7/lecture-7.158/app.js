@@ -36,3 +36,16 @@ const ul1 = ul.nextSibling;
 
 // returns next element sibling node
 const ul2 = ul.nextElementSibling;
+
+console.log('DEMO: Selecting Sibling Elements:');
+console.log('--------------------------------\n\n');
+
+console.log('SELECT PREVIOUS SIBLING FOR <ul>:');
+console.log('--------------------------------\n\n');
+
+console.log('Returns text node:');
+console.log(header.nodeName);
+console.log('\n\n');
+
+console.log('Returns <header> element node:');
+console.log(header2);
