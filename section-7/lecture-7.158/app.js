@@ -1,3 +1,18 @@
+/**
+ * 
+ * Lecture 7.158: Selecting Sibling Elements
+ * 
+ * Robert Hieger
+ * 11/25/2022
+ * 
+ * OBJECTIVE: Capture previous sibling element and
+ * next sibling element. Demonstrate how nextSibling
+ * method might return a text node, and that
+ * using nextElementSibling method prevents this
+ * from happening.
+ * 
+ */
+
 // Show differences between parentNode, parentElementNode,
 // previousSiblingNode, previousElementSiblingNode,
 // nextSiblingNode and nextElementSiblingMode.
@@ -32,10 +47,10 @@ const header2 = ul.previousElementSibling;
 // nextSibling returns a text node, not the ul
 // element that was intended. This requires the
 // nextElementSibling method.
-const ul1 = ul.nextSibling;
+const input1 = ul.nextSibling;
 
 // returns next element sibling node
-const ul2 = ul.nextElementSibling;
+const input2 = ul.nextElementSibling;
 
 console.log('DEMO: Selecting Sibling Elements:');
 console.log('--------------------------------\n\n');
@@ -49,3 +64,14 @@ console.log('\n\n');
 
 console.log('Returns <header> element node:');
 console.log(header2);
+console.log('\n\n');
+
+console.log('SELECT NEXT SIBLING FOR <ul>:');
+console.log('----------------------------\n\n');
+console.log('Returns text node:');
+console.log(input1);
+
+console.log('SELECT NEXT SIBLING FOR <ul>:');
+console.log('----------------------------\n\n');
+console.log('Returns <input> element node:');
+console.log(input2);
