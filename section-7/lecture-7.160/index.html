@@ -6,12 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>DOM Interaction</title>
   <script src="app.js" defer></script>
+  <style>
+    .red-bg {
+      background-color: red;
+      color: white;
+    }
+
+    .visible {
+      display: block;
+    }
+
+    .invisible {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1 id="main-title">Dive into the DOM!</h1>
   </header>
-  <section>
+  <section class="red-bg">
     <ul>
       <li class="list-item">Item 1</li>
       <li class="list-item">Item 2</li>
