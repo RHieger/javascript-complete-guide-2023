@@ -4,3 +4,4 @@ lecture-07.149-nodes-vs-elements.pdf filter=lfs diff=lfs merge=lfs -text
 lecture-07.150-querying-elements.pdf filter=lfs diff=lfs merge=lfs -text
 lecture-07.152-evaluating-and-manipuulating-elements.pdf filter=lfs diff=lfs merge=lfs -text
 lecture-07.153-attributes-vs-properties.pdf filter=lfs diff=lfs merge=lfs -text
+lecture-07.160-styling-dom-elements.pdf filter=lfs diff=lfs merge=lfs -text
