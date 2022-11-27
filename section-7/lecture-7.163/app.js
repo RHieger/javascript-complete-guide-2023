@@ -1,43 +1,43 @@
 /**
  * 
- * Lecture 7.160: Styling DOM Elements
+ * Lecture 7.163: Adding Elements via createElement()
  * 
  * Robert Hieger
- * 11/25/2022
+ * 11/26/2022
  * 
- * OBJECTIVE: Explore various means of applying styles
- * to DOM elements thus changing the appearance of a
- * web page. The focus of the lecture narrows down to
- * safely and accurately toggling the visibility of a
- * styled DOM element.
+ * OBJECTIVE: Dynamically inject an HTML element as a
+ * sibling to those occuring within a <ul> element.
+ * Naturally, the logical insertion would be an <li>
+ * element, setting its text content to "Item 4."
+ * 
+ * Additionally, set the font size of the new <li> element
+ * to 21px and set its color to blue. Finally append the
+ * new element to the <ul> to make it visible within the
+ * browser window.
  * 
  */
 
 // Capture <section>
 const section = document.querySelector('section');
 
-// Capture button
+// Capture <ul>
+const list = document.querySelector('ul');
+
+// Capture <button>
 const button = document.querySelector('button');
 
-// Method #1 of revealing or hiding <section>
-// NOTE: Prone to error as classes may change over
-// time and this forces the developer to constantly
-// keep track of what classes are present and
-// applied, as well as which ones are removed. It
-// is therefore commented out within the eventListener
-// wired to <button>.
+// Build and append new list item to <ul>:
+
+// Create new <li> element
+const newListItem = document.createElement('li');
+// Add text node to newListItem
+newListItem.textContent = 'Item 4';
+// Set color to blue and font size to 21px
+newListItem.style.color = 'blue';
+newListItem.style.fontSize = '21px';
+// Append newListItem to list
+list.appendChild(newListItem);
 
 button.addEventListener('click', () => {
-//   if (section.className === 'red-bg visible') {
-//     section.className = 'red-bg invisible';
-//   } else {
-//     section.className = 'red-bg visible';
-//   }
-
-  // Method #2 of revealing or hiding <section>--
-  // the toggle() method. 1 line of code replaces 5
-  // and with greater accuracy and safety.
-  
   section.classList.toggle('invisible');
-
 });
