@@ -24,6 +24,10 @@ const list = document.querySelector('ul');
 // Capture <button>
 const button = document.querySelector('button');
 const button2 = document.getElementsByTagName('button')[1];
+const button3 = document.getElementsByTagName('button')[2];
+
+// Indent button3
+button3.style.marginLeft = '40px';
 
 // Capture second list
 const list2 = document.getElementById('hidden-list');
@@ -36,11 +40,14 @@ const newLi2 = document.createElement('li');
 
 // Create new <li> element to be prepended
 const newLi3 = document.createElement('li');
+const newLi4 = document.createElement('li');
 
 // Set text nodes for both <li> elements
 newLi1.textContent = 'Item 4';
 newLi2.textContent = 'Item 5';
 newLi3.textContent = 'Item 0';  // textContent for prepended item
+// textContent for prepended moveable item
+newLi4.textContent = 'Moveable Item';
 
 // Set styling for new <li> element nodes
 newLi1.style.color = 'blue';
@@ -61,10 +68,23 @@ list.append(newLi1, newLi2);
 // of the siblings in the node tree.
 list.prepend(newLi3);
 
+// prepend() newLi4 to list2
+list2.firstElementChild.prepend(newLi4);
+
 button.addEventListener('click', () => {
   section.classList.toggle('invisible');
 });
 
 button2.addEventListener( 'click', () => {
   list2.classList.toggle('invisible');
+  button3.classList.toggle('invisible');
+});
+
+// Select list2 <div>, traverse to first element child
+// (<ul>), travere to last element child, and prepend
+// moveable element (newLi4).
+button3.addEventListener( 'click', () => {
+  list2.firstElementChild
+       .lastElementChild
+       .before(newLi4);
 });
