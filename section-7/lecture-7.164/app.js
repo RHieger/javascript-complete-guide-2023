@@ -3,7 +3,7 @@
  * Lecture 7.164: Inserting DOM Elements
  * 
  * Robert Hieger
- * 11/26/2022
+ * 11/27/2022
  * 
  * OBJECTIVE: Explore the difference between appendChild()
  * and append() methods. Specifically, this application
@@ -25,12 +25,27 @@ const list = document.querySelector('ul');
 const button = document.querySelector('button');
 const button2 = document.getElementsByTagName('button')[1];
 const button3 = document.getElementsByTagName('button')[2];
+const button4 = document.getElementsByTagName('button')[3];
+
+// Style button and button4
+button2.style.marginLeft = '6px';
+button4.style.marginLeft = '6px';
 
 // Indent button3
 button3.style.marginLeft = '40px';
 
 // Capture second list
 const list2 = document.getElementById('hidden-list');
+
+// Capture Instructive <h2>
+const explanation = document.querySelector('h2');
+
+// Set style for explanation
+explanation.style.marginLeft = '40px';
+explanation.style.fontWeight = 'bold';
+explanation.style.color = '#007fff';  /* Azure */
+explanation.style.marginTop = '50px';
+explanation.style.marginBottom = '0';
 
 // Build and append new list item to <ul>:
 
@@ -76,8 +91,10 @@ button.addEventListener('click', () => {
 });
 
 button2.addEventListener( 'click', () => {
+  explanation.classList.toggle('invisible');
   list2.classList.toggle('invisible');
   button3.classList.toggle('invisible');
+  button4.classList.toggle('invisible');
 });
 
 // Select list2 <div>, traverse to first element child
@@ -87,4 +104,10 @@ button3.addEventListener( 'click', () => {
   list2.firstElementChild
        .lastElementChild
        .before(newLi4);
+});
+
+button4.addEventListener( 'click', () => {
+  list2.firstElementChild
+       .lastElementChild
+       .after(newLi4);
 });
