@@ -12,6 +12,24 @@
       color: white;
     }
 
+    .bordered-list {
+      margin: 35px 0 35px 35px;
+      background-color: #7cb9e8; /* Aero */
+      border-radius: 12px;
+      list-style-type: none;
+      padding: 35px;
+    }
+
+    #hidden-list ul li {
+      font-family: 'Times', 'Times New Roman' serif;
+      font-size: 24px;
+    }
+
+    #hidden-list ul li::before {
+      content: '\261e';
+      padding: 18px 25px 18px 0;
+    }
+
     .visible {
       display: block;
     }
@@ -33,6 +51,17 @@
     </ul>
   </section>
   <button>Toggle Visibility</button>
+  <button>Display Hidden List</button>
   <input type="text" value="default text">
+  <section id="hidden-list" class="invisible">
+    <ul class="bordered-list">
+      <li>Movable Item</li>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+      <li>List Item 4</li>
+      <li>List Item 5</li>
+    </ul>
+  </section>
 </body>
 </html>

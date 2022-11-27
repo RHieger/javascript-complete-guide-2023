@@ -23,6 +23,10 @@ const list = document.querySelector('ul');
 
 // Capture <button>
 const button = document.querySelector('button');
+const button2 = document.getElementsByTagName('button')[1];
+
+// Capture second list
+const list2 = document.getElementById('hidden-list');
 
 // Build and append new list item to <ul>:
 
@@ -59,4 +63,8 @@ list.prepend(newLi3);
 
 button.addEventListener('click', () => {
   section.classList.toggle('invisible');
+});
+
+button2.addEventListener( 'click', () => {
+  list2.classList.toggle('invisible');
 });
