@@ -26,10 +26,12 @@ const button = document.querySelector('button');
 const button2 = document.getElementsByTagName('button')[1];
 const button3 = document.getElementsByTagName('button')[2];
 const button4 = document.getElementsByTagName('button')[3];
+const button5 = document.getElementsByTagName('button')[4];
 
-// Style button and button4
+// Style button2 and button4
 button2.style.marginLeft = '6px';
 button4.style.marginLeft = '6px';
+button4.style.marginRight = '6px';
 
 // Indent button3
 button3.style.marginLeft = '40px';
@@ -56,6 +58,20 @@ const newLi2 = document.createElement('li');
 // Create new <li> element to be prepended
 const newLi3 = document.createElement('li');
 const newLi4 = document.createElement('li');
+
+// Create new paragraph element:
+const theLastWord = document.createElement('p');
+// Set text content:
+theLastWord.textContent =
+  '\u201cTh-thee, the-thee, the-thee that\'s all, folks!\u201d, Porky Pig';
+// Add class to class list:
+theLastWord.classList.add('invisible');
+// Set styling for paragraph:
+theLastWord.style.fontFamily = 'Times, Times New Roman, serif;';
+theLastWord.style.fontSize = '23px';
+theLastWord.style.fontWeight = '600';
+theLastWord.style.marginLeft = '75px';
+theLastWord.style.color = '#007fff'; /* Azure */
 
 // Set text nodes for both <li> elements
 newLi1.textContent = 'Item 4';
@@ -86,6 +102,11 @@ list.prepend(newLi3);
 // prepend() newLi4 to list2
 list2.firstElementChild.prepend(newLi4);
 
+// append theLastWord at end of document.
+button5.insertAdjacentElement('afterend', theLastWord);
+
+// EVENT LISTENERS:
+
 button.addEventListener('click', () => {
   section.classList.toggle('invisible');
 });
@@ -95,6 +116,7 @@ button2.addEventListener( 'click', () => {
   list2.classList.toggle('invisible');
   button3.classList.toggle('invisible');
   button4.classList.toggle('invisible');
+  button5.classList.toggle('invisible');
 });
 
 // Select list2 <div>, traverse to first element child
@@ -110,4 +132,8 @@ button4.addEventListener( 'click', () => {
   list2.firstElementChild
        .lastElementChild
        .after(newLi4);
+});
+
+button5.addEventListener( 'click', () => {
+  theLastWord.classList.toggle('invisible');
 });
