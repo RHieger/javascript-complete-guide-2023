@@ -27,11 +27,13 @@ const button2 = document.getElementsByTagName('button')[1];
 const button3 = document.getElementsByTagName('button')[2];
 const button4 = document.getElementsByTagName('button')[3];
 const button5 = document.getElementsByTagName('button')[4];
+const button6 = document.getElementsByTagName('button')[5];
 
-// Style button2 and button4
+// Style button2, button4 and button5
 button2.style.marginLeft = '6px';
 button4.style.marginLeft = '6px';
 button4.style.marginRight = '6px';
+button5.style.marginRight = '6px';
 
 // Indent button3
 button3.style.marginLeft = '40px';
@@ -63,7 +65,7 @@ const newLi4 = document.createElement('li');
 const theLastWord = document.createElement('p');
 // Set text content:
 theLastWord.textContent =
-  '\u201cTh-thee, the-thee, the-thee that\'s all, folks!\u201d, Porky Pig';
+  '\u201cTh-thee, th-thee, th-thee that\'s all, folks!\u201d, Porky Pig';
 // Add class to class list:
 theLastWord.classList.add('invisible');
 // Set styling for paragraph:
@@ -89,7 +91,6 @@ newLi3.style.color = 'white';
 newLi3.style.fontSize = '21px';
 newLi3.style.backgroundColor = 'blue';
 
-
 // append() method appends both <li> elements
 // at the same time, unlike appendChild()
 list.append(newLi1, newLi2);
@@ -103,7 +104,7 @@ list.prepend(newLi3);
 list2.firstElementChild.prepend(newLi4);
 
 // append theLastWord at end of document.
-button5.insertAdjacentElement('afterend', theLastWord);
+button6.insertAdjacentElement('afterend', theLastWord);
 
 // EVENT LISTENERS:
 
@@ -117,10 +118,11 @@ button2.addEventListener( 'click', () => {
   button3.classList.toggle('invisible');
   button4.classList.toggle('invisible');
   button5.classList.toggle('invisible');
+  button6.classList.toggle('invisible');
 });
 
 // Select list2 <div>, traverse to first element child
-// (<ul>), travere to last element child, and prepend
+// (<ul>), traverse to last element child, and prepend
 // moveable element (newLi4).
 button3.addEventListener( 'click', () => {
   list2.firstElementChild
@@ -135,5 +137,9 @@ button4.addEventListener( 'click', () => {
 });
 
 button5.addEventListener( 'click', () => {
+  theLastWord.classList.toggle('invisible');
+});
+
+button6.addEventListener( 'click', () => {
   theLastWord.classList.toggle('invisible');
 });
