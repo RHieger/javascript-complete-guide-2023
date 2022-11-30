@@ -1,6 +1,6 @@
 /**
  * 
- * Lecture 7.172: Opening a Modal by Changing CSS Classes
+ * Lecture 7.173: Opening a Modal by Changing CSS Classes
  * 
  * Robert Hieger
  * 11/29/2022
@@ -16,6 +16,7 @@
 const addMovieModal = document.getElementById('add-modal');
 const addStartMovieButton =
   document.querySelector('header button');
+const backDrop = document.getElementById('backdrop');
 
 // Callback Functions
 const toggleMovieModal = () => {
@@ -23,6 +24,13 @@ const toggleMovieModal = () => {
   addMovieModal.classList.toggle('visible');
 };
 
+const toggleBackDrop = () => {
+  backDrop.classList.toggle('visible');
+};
+
 // EventListeners
 addStartMovieButton
-  .addEventListener( 'click', toggleMovieModal);
+  .addEventListener('click', () => {
+    toggleMovieModal();
+    toggleBackDrop();
+  });
