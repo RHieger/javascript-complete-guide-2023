@@ -1,9 +1,10 @@
 <h1 style="font-family: 'Helvetica', sans-serif; font-size: 26px; text-decoration: none; text-align: center !important;">GNU GENERAL PUBLIC LICENSE</h1>
 <h2 style="font-family: 'Helvetica', sans-serif; font-size: 24px font-weight: bold; text decoration: none; text-align: center;">Version 3, 29 June 2007</h2>
-
- Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
- Everyone is permitted to copy and distribute verbatim copies
- of this license document, but changing it is not allowed.
+<div style="text-align: center">
+Copyright &copy; 2007 Free Software Foundation, Inc. <https://fsf.org/>
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+ </div>
 
                             Preamble
 
