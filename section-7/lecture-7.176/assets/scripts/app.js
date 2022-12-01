@@ -43,7 +43,11 @@ const movies = [];
 // Check length of movies array. If not empty,
 // hide default message and display the movie(s).
 const updateUI = () => {
-  // TBD
+  if (movies.length === 0) {
+    entryText.style.display = 'block';
+  } else {
+    entryText.style.display = 'none';   
+  }
 };
 
 // Callback Functions
