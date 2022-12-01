@@ -1,4 +1,4 @@
-# JavaScript&mdash;The Complete Guide 2021 (Beginner + Advanced)
+# JavaScript&mdash;The Complete Guide 2023 (Beginner + Advanced)
 
 ## Instructor: Maximilliann Schwarzmüller [Udemy.com](https://udemy.com)
 
