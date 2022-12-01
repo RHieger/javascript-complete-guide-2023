@@ -34,9 +34,17 @@ const cancelAddMovieButton =
 const confirmAddMovieButton =
   cancelAddMovieButton.nextElementSibling;
 const userInput = addMovieModal.querySelectorAll('input');
+const entryDefaultMessage =
+  document.getElementById('entry-text');
 
 // Declare Datastore to contain movie objects:
 const movies = [];
+
+// Check length of movies array. If not empty,
+// hide default message and display the movie(s).
+const updateUI = () => {
+  // TBD
+};
 
 // Callback Functions
 const toggleBackDrop = () => {
