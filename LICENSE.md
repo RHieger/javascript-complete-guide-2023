@@ -1,4 +1,4 @@
-<h1 style="font-family: 'Helvetica', sans-serif; font-size: 26px; text-align: center;">GNU GENERAL PUBLIC LICENSE</h1>
+<h1 style="font-family: 'Helvetica', sans-serif; font-size: 26px; text-align: center !important;">GNU GENERAL PUBLIC LICENSE</h1>
                        Version 3, 29 June 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
