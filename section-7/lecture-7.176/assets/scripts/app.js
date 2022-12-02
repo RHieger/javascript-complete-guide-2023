@@ -1,26 +1,41 @@
 /**
  * 
- * Lecture 7.175: Creating a Movie in JavaScript
- *                and Clearing the Input
+ * Lecture 7.176: Rendering Movie Items on the Screen
  * 
  * Robert Hieger
- * 11/30/2022
+ * 12/01/2022
  * 
- * OBJECTIVE: Declare a Datastore Array to contain
- * movie objects.
+ * OBJECTIVE: Overall, the objective is to render movie
+ * components on the screen, not just in the JavaScript
+ * console. To do this, it is necessary to create a DOM
+ * object that captures the default message appearing on
+ * the screen. This will make it possible to hide this
+ * message when a movie component is rendered to the
+ * browser window.
  * 
- * In addMovieHandler, create a movie object that
- * will be pushed to the movies datastore array.
- * The results of this push will be logged to the
- * console at this stage in the application's
- * development. Later, it will be rendered on
- * the web page.
+ * Two helper functions are declared to be called by the
+ * event listener attached to the "Add" button in the
+ * modal that appears to allow entry of movie data.
  * 
- * Finally, when the "Add" button is clicked on the
- * add movie modal, the modal box fields should be
- * emptied and the modal and backdrop removed from
- * the screen. This is accomplished by making a
- * call to toggleMovieModal().
+ * The first function determines whether the movies[]
+ * array is empty or if it is not. If it's not empty,
+ * i.e. a movie has been entered, or one is already
+ * there, the default message is hidden. If the array
+ * is empty the default mesage is made visible again.
+ * 
+ * The second function renders the movie component to
+ * the screen and is also called by the event listener
+ * wired to the "Add" button.
+ * 
+ * Example Image URLs:
+ *   1. The Tall Guy
+ *      https://m.media-amazon.com/images/I/51N9GBFJTWL.jpg
+ *
+ *   2. My Cousin Vinny
+ *      https://m.media-amazon.com/images/I/51B5VNCN7QL.jpg
+ * 
+ *   3. Life Stinks
+ *      https://m.media-amazon.com/images/I/5146F7FCH9L.jpg
  * 
  */
 
@@ -44,11 +59,30 @@ const movies = [];
 // hide default message and display the movie(s).
 const updateUI = () => {
   if (movies.length === 0) {
-    entryText.style.display = 'block';
+    entryDefaultMessage.style.display = 'block';
   } else {
-    entryText.style.display = 'none';   
+    entryDefaultMessage.style.display = 'none';   
   }
 };
+
+// Render Movie Element to Screen
+const renderMovieElement =
+  (title, imageUrl, rating) => {
+    const newMovieElement = document.createElement('li');
+    newMovieElement.className = 'movie-element';
+    newMovieElement.innerHTML =
+    `
+    <div class="movie-element__image">
+      <img src="${imageUrl}" alt="${title}">
+    </div>
+    <div class="movie-element__info">
+      <h2>${title}</h2>
+      <p>${rating}/5 stars</p>
+    </div>
+    `;
+    const listRoot = document.getElementById('movie-list');
+    listRoot.append(newMovieElement);
+  };
 
 // Callback Functions
 const toggleBackDrop = () => {
@@ -117,6 +151,14 @@ const addMovieHandler = () => {
   
   // Clear modal input fields
   clearMovieInput();
+
+  // Insert new movie into DOM and display on page
+  renderMovieElement(
+    newMovie.title, newMovie.image, newMovie.rating
+  );
+
+  // Hide default entry message
+  updateUI();
 };
 
 // EventListeners
