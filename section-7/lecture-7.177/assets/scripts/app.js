@@ -1,31 +1,11 @@
 /**
  * 
- * Lecture 7.176: Rendering Movie Items on the Screen
+ * Lecture 7.177: Deleting Movie Elements
  * 
  * Robert Hieger
- * 12/01/2022
+ * 12/02/2022
  * 
- * OBJECTIVE: Overall, the objective is to render movie
- * components on the screen, not just in the JavaScript
- * console. To do this, it is necessary to create a DOM
- * object that captures the default message appearing on
- * the screen. This will make it possible to hide this
- * message when a movie component is rendered to the
- * browser window.
- * 
- * Two helper functions are declared to be called by the
- * event listener attached to the "Add" button in the
- * modal that appears to allow entry of movie data.
- * 
- * The first function determines whether the movies[]
- * array is empty or if it is not. If it's not empty,
- * i.e. a movie has been entered, or one is already
- * there, the default message is hidden. If the array
- * is empty the default mesage is made visible again.
- * 
- * The second function renders the movie component to
- * the screen and is also called by the event listener
- * wired to the "Add" button.
+ * OBJECTIVE: TBD
  * 
  * Example Image URLs:
  *   1. The Tall Guy
