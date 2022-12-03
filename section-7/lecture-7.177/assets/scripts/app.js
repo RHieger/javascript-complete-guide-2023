@@ -3,34 +3,29 @@
  * Lecture 7.177: Deleting Movie Elements
  * 
  * Robert Hieger
- * 12/02/2022
+ * 12/03/2022
  * 
- * OBJECTIVE: TBD
+ * OBJECTIVE: Remove a movie item from those displayed
+ * on screen (DOM) and delete the corresponding element
+ * stored in the movies[] array.
  * 
- * Example Image URLs:
- *   1. The Tall Guy
- *      https://m.media-amazon.com/images/I/51N9GBFJTWL.jpg
- *
- *   2. My Cousin Vinny
- *      https://m.media-amazon.com/images/I/51B5VNCN7QL.jpg
+ * SOME SAMPLE URLs for movie images:
  * 
- *   3. Life Stinks
- *      https://m.media-amazon.com/images/I/5146F7FCH9L.jpg
+ * 1. The Tall Guy
+ *    https://m.media-amazon.com/images/I/51N9GBFJTWL.jpg
+ * 
+ * 2. My Cousin Vinny
+ *    https://m.media-amazon.com/images/I/51B5VNCN7QL.jpg
+ * 
+ * 3. Life Stinks
+ *    https://m.media-amazon.com/images/I/5146F7FCH9L.jpg
+ * 
+ * 4. Harry Potter and the Order of the Phoenix
+ *    https://images.squarespace-cdn.com/content/v1/5c71c7d8aadd342945360ba1/1580415741004-5K6ZFHXVINGT91CV90IG/HP5+Ultimate+Edition+Blu-Ray.jpg?format=1500w
  * 
  */
 
-// DOM Objects
 const addMovieModal = document.getElementById('add-modal');
-const addStartMovieButton =
-  document.querySelector('header button');
-const backDrop = document.getElementById('backdrop');
-const cancelAddMovieButton =
-  addMovieModal.querySelector('.btn--passive');
-const confirmAddMovieButton =
-  cancelAddMovieButton.nextElementSibling;
-const userInput = addMovieModal.querySelectorAll('input');
-const entryDefaultMessage =
-  document.getElementById('entry-text');
 
 // Declare Datastore to contain movie objects:
 const movies = [];
@@ -43,11 +38,11 @@ const updateUI = () => {
   } else {
     entryDefaultMessage.style.display = 'none';   
   }
-};
+}; 
 
 // Render Movie Element to Screen
 const renderMovieElement =
-  (title, imageUrl, rating) => {
+  (id, title, imageUrl, rating) => {
     const newMovieElement = document.createElement('li');
     newMovieElement.className = 'movie-element';
     newMovieElement.innerHTML =
@@ -60,9 +55,28 @@ const renderMovieElement =
       <p>${rating}/5 stars</p>
     </div>
     `;
-    const listRoot = document.getElementById('movie-list');
+    newMovieElement
+      .addEventListener(
+        'click', deleteMovieHandler.bind(null, )
+    );
     listRoot.append(newMovieElement);
   };
+
+  // Delete a Movie Element from the Screen
+const deleteMovieHandler = (movieId) => {
+  // Contains index of movieId
+  // passed to function.
+  let movieIndex = 0;
+  for (const movie of movies) {
+    if (movie.id === movieId) {
+      break;
+    }
+    movieIndex++;
+  }
+movies.splice(movieIndex, 1);
+const listRoot = document.getElementById('movie-list');
+  listRoot.children[movieIndex].remove();
+};
 
 // Callback Functions
 const toggleBackDrop = () => {
@@ -116,6 +130,7 @@ const addMovieHandler = () => {
 
   // Holds movie object to be pushed to movies array:
   const newMovie = {
+    id: Math.random().toString(),
     title: titleValue,
     image: imageUrlValue,
     rating: ratingValue
@@ -134,7 +149,8 @@ const addMovieHandler = () => {
 
   // Insert new movie into DOM and display on page
   renderMovieElement(
-    newMovie.title, newMovie.image, newMovie.rating
+    newMovie.id, newMovie.title,
+    newMovie.image, newMovie.rating
   );
 
   // Hide default entry message
