@@ -25,7 +25,19 @@
  * 
  */
 
+
+// DOM Objects
 const addMovieModal = document.getElementById('add-modal');
+const startAddMovieButton = document
+  .querySelector('header button');
+const backdrop = document.getElementById('backdrop');
+const cancelAddMovieButton = addMovieModal
+  .querySelector('.btn--passive');
+const confirmAddMovieButton =
+  cancelAddMovieButton.nextElementSibling;
+const userInputs = addMovieModal.querySelectorAll('input');
+const textEntryDefault = document.getElementById('entry-text');
+const listRoot = document.getElementById('movie-list');
 
 // Declare Datastore to contain movie objects:
 const movies = [];
@@ -34,9 +46,9 @@ const movies = [];
 // hide default message and display the movie(s).
 const updateUI = () => {
   if (movies.length === 0) {
-    entryDefaultMessage.style.display = 'block';
+    textEntryDefault.style.display = 'block';
   } else {
-    entryDefaultMessage.style.display = 'none';   
+    textEntryDefault.style.display = 'none';   
   }
 }; 
 
@@ -57,12 +69,12 @@ const renderMovieElement =
     `;
     newMovieElement
       .addEventListener(
-        'click', deleteMovieHandler.bind(null, )
+        'click', deleteMovieHandler.bind(null, id)
     );
     listRoot.append(newMovieElement);
   };
 
-  // Delete a Movie Element from the Screen
+// Delete a Movie Element from the Screen
 const deleteMovieHandler = (movieId) => {
   // Contains index of movieId
   // passed to function.
@@ -73,14 +85,13 @@ const deleteMovieHandler = (movieId) => {
     }
     movieIndex++;
   }
-movies.splice(movieIndex, 1);
-const listRoot = document.getElementById('movie-list');
+  movies.splice(movieIndex, 1);
   listRoot.children[movieIndex].remove();
 };
 
 // Callback Functions
 const toggleBackDrop = () => {
-  backDrop.classList.toggle('visible');
+  backdrop.classList.toggle('visible');
 };
 
 // Hides modal if present; displays if hiddenx
@@ -91,7 +102,7 @@ const toggleMovieModal = () => {
 
 // Empties movie input fields
 const clearMovieInput = () => {
-  for (const input of userInput) {
+  for (const input of userInputs) {
     input.value = '';
   }
 };
@@ -110,9 +121,9 @@ const backdropClickHandler = () => {
 // Handles creation of movie objects to be stored
 // in movies array.
 const addMovieHandler = () => {
-  const titleValue = userInput[0].value;
-  const imageUrlValue = userInput[1].value;
-  const ratingValue = userInput[2].value;
+  const titleValue = userInputs[0].value;
+  const imageUrlValue = userInputs[1].value;
+  const ratingValue = userInputs[2].value;
 
   if (
     titleValue.trim() === '' ||
@@ -158,16 +169,19 @@ const addMovieHandler = () => {
 };
 
 // EventListeners
-addStartMovieButton
+startAddMovieButton
   .addEventListener('click', () => {
     toggleMovieModal();
   });
 
-backDrop
-  .addEventListener( 'click', backdropClickHandler );
+backdrop.addEventListener(
+  'click', backdropClickHandler
+);
 
-cancelAddMovieButton
-  .addEventListener('click', cancelAddMovieHandler);
+cancelAddMovieButton.addEventListener(
+  'click', cancelAddMovieHandler
+);
 
-confirmAddMovieButton
-  .addEventListener('click', addMovieHandler);
+confirmAddMovieButton.addEventListener(
+  'click', addMovieHandler
+);
