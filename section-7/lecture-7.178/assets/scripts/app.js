@@ -1,13 +1,11 @@
 /**
  * 
- * Lecture 7.177: Deleting Movie Elements
+ * Lecture 7.178: Showing and Hiding "Are you sure?" Dialog
  * 
  * Robert Hieger
  * 12/03/2022
  * 
- * OBJECTIVE: Remove a movie item from those displayed
- * on screen (DOM) and delete the corresponding element
- * stored in the movies[] array.
+ * OBJECTIVE: TBD
  * 
  * SOME SAMPLE URLs for movie images:
  * 
@@ -74,8 +72,7 @@ const renderMovieElement =
     listRoot.append(newMovieElement);
   };
 
-// Delete a Movie Element from the Screen
-const deleteMovieHandler = (movieId) => {
+const deleteMovie = (movieId) => {
   // Contains index of movieId
   // passed to function.
   let movieIndex = 0;
@@ -89,15 +86,24 @@ const deleteMovieHandler = (movieId) => {
   listRoot.children[movieIndex].remove();
 };
 
+// Delete a Movie Element from the Screen
+const deleteMovieHandler = (movieId) => {
+  const deleteMovieModal
+    = document.getElementById('delete-modal');
+  deleteMovieModal.classList.add('visible');
+  toggleBackdrop();
+  // deleteMovie(movieId);
+};
+
 // Callback Functions
-const toggleBackDrop = () => {
+const toggleBackdrop = () => {
   backdrop.classList.toggle('visible');
 };
 
 // Hides modal if present; displays if hiddenx
 const toggleMovieModal = () => {
   addMovieModal.classList.toggle('visible');
-  toggleBackDrop();
+  toggleBackdrop();
 };
 
 // Empties movie input fields
