@@ -1,16 +1,11 @@
 /**
  * 
- * Lecture 7.178: Showing and Hiding "Are you sure?" Dialog
+ * Lecture 7.179: Starting with the Application Logic
  * 
  * Robert Hieger
  * 12/04/2022
  * 
- * OBJECTIVE: Implement deleteMovieModal() and
- * deleteMovieHandler() to facilitate the deletion of
- * movie entries on the screen. To do so, a fair
- * amount of refactoring is called for, including
- * refactoring deleteMovieHandler() and implementing
- * the helper function it calls (deleteMovie()).
+ * OBJECTIVE: TBD
  * 
  * Additionally, references to renamed functions have
  * to be updated.
