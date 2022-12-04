@@ -3,9 +3,17 @@
  * Lecture 7.178: Showing and Hiding "Are you sure?" Dialog
  * 
  * Robert Hieger
- * 12/03/2022
+ * 12/04/2022
  * 
- * OBJECTIVE: TBD
+ * OBJECTIVE: Implement deleteMovieModal() and
+ * deleteMovieHandler() to facilitate the deletion of
+ * movie entries on the screen. To do so, a fair
+ * amount of refactoring is called for, including
+ * refactoring deleteMovieHandler() and implementing
+ * the helper function it calls (deleteMovie()).
+ * 
+ * Additionally, references to renamed functions have
+ * to be updated.
  * 
  * SOME SAMPLE URLs for movie images:
  * 
@@ -33,9 +41,13 @@ const cancelAddMovieButton = addMovieModal
   .querySelector('.btn--passive');
 const confirmAddMovieButton =
   cancelAddMovieButton.nextElementSibling;
-const userInputs = addMovieModal.querySelectorAll('input');
-const textEntryDefault = document.getElementById('entry-text');
+const userInputs =
+  addMovieModal.querySelectorAll('input');
+const textEntryDefault =
+  document.getElementById('entry-text');
 const listRoot = document.getElementById('movie-list');
+const deleteMovieModal =
+  document.getElementById('delete-modal');
 
 // Declare Datastore to contain movie objects:
 const movies = [];
@@ -70,7 +82,7 @@ const renderMovieElement =
         'click', deleteMovieHandler.bind(null, id)
     );
     listRoot.append(newMovieElement);
-  };
+};
 
 const deleteMovie = (movieId) => {
   // Contains index of movieId
@@ -88,11 +100,14 @@ const deleteMovie = (movieId) => {
 
 // Delete a Movie Element from the Screen
 const deleteMovieHandler = (movieId) => {
-  const deleteMovieModal
-    = document.getElementById('delete-modal');
   deleteMovieModal.classList.add('visible');
   toggleBackdrop();
-  // deleteMovie(movieId);
+};
+
+// Allows user to cancel deletion of a movie
+const closeMovieDeletionModal = () => {
+  toggleBackdrop(); // hides backdrop
+  deleteMovieModal.classList.remove('visible');
 };
 
 // Callback Functions
@@ -100,9 +115,14 @@ const toggleBackdrop = () => {
   backdrop.classList.toggle('visible');
 };
 
-// Hides modal if present; displays if hiddenx
-const toggleMovieModal = () => {
-  addMovieModal.classList.toggle('visible');
+// Closes modal for movie entry
+const closeMovieModal = () => {
+  addMovieModal.classList.remove('visible');
+};
+
+// Reveals modal for movie entry
+const showMovieModal = () => {
+  addMovieModal.classList.add('visible');
   toggleBackdrop();
 };
 
@@ -115,13 +135,14 @@ const clearMovieInput = () => {
 
 // Removes Modal and backdrop on "Cancel" button click
 const cancelAddMovieHandler  = () => {
-  toggleMovieModal();
-  clearMovieInput();
+  closeMovieModal();  // closes entry modal
+  clearMovieInput();  // empties input data
 };
 
 // Removes backdrop any time modal closes
 const backdropClickHandler = () => {
-  toggleMovieModal();
+  closeMovieModal();
+  closeMovieDeletionModal();
 };
 
 // Handles creation of movie objects to be stored
@@ -159,7 +180,10 @@ const addMovieHandler = () => {
   console.log(movies);
 
   // Removes modal and backdrop
-  toggleMovieModal();
+  closeMovieModal();
+
+  // Remove backdrop
+  toggleBackdrop();
   
   // Clear modal input fields
   clearMovieInput();
@@ -177,7 +201,7 @@ const addMovieHandler = () => {
 // EventListeners
 startAddMovieButton
   .addEventListener('click', () => {
-    toggleMovieModal();
+    showMovieModal();
   });
 
 backdrop.addEventListener(
