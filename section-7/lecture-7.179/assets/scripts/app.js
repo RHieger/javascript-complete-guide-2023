@@ -97,6 +97,11 @@ const deleteMovie = (movieId) => {
 const deleteMovieHandler = (movieId) => {
   deleteMovieModal.classList.add('visible');
   toggleBackdrop();
+  // DOM Objects
+  const cancelDeletionButton =
+    deleteMovieModal.querySelector('.btn--passive');
+  const confirmDeletionButton =
+    deleteMovieModal.querySelector('.btn--danger');
 };
 
 // Allows user to cancel deletion of a movie
