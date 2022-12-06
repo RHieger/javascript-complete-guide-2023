@@ -3,12 +3,25 @@
  * Lecture 7.179: Starting with the Application Logic
  * 
  * Robert Hieger
- * 12/04/2022
+ * 12/05/2022
  * 
- * OBJECTIVE: TBD
+ * OBJECTIVE: The objective of Lecture 7.179 is to capture
+ * the two elements in the modal that confirms deletion of
+ * a movie. There is one DOM object for the "No (cancel)"
+ * button and a second for the "Yes" button confirming the
+ * deletion of the movie.
+ * 
+ * The second objective is to declare two event listeners
+ * wired to the "No" and "Yes" buttons on the modal. The
+ * "No" button event listener should have a callback
+ * function that closes the confirmation modal and hides
+ * the backdrop. The "Yes" button event listener closes
+ * the modal, hides the backdrop and removes the specified
+ * movie item.
  * 
  * Additionally, references to renamed functions have
- * to be updated.
+ * to be updated. A couple of bugs remain, but these
+ * will be address in Lecture-7.180.
  * 
  * SOME SAMPLE URLs for movie images:
  * 
@@ -74,12 +87,12 @@ const renderMovieElement =
     `;
     newMovieElement
       .addEventListener(
-        'click', deleteMovieHandler.bind(null, id)
+        'click', confirmDeleteMovieHandler.bind(null, id)
     );
     listRoot.append(newMovieElement);
 };
 
-const deleteMovie = (movieId) => {
+const deleteMovieHandler = (movieId) => {
   // Contains index of movieId
   // passed to function.
   let movieIndex = 0;
@@ -94,7 +107,7 @@ const deleteMovie = (movieId) => {
 };
 
 // Delete a Movie Element from the Screen
-const deleteMovieHandler = (movieId) => {
+const confirmDeleteMovieHandler = (movieId) => {
   deleteMovieModal.classList.add('visible');
   toggleBackdrop();
   // DOM Objects
@@ -102,6 +115,13 @@ const deleteMovieHandler = (movieId) => {
     deleteMovieModal.querySelector('.btn--passive');
   const confirmDeletionButton =
     deleteMovieModal.querySelector('.btn--danger');
+  // EventListeners
+  cancelDeletionButton.addEventListener(
+    'click', closeMovieDeletionModal
+  );
+  confirmDeletionButton.addEventListener(
+    'click', deleteMovieHandler.bind(null, movieId)
+  );
 };
 
 // Allows user to cancel deletion of a movie
