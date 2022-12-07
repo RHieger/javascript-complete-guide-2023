@@ -147,6 +147,7 @@ const cancelAddMovieHandler  = () => {
 const backdropClickHandler = () => {
   closeMovieModal();
   closeMovieDeletionModal();
+  clearMovieInput();
 };
 
 // Handles creation of movie objects to be stored
