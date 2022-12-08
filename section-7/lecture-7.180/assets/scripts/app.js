@@ -140,6 +140,7 @@ const clearMovieInput = () => {
 // Removes Modal and backdrop on "Cancel" button click
 const cancelAddMovieHandler  = () => {
   closeMovieModal();  // closes entry modal
+  toggleBackdrop(); // hides backdrop
   clearMovieInput();  // empties input data
 };
 
