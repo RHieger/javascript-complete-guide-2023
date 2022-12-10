@@ -63,3 +63,19 @@ const closeMovieDeletionModal = () => {
   deleteMovieModal
     .classList.remove('visible');
 };
+
+// Handles deletion of a movie card
+const deleteMovieHandler = movieId => {
+  let movieIndex = 0;
+  for (const movie of movies) {
+    if (movie.id === movieId) {
+      break;
+    }
+    movieIndex++;
+  }
+  movies.splice(movieIndex, 1);
+  const listRoot = document.getElementById('movie-list');
+  listRoot.children[movieIndex].remove();
+  closeMovieDeletionModal();
+  updateUI();
+};
