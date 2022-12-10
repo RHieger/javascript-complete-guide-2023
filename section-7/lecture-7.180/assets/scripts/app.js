@@ -133,3 +133,9 @@ const renderNewMovieElement =
 const closeMovieModal = () => {
   addMovieModal.classList.remove('visible');
 };
+
+// Reveals movie modal for user input
+const showMovieModal = () => {
+  addMovieModal.classList.add('visible');
+  toggleBackdrop();
+};
