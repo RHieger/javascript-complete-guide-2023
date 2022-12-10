@@ -48,11 +48,18 @@ const toggleBackdrop = () => {
 // Reveals default text entry message if
 // movies[] array is empty; hides if
 // there is a movie object to be added
-// to the DOM.
+// to the DOM
 const updateUI = () => {
   if (movies.length === 0) {
     textEntrySection.style.display = 'block';
   } else {
     textEntrySection.style.display = 'none';
   }
+};
+
+// Hides movie deletion modal
+const closeMovieDeletionModal = () => {
+  toggleBackdrop();
+  deleteMovieModal
+    .classList.remove('visible');
 };
