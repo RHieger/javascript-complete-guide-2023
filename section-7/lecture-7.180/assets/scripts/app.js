@@ -128,3 +128,8 @@ const renderNewMovieElement =
     const listRoot = document.getElementById('movie-list');
     listRoot.append(newMovieElement);
 };
+
+// Closes movie entry modal
+const closeMovieModal = () => {
+  addMovieModal.classList.remove('visible');
+};
