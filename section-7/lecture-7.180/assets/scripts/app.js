@@ -3,7 +3,7 @@
  * Lecture 7.180: Finishing the App
  * 
  * Robert Hieger
- * 12/06/2022
+ * 12/10/2022
  * 
  * OBJECTIVE: TBD
  * 
@@ -76,6 +76,33 @@ const deleteMovieHandler = movieId => {
   movies.splice(movieIndex, 1);
   const listRoot = document.getElementById('movie-list');
   listRoot.children[movieIndex].remove();
-  closeMovieDeletionModal();
   updateUI();
+};
+
+// This callback is called by an eventListener when a movie
+// that listens for a click on the surface of a movie card
+// and responds by revealing the delete movie modal
+const startDeleteMovieHandler = movieId => {
+  deleteMovieModal.classList.add('visible');
+  toggleBackdrop();
+
+  //DOM objects
+  const cancelDeletionButton =
+    deleteMovieModal.querySelector('.btn--passive');
+  let confirmDeletionButton =
+    deleteMovieModal.querySelector('.btn--danger');
+  
+    confirmDeletionButton.replaceWith(confirmDeletionButton
+      .cloneNode(true));
+    
+    confirmDeletionButton =
+      deleteMovieModal.querySelector('.btn--danger');
+
+    // Reset event listeners
+    cancelDeletionButton.removeEventListener('click', closeMovieDeletionModal);
+    cancelDeletionButton.addEventListener('click', closeMovieDeletionModal);
+    confirmDeletionButton.addEventListener(
+      'click',
+      deleteMovieHandler.bind(null, movieId)
+    );
 };
