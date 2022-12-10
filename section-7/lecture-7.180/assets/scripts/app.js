@@ -106,3 +106,25 @@ const startDeleteMovieHandler = movieId => {
       deleteMovieHandler.bind(null, movieId)
     );
 };
+
+// Renders a movie card for movie listing
+const renderNewMovieElement =
+  (id, title, imageUrl, rating) => {
+    const newMovieElement = document.createElement('li');
+    newMovieElement.className = 'movie-element';
+    newMovieElement.innerHTML = `
+      <div class="movie-element__image">
+        <img src="${imageUrl}" alt="${title}">
+      <div>
+      <div class="movie-element__info">
+        <h2>${title}</h2>
+        <p>${rating}/5 stars</p>
+      </div>
+    `;
+    newMovieElement.addEventListener(
+      'click',
+      startDeleteMovieHandler.bind(null, id)
+    );
+    const listRoot = document.getElementById('movie-list');
+    listRoot.append(newMovieElement);
+};
