@@ -33,3 +33,14 @@ const confirmAddMovieButton = cancelAddMovieButton.nextElementSibling;
 const userInputs = addMovieModal.querySelector('input');
 const textEntrySection = document.getElementById('entry-text-section');
 const deleteMovieModal = document.getElementById('delete-modal');
+
+// Empty array to hold movie objects
+const movies = [];
+
+// CALLBACK FUNCTIONS
+
+// Hides backdrop when visible and
+// reveals it when invisible
+const toggleBackdrop = () => {
+  backdrop.classList.toggle('visible');
+};
