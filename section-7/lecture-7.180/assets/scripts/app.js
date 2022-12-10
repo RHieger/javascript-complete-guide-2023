@@ -154,3 +154,43 @@ const cancelAddMovieHandler = () => {
   toggleBackdrop();
   clearMovieInput();
 };
+
+// Sets value for image and text nodes
+// of movie card
+const addMovieHandler = () => {
+  const titleValue = userInputs[0].value;
+  const imageUrlValue = userInputs[1].value;
+  const ratingValue = userInputs[2].value;
+
+  if (
+    titleValue.trim() === '' ||
+    imageUrlValue.trim() === '' ||
+    ratingValue.trim() === '' ||
+    +ratingValue < 1 ||
+    +ratingValue > 5
+  ) {
+    alert('Please enter valid values (rating ' + ratingValue +
+      'between 1 and 5.)');
+    return;
+  }
+
+  const newMovie = {
+    id: (Math.random() * 100).truncate.toString(),
+    title: titleValue,
+    image: imageUrlValue,
+    rating: ratingValue
+  };
+
+  movies.push(newMovie);
+  console.log(movies);
+  closeMovieModal();
+  toggleBackdrop();
+  clearMovieInput();
+  renderNewMovieElement(
+    newMovie.id,
+    newMovie.title,
+    newMovie.image,
+    newMovie.rating
+  );
+  updateUI();
+};
