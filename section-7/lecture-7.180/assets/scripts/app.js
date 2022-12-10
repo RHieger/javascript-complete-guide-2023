@@ -139,3 +139,10 @@ const showMovieModal = () => {
   addMovieModal.classList.add('visible');
   toggleBackdrop();
 };
+
+// Clears user input from movie entry modal
+const clearMovieInput = () => {
+  for (const userInput of userInputs) {
+    userInput.value = '';
+  }
+};
