@@ -146,3 +146,11 @@ const clearMovieInput = () => {
     userInput.value = '';
   }
 };
+
+// Cancels any input to movie entry modal
+// and closes modal
+const cancelAddMovieHandler = () => {
+  closeMovieModal();
+  toggleBackdrop();
+  clearMovieInput();
+};
