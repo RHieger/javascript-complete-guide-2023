@@ -203,3 +203,9 @@ const backdropClickHandler = () => {
   closeMovieDeletionModal();
   clearMovieInput();
 };
+
+// EVENT LISTENERS
+startAddMovieButton.addEventListener('click', showMovieModal);
+backdrop.addEventListener('click', backdropClickHandler);
+cancelAddMovieButton.addEventListener('click', cancelAddMovieHandler);
+confirmAddMovieButton.addEventListener('click', addMovieHandler);
