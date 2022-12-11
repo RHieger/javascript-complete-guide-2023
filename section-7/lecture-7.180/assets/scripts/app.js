@@ -194,3 +194,12 @@ const addMovieHandler = () => {
   );
   updateUI();
 };
+
+// Assures that the movie modal, the
+// movie deletion modal and the movie
+// inputs are cleared.
+const backdropClickHandler = () => {
+  closeMovieModal();
+  closeMovieDeletionModal();
+  clearMovieInput();
+};
