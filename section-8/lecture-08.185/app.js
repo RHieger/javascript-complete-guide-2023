@@ -26,3 +26,8 @@ console.log(evenMoreNumbers);
 const yetMoreNumbers = new Array(5);  // instantiats array with
                                       // 5 empty elements
 console.log(yetMoreNumbers);
+
+// Method #3: Instantiating an Array Object with Syntactic Sugar
+  // same as new Array()—assumed implicitly
+const enoughNumbers = Array(5, 2);
+console.log(enoughNumbers);
