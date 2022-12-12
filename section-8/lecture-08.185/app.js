@@ -10,7 +10,7 @@
  * 
  */
 
-// Method #1: Most commonly used
+// Method #1: Most commonly used and fastest performance
 const numbers = [1, 2, 3];
 console.log(numbers);
 
@@ -31,3 +31,7 @@ console.log(yetMoreNumbers);
   // same as new Array()—assumed implicitly
 const enoughNumbers = Array(5, 2);
 console.log(enoughNumbers);
+
+// Method #4: Instantiate an Array Object with Specified Elements
+const guessAgain = Array.of(1, 2);
+console.log(guessAgain);
