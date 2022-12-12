@@ -193,14 +193,14 @@ input:focus {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
-#entry-text-section {
+#entry-text {
   width: 40rem;
   margin: 2rem auto;
   max-width: 80%;
   padding: 1rem;
 }
 
-#entry-text-section p {
+#entry-text p {
   font-size: 1.5rem;
   text-align: center;
 }

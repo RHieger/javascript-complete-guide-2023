@@ -3,7 +3,7 @@
  * Lecture 7.180: Finishing the App
  * 
  * Robert Hieger
- * 12/10/2022
+ * 12/11/2022
  * 
  * OBJECTIVE: TBD
  * 
@@ -23,48 +23,39 @@
  * 
  */
 
-
-// DOM Objects
 const addMovieModal = document.getElementById('add-modal');
+// const addMovieModal = document.querySelector('#add-modal');
+// const addMovieModal = document.body.children[1];
 const startAddMovieButton = document.querySelector('header button');
+// const startAddMovieButton = document.querySelector('header').lastElementChild;
 const backdrop = document.getElementById('backdrop');
+// const backdrop = document.body.firstElementChild;
 const cancelAddMovieButton = addMovieModal.querySelector('.btn--passive');
 const confirmAddMovieButton = cancelAddMovieButton.nextElementSibling;
-const userInputs = addMovieModal.querySelector('input');
-const textEntrySection = document.getElementById('entry-text-section');
+const userInputs = addMovieModal.querySelectorAll('input');
+// const userInputs = addMovieModal.getElementsByTagName('input');
+const entryTextSection = document.getElementById('entry-text');
 const deleteMovieModal = document.getElementById('delete-modal');
 
-// Empty array to hold movie objects
 const movies = [];
 
-// CALLBACK FUNCTIONS
-
-// Hides backdrop when visible and
-// reveals it when invisible
 const toggleBackdrop = () => {
   backdrop.classList.toggle('visible');
 };
 
-// Reveals default text entry message if
-// movies[] array is empty; hides if
-// there is a movie object to be added
-// to the DOM
 const updateUI = () => {
   if (movies.length === 0) {
-    textEntrySection.style.display = 'block';
+    entryTextSection.style.display = 'block';
   } else {
-    textEntrySection.style.display = 'none';
+    entryTextSection.style.display = 'none';
   }
 };
 
-// Hides movie deletion modal
 const closeMovieDeletionModal = () => {
   toggleBackdrop();
-  deleteMovieModal
-    .classList.remove('visible');
+  deleteMovieModal.classList.remove('visible');
 };
 
-// Handles deletion of a movie card
 const deleteMovieHandler = movieId => {
   let movieIndex = 0;
   for (const movie of movies) {
@@ -76,87 +67,75 @@ const deleteMovieHandler = movieId => {
   movies.splice(movieIndex, 1);
   const listRoot = document.getElementById('movie-list');
   listRoot.children[movieIndex].remove();
+  // listRoot.removeChild(listRoot.children[movieIndex]);
+  closeMovieDeletionModal();
   updateUI();
 };
 
-// This callback is called by an eventListener when a movie
-// that listens for a click on the surface of a movie card
-// and responds by revealing the delete movie modal
 const startDeleteMovieHandler = movieId => {
   deleteMovieModal.classList.add('visible');
   toggleBackdrop();
 
-  //DOM objects
-  const cancelDeletionButton =
-    deleteMovieModal.querySelector('.btn--passive');
-  let confirmDeletionButton =
-    deleteMovieModal.querySelector('.btn--danger');
-  
-    confirmDeletionButton.replaceWith(confirmDeletionButton
-      .cloneNode(true));
+  const cancelDeletionButton = deleteMovieModal.querySelector('.btn--passive');
+  let confirmDeletionButton = deleteMovieModal.querySelector('.btn--danger');
+
+  confirmDeletionButton.replaceWith(confirmDeletionButton.cloneNode(true));
+
+  confirmDeletionButton = deleteMovieModal.querySelector('.btn--danger');
+
+  // confirmDeletionButton.removeEventListener('click', deleteMovieHandler.bind(null, movieId)); // will not work :(
     
-    confirmDeletionButton =
-      deleteMovieModal.querySelector('.btn--danger');
+  cancelDeletionButton.removeEventListener('click', closeMovieDeletionModal);
 
-    // Reset event listeners
-    cancelDeletionButton.removeEventListener('click', closeMovieDeletionModal);
-    cancelDeletionButton.addEventListener('click', closeMovieDeletionModal);
-    confirmDeletionButton.addEventListener(
-      'click',
-      deleteMovieHandler.bind(null, movieId)
-    );
+  cancelDeletionButton.addEventListener('click', closeMovieDeletionModal);
+  confirmDeletionButton.addEventListener(
+    'click',
+    deleteMovieHandler.bind(null, movieId)
+  );
 };
 
-// Renders a movie card for movie listing
-const renderNewMovieElement =
-  (id, title, imageUrl, rating) => {
-    const newMovieElement = document.createElement('li');
-    newMovieElement.className = 'movie-element';
-    newMovieElement.innerHTML = `
-      <div class="movie-element__image">
-        <img src="${imageUrl}" alt="${title}">
-      <div>
-      <div class="movie-element__info">
-        <h2>${title}</h2>
-        <p>${rating}/5 stars</p>
-      </div>
-    `;
-    newMovieElement.addEventListener(
-      'click',
-      startDeleteMovieHandler.bind(null, id)
-    );
-    const listRoot = document.getElementById('movie-list');
-    listRoot.append(newMovieElement);
+const renderNewMovieElement = (id, title, imageUrl, rating) => {
+  const newMovieElement = document.createElement('li');
+  newMovieElement.className = 'movie-element';
+  newMovieElement.innerHTML = `
+    <div class="movie-element__image">
+      <img src="${imageUrl}" alt="${title}">
+    </div>
+    <div class="movie-element__info">
+      <h2>${title}</h2>
+      <p>${rating}/5 stars</p>
+    </div>
+  `;
+  newMovieElement.addEventListener(
+    'click',
+    startDeleteMovieHandler.bind(null, id)
+  );
+  const listRoot = document.getElementById('movie-list');
+  listRoot.append(newMovieElement);
 };
 
-// Closes movie entry modal
 const closeMovieModal = () => {
   addMovieModal.classList.remove('visible');
 };
 
-// Reveals movie modal for user input
 const showMovieModal = () => {
+  // function() {}
   addMovieModal.classList.add('visible');
   toggleBackdrop();
 };
 
-// Clears user input from movie entry modal
 const clearMovieInput = () => {
-  for (const userInput of userInputs) {
-    userInput.value = '';
+  for (const usrInput of userInputs) {
+    usrInput.value = '';
   }
 };
 
-// Cancels any input to movie entry modal
-// and closes modal
 const cancelAddMovieHandler = () => {
   closeMovieModal();
   toggleBackdrop();
   clearMovieInput();
 };
 
-// Sets value for image and text nodes
-// of movie card
 const addMovieHandler = () => {
   const titleValue = userInputs[0].value;
   const imageUrlValue = userInputs[1].value;
@@ -169,13 +148,12 @@ const addMovieHandler = () => {
     +ratingValue < 1 ||
     +ratingValue > 5
   ) {
-    alert('Please enter valid values (rating ' + ratingValue +
-      'between 1 and 5.)');
+    alert('Please enter valid values (rating between 1 and 5).');
     return;
   }
 
   const newMovie = {
-    id: (Math.random() * 100).truncate.toString(),
+    id: Math.trunc((Math.random() * 100)).toString(),
     title: titleValue,
     image: imageUrlValue,
     rating: ratingValue
@@ -195,16 +173,12 @@ const addMovieHandler = () => {
   updateUI();
 };
 
-// Assures that the movie modal, the
-// movie deletion modal and the movie
-// inputs are cleared.
 const backdropClickHandler = () => {
   closeMovieModal();
   closeMovieDeletionModal();
   clearMovieInput();
 };
 
-// EVENT LISTENERS
 startAddMovieButton.addEventListener('click', showMovieModal);
 backdrop.addEventListener('click', backdropClickHandler);
 cancelAddMovieButton.addEventListener('click', cancelAddMovieHandler);

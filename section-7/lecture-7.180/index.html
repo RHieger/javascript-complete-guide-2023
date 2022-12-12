@@ -9,10 +9,8 @@
     <script src="assets/scripts/app.js" defer></script>
   </head>
   <body>
-    <div id="backdrop">
-      <!-- Dynamic content lives here. -->
-    </div>
-    <div class="modal" id="add-modal">
+    <div id="backdrop"></div>
+    <div class="modal card" id="add-modal">
       <div class="modal__content">
         <label for="title">Movie Title</label>
         <input type="text" name="title" id="title" />
@@ -33,7 +31,7 @@
         <button class="btn btn--success">Add</button>
       </div>
     </div>
-    <div class="modal" id="delete-modal">
+    <div class="modal card" id="delete-modal">
       <h2 class="modal__title">Are you sure?</h2>
       <p class="modal__content">
         Are you sure you want to delete this item? This action can't be made
@@ -51,7 +49,7 @@
     </header>
 
     <main>
-      <section id="entry-text-section" class="card">
+      <section id="entry-text" class="card">
         <p>Your personal movie database!</p>
       </section>
       <ul id="movie-list"></ul>
