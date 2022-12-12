@@ -35,3 +35,9 @@ console.log(enoughNumbers);
 // Method #4: Instantiate an Array Object with Specified Elements
 const guessAgain = Array.of(1, 2);
 console.log(guessAgain);
+
+// Method #5 Convert Array-Like Object to Array
+const listItems = document.querySelectorAll('li');
+console.log(listItems);
+const guessYetAgain = Array.from(listItems);  
+console.log(guessYetAgain);
