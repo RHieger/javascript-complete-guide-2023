@@ -49,3 +49,9 @@ console.log('\t', hobbies);
 hobbies[1] = 'Coding';
 console.log('\nUse Index Addresses to Set Element Value');
 console.log(hobbies);
+
+// Method #6: Add Element Beyond Index Range
+// Adds empty elements where there is no data.
+hobbies[5] = 'Reading'; // rarely used
+console.log('\n\tUse Index to Add Element Beyond Index Range');
+console.log(hobbies);
