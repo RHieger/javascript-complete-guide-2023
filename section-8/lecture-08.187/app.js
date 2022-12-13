@@ -11,3 +11,14 @@
  * 
  */
 
+// Add Data to an Array
+
+const hobbies = ['Sports', 'Cooking'];
+
+console.log('\n\n\tOriginal Array: ');
+console.log('\t', hobbies);
+
+// Method 1: push()—adds element to end of array
+hobbies.push('Reading');
+console.log('\n\tNew Element Pushed to the Array:');
+console.log('\t', hobbies);
