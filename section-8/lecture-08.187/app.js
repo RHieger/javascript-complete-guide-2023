@@ -11,6 +11,7 @@
  * 
  */
 
+
 // Add Data to an Array
 
 const hobbies = ['Sports', 'Cooking'];
@@ -43,3 +44,8 @@ console.log('\n\tUse shift() to Delete Element ' +
             'from the Beginning of the Array'
 );
 console.log('\t', hobbies);
+
+// Method #5: Set Value Using Index Addresses
+hobbies[1] = 'Coding';
+console.log('\nUse Index Addresses to Set Element Value');
+console.log(hobbies);
