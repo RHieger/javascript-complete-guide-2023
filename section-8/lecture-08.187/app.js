@@ -18,7 +18,14 @@ const hobbies = ['Sports', 'Cooking'];
 console.log('\n\n\tOriginal Array: ');
 console.log('\t', hobbies);
 
-// Method 1: push()—adds element to end of array
+// Method #1: push()—adds element to end of array
 hobbies.push('Reading');
 console.log('\n\tNew Element Pushed to the Array:');
+console.log('\t', hobbies);
+
+// Method #2: unshift()—adds element to beginning of array
+hobbies.unshift('Coding');
+console.log('\n\tUse unshift() to Add Element to ' +
+            'Beginning of Array'
+);
 console.log('\t', hobbies);
