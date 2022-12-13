@@ -29,3 +29,10 @@ console.log('\n\tUse unshift() to Add Element to ' +
             'Beginning of Array'
 );
 console.log('\t', hobbies);
+
+// Method #3 pop()—deletes the last element in an array.
+hobbies.pop();
+console.log('\n\tUse pop() to Delete Element ' +
+            'from the End of the Array'
+);
+console.log('\t', hobbies);
