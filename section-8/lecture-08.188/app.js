@@ -19,10 +19,26 @@ console.log(hobbies);
 
 // Use case for splice() where item is inserted
 // at a specified index
+
+// Array.splice(
+//  starting index,
+//  number of items to delete,
+//  items to add
+// )
 hobbies.splice(1, 0, 'Good Food');
 
 console.log(
   '\n\tUse splice() to insert element' +
   ' at a specified index:'
+);
+console.log('\t', hobbies);
+
+// Use case for splice where an item
+// is deleted
+hobbies.splice(0, 1);
+
+console.log(
+  '\n\tUse splice() to delete ' +
+  'one element at index 0:'
 );
 console.log('\t', hobbies);
