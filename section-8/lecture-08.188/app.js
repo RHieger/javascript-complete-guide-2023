@@ -11,3 +11,18 @@
  * 
  */
 
+// Instantiate hobbies array
+const hobbies = ['Sports', 'Coding'];
+
+console.log('\n\n\tOriginal hobbies array:');
+console.log(hobbies);
+
+// Use case for splice() where item is inserted
+// at a specified index
+hobbies.splice(1, 0, 'Good Food');
+
+console.log(
+  '\n\tUse splice() to insert element' +
+  ' at a specified index:'
+);
+console.log('\t', hobbies);
