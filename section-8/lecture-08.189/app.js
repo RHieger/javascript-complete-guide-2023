@@ -4,7 +4,7 @@
  * Creating Copies with slice()
  * 
  * Robert Hieger
- * 12/14/2022
+ * 12/16/2022
  * 
  * Objective: Explore the functionality of the
  * Array.slice() method. Demonstrate diferent
@@ -81,3 +81,24 @@ console.log(
 // Reveal altered testResults[]
 console.log('\n\tResulting Change to testResults[]:');
 console.log('\t', testResults);
+
+// Selecting ranges from an array with slice()
+console.log(
+  '\n\tNow let\'s use slice() to select a range' +
+  ' \nfor a new array. The new array is called ' +
+  ' moreStoredResults.'
+);
+
+// Select index range 0 through and not including 2
+// for new array:
+const moreStoredResults = testResults.slice(0, 2);
+
+console.log(
+  '\nThe range to be sliced is index 0 up to but' +
+  ' not including 2'
+);
+
+console.log(
+  '\n\tElements included in moreStoredElements:'
+);
+console.log('\t', moreStoredResults);
