@@ -11,3 +11,10 @@
  */
 
 const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
+
+// Display original testResults Array.
+console.log('\n\n\tDemonstrate cat() Method:');
+console.log('\t------------------------\n\n');
+
+console.log('\tOriginal testResults[] Array:')
+console.log('\t', testResults);
