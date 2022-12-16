@@ -18,3 +18,12 @@ console.log('\t------------------------\n\n');
 
 console.log('\tOriginal testResults[] Array:')
 console.log('\t', testResults);
+
+// concat() storedResults with newElements[]
+// NOTE: Instructor passed the array object literal to
+// the concat() method, which certainly works. For myself,
+// I prefer the specifity provided by identifying
+// explicitly what is being concatenated.
+const newElements = [3.99, 2];
+
+const storedResults = testResults.concat(newElements);
