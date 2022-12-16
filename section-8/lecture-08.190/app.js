@@ -27,3 +27,15 @@ console.log('\t', testResults);
 const newElements = [3.99, 2];
 
 const storedResults = testResults.concat(newElements);
+
+// Log resulting storedResults[] to console.
+console.log('\n\tContents of newElements[] Array:');
+console.log('\t', newElements);
+
+console.log(
+  '\n\tUse concat() to concatenate newElements[]\n' +
+  ' to testResults and save the new Array as storedResults[]:'
+);
+
+console.log('\n\tContents of new storedResults[] Array:');
+console.log('\t', storedResults);
