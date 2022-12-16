@@ -1,58 +1,83 @@
 /**
  * 
- * Lecture 8.188: The splice() Method
+ * Lecture 8.189: Selecting Ranges &
+ * Creating Copies with slice()
  * 
  * Robert Hieger
  * 12/14/2022
  * 
- * Objective: Explore and demonstrate the use
- * cases for the splice() method exposed by
- * the Array() object.
+ * Objective: Explore the functionality of the
+ * Array.slice() method. Demonstrate diferent
+ * use cases for this versatile method.
  * 
  */
 
-// Instantiate hobbies array
-let hobbies = ['Sports', 'Coding'];
+// First let's show what happens if we simply set
+// the value of an identifier to that contained
+// within our array.
 
-console.log('\n\n\tOriginal hobbies array:');
-console.log(hobbies);
+const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
 
-// Use case for splice() where item is inserted
-// at a specified index
+console.log('\n\n\tValue of testResults:');
+console.log('\t', testResults.slice());
 
-// Array.splice(
-//  starting index,
-//  number of items to delete,
-//  items to add
-// )
-hobbies.splice(1, 0, 'Good Food');
+// Copy testResults[] to another variable.
+let storedResults = testResults;
 
-console.log(
-  '\n\tUse splice() to insert element' +
-  ' at a specified index:'
-);
-console.log('\t', hobbies);
+console.log('\n\tCopy testResults to storedResults:');
 
-// Use case for splice where an item
-// is deleted
-hobbies.splice(0, 1);
+console.log('\n\tValue of storedResults:');
+console.log('\t', storedResults);
+console.log('\n\tValue of testResults:');
+console.log('\t', testResults);
+
+console.log('\n\tAs you can see, both arrays are identical.');
+
+storedResults.pop();
 
 console.log(
-  '\n\tUse splice() to delete ' +
-  'one element at index 0:'
-);
-console.log('\t', hobbies);
+  '\n\tNow let\'s use pop() to remove last element' + 
+  ' from storedResults:');
+console.log('\n\tResult of storedResults.pop():');
+console.log('\t', storedResults);
 
-// Use splice() method to flush all elements
-// from the array.
-hobbies = ['Sports', 'Good Food', 'Coding'];
-console.log('\n\thobbies[] restored:');
-console.log('\t', hobbies);
-hobbies.splice(0); // Because no count of elements
-                  // to be removed is provided,
-                  // all elements are removed.
+console.log('\n\tNow let\'s see the value of testResults:');
+console.log('\t', testResults);
+
 console.log(
-  '\n\tUse splice(0) to flush ' + 
-  'all elements from the array:'
+  '\n\tWAIT A MINUTE! I didn\'t touch testResults!\n' +
+  'Why is it also missing the last element?'
 );
-console.log('\t', hobbies);
+
+console.log(
+  '\n\tOh, but you did touch testResults. Remember. Arrays are ' +
+  'reference values.\n\tAnything you do to storedResults effects ' +
+  'testResults because they are both at the same address.'
+);
+console.log('\n\tslice() can be of assistance here.');
+
+// Create bonified copy of testResults
+storedResults = testResults.slice();
+
+console.log(
+  '\n\tJust made true copy of testResults using slice().'
+);
+console.log(
+  '\n\tProof that storedResults does not share ' +
+  'the same memory address as testResults:'
+);
+console.log('\n\tstoredResults is equal to testResults?');
+console.log('\t',storedResults === testResults);
+
+testResults.splice(2, 1);
+
+console.log(
+  '\n\tNow let\'s remove the third element from testResults.'
+);
+console.log(
+  '\n\t...and compare storedResults with\ntestResults again...'
+);
+
+// Reveal altered testResults[]
+console.log('\n\tResulting Change to testResults[]:');
+console.log('\t', testResults);
