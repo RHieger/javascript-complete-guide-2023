@@ -1,20 +1,14 @@
 /**
  * 
- * Lecture 8.189: Selecting Ranges &
- * Creating Copies with slice()
+ * Lecture 8.190: Adding Arrays to Arrays with concat()
  * 
  * Robert Hieger
  * 12/16/2022
  * 
- * Objective: Explore the functionality of the
- * Array.slice() method. Demonstrate diferent
- * use cases for this versatile method.
+ * Objective: Demonstrate the concat() Method and
+ * its utility in manipulating Arrays.
  * 
  */
-
-// First let's show what happens if we simply set
-// the value of an identifier to that contained
-// within our array.
 
 const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
 
