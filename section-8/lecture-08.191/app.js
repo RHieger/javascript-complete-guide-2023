@@ -1,12 +1,13 @@
 /**
  * 
- * Lecture 8.190: Adding Arrays to Arrays with concat()
+ * Lecture 8.191: Retrieving Indexes with indexOf()
+ * and lastIndex()
  * 
  * Robert Hieger
  * 12/16/2022
  * 
- * Objective: Demonstrate the concat() Method and
- * its utility in manipulating Arrays.
+ * Objective: Demonstrate the use of indexOf() and
+ * lastIndex() to find the index of array elements.
  * 
  */
 
