@@ -1,7 +1,7 @@
 /**
  * 
  * Lecture 8.191: Retrieving Indexes with indexOf()
- * and lastIndex()
+ * and lastIndexOf()
  * 
  * Robert Hieger
  * 12/16/2022
@@ -12,3 +12,14 @@
  */
 
 const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
+
+// Log contents of testResults to console.
+console.log('\n\n\tUSING indexOf() and lastIndex():');
+console.log('\t------------------------------');
+
+console.log('\n\tContent in testResults[]:');
+console.log('\t', testResults);
+
+// Use indexOf() to find index of 1.5 in testResults.
+console.log('\n\tUse indexOf() to find index of 1.5:');
+console.log('\t', testResults.indexOf(1.5));
