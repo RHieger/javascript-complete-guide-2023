@@ -15,3 +15,7 @@
 
 // Our new array for manipulation:
 const prices = [10.99, 5.99, 3.99, 6.59];
+
+// Tax Rate:
+const salesTax = 0.08875;
+const taxAdjustedPrices = [];
