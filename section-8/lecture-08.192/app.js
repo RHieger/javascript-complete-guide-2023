@@ -23,3 +23,11 @@ const personData = [
   { name: 'Max' },
   { name: 'Manuel'}
 ];
+
+// Log personData to Console.
+
+console.log('\n\n\tFINDING OBJECTS IN AN ARRAY:');
+console.log('\t---------------------------\n');
+
+console.log('\n\tHere is our personData[] Array:');
+console.log('\t', personData);
