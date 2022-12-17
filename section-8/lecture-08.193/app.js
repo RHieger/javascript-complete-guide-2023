@@ -12,43 +12,8 @@
  * 
  */
 
-const personData = [
-  { name: 'Max' },
-  { name: 'Manuel'}
-];
+// testResults revisited:
+const testResults = [1, 5.3, 1.5, 10.99, 1.5, -5, 10];
 
-// Log personData to Console.
-
-console.log('\n\n\tFINDING OBJECTS IN AN ARRAY:');
-console.log('\t---------------------------\n');
-
-console.log('\n\tHere is our personData[] Array:');
-console.log('\t', personData);
-
-// find() object whose value is 'Manuel'.
-
-const manuel = personData
-  .find( (person, index, people) => {
-    return person.name === 'Manuel';
-  });
-
-// Log manuel() to console.
-console.log(
-  '\n\tUsing the find() method, now let\'s find the object' +
-  ' whose value is Manuel and log it to the console.'
-);
-console.log('\tObject found: ', manuel);
-
-// Use findIndex to locate the index at which the object
-// whose value is "Max" resides.
-const maxIndex = personData
-.findIndex( (person, index, people) => {
-  return person.name === 'Max';
-});
-
-console.log(
-  '\n\tNow using the findIndex() method, let\'s find the index' +
-  ' for the object whose value is \'Max\' and log it to' +
-  ' the console.'
-);
-console.log('\tIndex for Max: ', maxIndex);
+console.log('\n\n\tDEMONSTRATION OF THE includes() METHOD:');
+console.log('\t--------------------------------------');
