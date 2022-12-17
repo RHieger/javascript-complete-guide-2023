@@ -41,3 +41,24 @@ console.log('\n\t', testResults);
 
 console.log('\n\tNow let\'s get the index of 1.5 again:');
 console.log('\tIndex of 1.5: ', testResults.indexOf(1.5));
+
+// Demonstrate the Use of lastIndexOf():
+
+console.log(
+  '\n\tWe still get the same index of 2, but no' +
+  ' index for the second instance. What to do?\n' +
+  '\n\tEnter the lastIndexOf() method.'
+);
+
+console.log('\n\tIndex for Last Instance of 1.5:');
+console.log(
+  '\tLast Instance of 1.5: ',
+  testResults.lastIndexOf(1.5)
+);
+
+console.log(
+  '\n\n\tThis time lastIndexOf() searches from' +
+  ' right to left and finds index 4 for the ' +
+  'lastIndexOf() as no other instances occur ' +
+  'after index 4.'
+);
