@@ -1,13 +1,21 @@
 /**
  * 
- * Lecture 8.191: Retrieving Indexes with indexOf()
- * and lastIndexOf()
+ * Lecture 8.192: Finding Stuff: find() & findIndex()
  * 
  * Robert Hieger
- * 12/16/2022
+ * 12/17/2022
  * 
- * Objective: Demonstrate the use of indexOf() and
- * lastIndex() to find the index of array elements.
+ * Objective: As discussed in Lecture 8.191, one inherint
+ * limitation of both indexOf() and lastIndexOf() is that
+ * they cannot handle searching of objects within an array.
+ * 
+ * This is because objects are reference data types—that is,
+ * the object contains a reference to a memory address where
+ * the object or objects are stored, not the object(s).
+ * 
+ * The object of this lecture is to explore two methods—
+ * find() and findIndex() to show methods of finding the
+ * address of objects.
  * 
  */
 
