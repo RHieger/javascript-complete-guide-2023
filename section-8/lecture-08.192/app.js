@@ -31,3 +31,17 @@ console.log('\t---------------------------\n');
 
 console.log('\n\tHere is our personData[] Array:');
 console.log('\t', personData);
+
+// find() object whose value is 'Manuel'.
+
+const manuel = personData
+  .find( (person, index, people) => {
+    return person.name === 'Manuel';
+  });
+
+  // Log manuel() to console.
+  console.log(
+    '\n\tUsing the find() method, now let\'s find the object' +
+    ' whose value is Manuel and log it to the console.'
+  );
+  console.log('\tObject found: ', manuel);
