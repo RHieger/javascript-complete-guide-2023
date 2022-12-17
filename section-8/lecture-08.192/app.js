@@ -19,3 +19,7 @@
  * 
  */
 
+const personData = [
+  { name: 'Max' },
+  { name: 'Manuel'}
+];
