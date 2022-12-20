@@ -4,7 +4,7 @@
  * The forEach() Method
  * 
  * Robert Hieger
- * 12/17/2022
+ * 12/19/2022
  * 
  * Objective: Demonstrate the utility of the forEach()
  * method and explore its differences from for().
@@ -16,6 +16,8 @@
 // Our new array for manipulation:
 const prices = [10.99, 5.99, 3.99, 6.59];
 
-// Tax Rate:
-const salesTax = 0.08875;
-const taxAdjustedPrices = [];
+// Log original prices[] array to console.
+console.log('\n\n\tDEMO OF forEach() METHOD:');
+console.log('\t------------------------\n\n');
+
+console.table(prices);
