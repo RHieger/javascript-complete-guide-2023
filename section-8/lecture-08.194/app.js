@@ -30,3 +30,14 @@ console.table(prices);
 console.log('\n\tNYC Sales Tax Rate:');
 console.log('\t------------------------');
 console.log(`\tSales Tax: ${salesTax}`);
+
+// Log Base Price, Tax, and Grand Total
+// to console.
+
+// Displays base price, sales tax and grand
+// total for each element in the prices array.
+const getGrandTotal = (
+  id, basePrice, tax, taxAdjustedPrice
+) => {
+  // TBD
+};
