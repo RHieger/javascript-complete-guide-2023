@@ -18,7 +18,7 @@ const prices = [10.99, 5.99, 3.99, 6.59];
 
 // Tax Rate
 const salesTax = 0.08875;
-const grandTotal = [];
+const taxAdjustedPrices = [];
 
 // Log original prices[] array to console.
 console.log('\n\n\tDEMO OF forEach() METHOD:');
@@ -36,8 +36,7 @@ console.log(`\tSales Tax: ${salesTax}`);
 
 // Displays base price, sales tax and grand
 // total for each element in the prices array.
-const getGrandTotal = (
-  id, basePrice, tax, taxAdjustedPrice
-) => {
+
+const displayGrandTotals = () => {
   // TBD
 };
