@@ -40,17 +40,18 @@ const taxAdjustedPrices = [];
 // Displays base price, sales tax and grand
 // total for each element in the prices array.
 const displayPriceData = () => {
-  prices.forEach( (basePrice) => {
+  prices.forEach( (basePrice, index, salesTax) => {
     const priceObj = {
-      price: basePrice,
-      salesTax: parseFloat((basePrice * tax)
-        .toFixed(2)),
-      grandTotal: parseFloat( (basePrice + tax)
-        .toFixed(2))
+      index: index,
+      basePrice: basePrice,
+      salesTax: (tax * basePrice).toFixed(2),
+      grandTotal: (tax + basePrice).toFixed(2)
   };
     taxAdjustedPrices.push(priceObj);
+    console.log(`Base Price:\t $${taxAdjustedPrices[index].basePrice}`);
+    console.log(`Sales Tax:\t$${taxAdjustedPrices[index].salesTax}`);
+    console.log(`TOTAL: $${taxAdjustedPrices[index].grandTotal}`);
   });
-  console.log(taxAdjustedPrices);
 };
 
 displayPriceData();
