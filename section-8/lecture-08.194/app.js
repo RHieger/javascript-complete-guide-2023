@@ -83,7 +83,7 @@ prices.forEach((price, idx, prices) => {
     `\n\tBase Price:\t$${taxAdjustedPrices[idx].price}`
   );
   console.log(
-    `\tSales Tax\t$${taxAdjustedPrices[idx].salesTax}`
+    `\tSales Tax:\t$${taxAdjustedPrices[idx].salesTax}`
   );
   console.log(
     `\tTotal:\t$${taxAdjustedPrices[idx].taxAdjPrice}`
