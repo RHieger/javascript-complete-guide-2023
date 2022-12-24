@@ -33,10 +33,6 @@ console.log(`\tSales Tax: ${tax}`);
 // Log Base Price, Tax, and Grand Total
 // to console.
 
-// Array to which price taxes and total data
-// will be pushed.
-const taxAdjustedPrices = [];
-
 // Displays base price, sales tax and grand
 // total for each element in the prices array.
 
