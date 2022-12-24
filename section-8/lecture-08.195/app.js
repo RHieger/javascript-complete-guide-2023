@@ -51,18 +51,20 @@ console.log(`\tSales Tax: ${tax}`);
 // values contained only 2 decmial places, as they would
 // in a money figure.
 
-/**
- * 
- * INSTRUCTOR'S ORIGINAL CODE:
- * 
- * prices.forEach((price, idx, prices) => {
-  const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
-  taxAdjustedPrices.push(priceObj);
+const priceBreakdown = prices
+  .map((price, idx, prices) => {
+  const priceObj = {
+    index: idx,
+    price: price,
+    salesTax: parseFloat((price * tax).toFixed(2)),
+    taxAdjPrice: parseFloat((price * (1 + tax)).toFixed(2))
+  };
+  return priceObj;
 });
 
-console.log(taxAdjustedPrices);
- */
+console.table(priceBreakdown);
 
+/* Commented out temporarily
 // Output price data
 console.log('\n\tPRICE LIST:');
 console.log('\t----------\n');
@@ -85,3 +87,4 @@ prices.forEach((price, idx, prices) => {
     `\tTotal:\t$${taxAdjustedPrices[idx].taxAdjPrice}`
   );
 });
+*/
