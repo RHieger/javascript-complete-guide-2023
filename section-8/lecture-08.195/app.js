@@ -13,8 +13,18 @@
  * 
  */
 
+// NOTE: My original intention was to create the same more
+// descriptive output found in my solution to Lecture 8.194,
+// but this time, converting all dollar and fractional values
+// to pennies, as TA Jost suggested. Because I found it
+// rather daunting to get accurate results, I have opted to
+// take the simpler route until I get more lecture concepts
+// under my belt.
+
 // Our new array for manipulation:
-const prices = [10.99, 5.99, 3.99, 6.59];
+const prices = [
+  10.99, 5.99, 3.99, 6.59
+];
 
 // Tax Rate
 const tax = 0.08875;
@@ -36,55 +46,18 @@ console.log(`\tSales Tax: ${tax}`);
 // Displays base price, sales tax and grand
 // total for each element in the prices array.
 
-// NOTE: The output provided by my forEach() loop
-// differs from the output provided by the instructor
-// which simply output the array of price objects
-// using the prices.forEach() loop.
-
-// I have chosen to code a more elaborate output that
-// includes the tax rate (in this case NYC), the base
-// price, and finally, the total, all clearly labeled
-// in console.log() statements.
-
-// To do this, I used the as-yet-not-covered mathematical
-// toFixed() function to assure that the resulting float
-// values contained only 2 decmial places, as they would
-// in a money figure.
-
 const priceBreakdown = prices
   .map((price, idx, prices) => {
   const priceObj = {
     index: idx,
     price: price,
-    salesTax: parseFloat((price * tax).toFixed(2)),
-    taxAdjPrice: parseFloat((price * (1 + tax)).toFixed(2))
+    salesTax: parseFloat((price * tax)),
+    taxAdjPrice: parseFloat((price * (1 + tax)))
   };
   return priceObj;
 });
 
-console.table(priceBreakdown);
-
-/* Commented out temporarily
 // Output price data
 console.log('\n\tPRICE LIST:');
-console.log('\t----------\n');
 
-prices.forEach((price, idx, prices) => {
-  const priceObj = {
-    index: idx,
-    price: price,
-    salesTax: parseFloat((price * tax).toFixed(2)),
-    taxAdjPrice: parseFloat((price * (1 + tax)).toFixed(2))
-  };
-  taxAdjustedPrices.push(priceObj);
-  console.log(
-    `\n\tBase Price:\t$${taxAdjustedPrices[idx].price}`
-  );
-  console.log(
-    `\tSales Tax\t$${taxAdjustedPrices[idx].salesTax}`
-  );
-  console.log(
-    `\tTotal:\t$${taxAdjustedPrices[idx].taxAdjPrice}`
-  );
-});
-*/
+console.log('\t', priceBreakdown);
