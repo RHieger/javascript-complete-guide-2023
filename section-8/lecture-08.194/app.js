@@ -40,10 +40,10 @@ const taxAdjustedPrices = [];
 // Displays base price, sales tax and grand
 // total for each element in the prices array.
 
-// NOTE: the output provided by the displayPriceData()
-// function differs from the output provided by the
-// instructor, which simply output the array of price
-// objects using the prices.forEach() loop.
+// NOTE: The output provided by my forEach() loop
+// differs from the output provided by the instructor
+// which simply output the array of price objects
+// using the prices.forEach() loop.
 
 // I have chosen to code a more elaborate output that
 // includes the tax rate (in this case NYC), the base
@@ -67,29 +67,6 @@ const taxAdjustedPrices = [];
 console.log(taxAdjustedPrices);
  */
 
-/* Commented Out temporarily
-const displayPriceData = () => {
-  prices.forEach( (basePrice, index, salesTax) => {
-    const priceObj = {
-      index: index,
-      basePrice: basePrice,
-      salesTax: (tax * basePrice).toFixed(2),
-      grandTotal: (tax + basePrice).toFixed(2)
-  };
-    taxAdjustedPrices.push(priceObj);
-    console.log(
-      `\n\tBase Price:\n\t$${taxAdjustedPrices[index].basePrice}`
-    );
-    console.log(
-      `\tSales Tax:\n\t$${taxAdjustedPrices[index].salesTax}`
-    );
-    console.log(
-      `\tTOTAL:\n\t$${taxAdjustedPrices[index].grandTotal}\n\n`
-    );
-  });
-};
-*/
-
 // Output price data
 console.log('\n\tPRICE LIST:');
 console.log('\t----------\n');
@@ -97,13 +74,18 @@ console.log('\t----------\n');
 prices.forEach((price, idx, prices) => {
   const priceObj = {
     index: idx,
-    basePrice: price,
-    taxRate: parseFloat((price * tax).toFixed(2)),
+    price: price,
+    salesTax: parseFloat((price * tax).toFixed(2)),
     taxAdjPrice: parseFloat((price * (1 + tax)).toFixed(2))
   };
   taxAdjustedPrices.push(priceObj);
+  console.log(
+    `\n\tBase Price:\t$${taxAdjustedPrices[idx].price}`
+  );
+  console.log(
+    `\tSales Tax\t$${taxAdjustedPrices[idx].salesTax}`
+  );
+  console.log(
+    `\tTotal:\t$${taxAdjustedPrices[idx].taxAdjPrice}`
+  );
 });
-
-console.table(taxAdjustedPrices);
-
-// displayPriceData();
