@@ -1,15 +1,15 @@
 /**
  * 
- * Lecture 8.194: Alternative to for Loops:
- * The forEach() Method
+ * Lecture 8.195: Transforming Data with map()
  * 
  * Robert Hieger
- * 12/23/2022
+ * 12/24/2022
  * 
- * Objective: Demonstrate the utility of the forEach()
- * method and explore its differences from for().
- * 
- * Also, use forEach() to add tax to an array of prices.
+ * Objective: Demonstrate a simpler method of achieving
+ * the same results as those in Lecture 8.194 by
+ * employing the map() method, which manipulates the
+ * existing array and returns a new array with the
+ * specified changes.
  * 
  */
 
