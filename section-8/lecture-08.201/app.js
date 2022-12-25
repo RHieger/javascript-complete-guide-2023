@@ -9,14 +9,15 @@
  * 
  */
 
-const prices = [
-  10.99, 5.99, 3.99, 6.59
-];
+const data = 'new york;10.99;2000';
 
 // Log Intro and Original Array Contents to Console.
 
-console.log('\n\n\tDEMO OF reduce() METHOD:');
-console.log('\t-----------------------\n');
+console.log('\n\n\tDEMONSTRATION OF split() AND join():');
+console.log('\t------------------------------------\n');
 
 console.log('\nContents of prices[] Array:');
-console.table(prices);
+console.table(data);
+
+// Demonstrate the split() Method:
+
