@@ -16,8 +16,26 @@ const data = 'new york;10.99;2000';
 console.log('\n\n\tDEMONSTRATION OF split() AND join():');
 console.log('\t------------------------------------\n');
 
-console.log('\nContents of prices[] Array:');
-console.table(data);
+console.log(`\n\tValue of data String: '${data}'\n`);
 
 // Demonstrate the split() Method:
 
+// NOTE: the split() method is a String method, not
+// an array method.
+
+// Argument of separator between desired elements.
+// In this case, semicolon. There is an optional
+// argument that specifies a limit on the number
+// of array elements returned.
+const transformedData = data.split(';');
+
+console.log(
+  '\n\nDemonstration of split() Method (String Function):'
+);
+console.log(
+  '-------------------------------------------------\n'
+);
+
+// Log new transformedData[] to console:
+console.log('\ndata Transformed Into transformedData[]:')
+console.table(transformedData);
