@@ -44,3 +44,12 @@ const sortedPrices = prices.sort( (a, b) => {
 
 console.log('\nprices[] Array Sorted in Ascending Order:');
 console.table(sortedPrices);
+
+console.log('\n\tThe reverse() Method:');
+console.log('\t--------------------\n');
+
+const reversedArray = prices.reverse();
+
+console.log('\tThe prices[] Array Sorted in Reverse Order:');
+
+console.table(reversedArray);
