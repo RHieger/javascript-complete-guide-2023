@@ -1,12 +1,19 @@
 /**
  * 
- * Lecture 8.197: Filtering Arrays with filter()
+ * Lecture 8.198: Where Arrow Functions Shine!
  * 
  * Robert Hieger
- * 12/24/2022
+ * 12/25/2022
  * 
- * Objective: Demonstrate the filter() method exposed
- * by the Array object.
+ * Objective: Refactor prices.filter() to take further
+ * advantage of the arrow function as follows:
+ * 
+ * 1) Pass only the relevant argument to the function
+ * (in this case, price).
+ * 
+ * 2) Since there is only one argument, remove the
+ * parentheses and dispense with the curly braces,
+ * which are no longer necessary.
  * 
  */
 
