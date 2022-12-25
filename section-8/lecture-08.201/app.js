@@ -1,24 +1,11 @@
 /**
  * 
- * Lecture 8.199: The Important reduce() Method
+ * Lecture 8.201: Arrays & Strings--split() and join()
  * 
  * Robert Hieger
  * 12/25/2022
  * 
- * Objective: Demonstrate the utility of the reduce
- * method and its ability to condense calculation
- * of a sum of number elements in an array.
- * 
- * Without reduce(), it would be possible to get the
- * sum of prices[] below using a for...of loop as
- * follows:
- * 
- * const sum = 0;
- * prices.forEach(price => sum+= price);
- * console.log(sum);  // expected result 27.56
- * 
- * As demonstrated herein, the reduce() method is a
- * more succinct and efficient algorithm.
+ * Objective: TBD
  * 
  */
 
