@@ -26,7 +26,9 @@ const prices = [
   10.99, 5.99, 3.99, 6.59
 ];
 
-/* Temporarily Commented Out
-console.log('\n\n\tDEMO OF filter() METHOD:');
+// Log Intro and Original Array Contents to Console.
+console.log('\n\n\tDEMO OF reduce() METHOD:');
 console.log('\t-----------------------\n');
-*/
+
+console.log('\nContents of prices[] Array:');
+console.table(prices);
