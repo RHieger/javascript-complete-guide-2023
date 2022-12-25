@@ -29,10 +29,7 @@ console.table(prices);
 
 // Perform filter() operation to produce filteredArray[]:
 
-const filteredArray = prices
-  .filter( (price, index, prices) => {
-  return price > 6;
-});
+const filteredArray = prices.filter(price => price > 6);
 
 // Log new filteredArray[] to console:
 console.log(
