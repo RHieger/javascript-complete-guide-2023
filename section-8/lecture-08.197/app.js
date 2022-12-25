@@ -19,3 +19,10 @@ console.log('\t-----------------------\n');
 
 console.log('\nContents of prices[]:');
 console.table(prices);
+
+// Perform filter() operation to produce filteredArray[]:
+
+const filteredArray = prices
+  .filter( (price, index, prices) => {
+  return price > 6;
+});
