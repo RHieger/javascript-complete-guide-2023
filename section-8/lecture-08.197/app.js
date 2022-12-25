@@ -1,12 +1,12 @@
 /**
  * 
- * Lecture 8.196: sort()ing and reverse()ing
+ * Lecture 8.197: Filtering Arrays with filter()
  * 
  * Robert Hieger
  * 12/24/2022
  * 
- * Objective: Demonstrate the sort() and reverse()
- * methods exposed by the Array object.
+ * Objective: Demonstrate the filter() method exposed
+ * by the Array object.
  * 
  */
 
@@ -14,8 +14,9 @@ const prices = [
   10.99, 5.99, 3.99, 6.59
 ];
 
-console.log('\n\n\tDEMO OF sort() AND reverse():');
-console.log('\t----------------------------\n');
+/* Temporarily Commented Out
+console.log('\n\n\tDEMO OF filter() METHOD:');
+console.log('\t-----------------------\n');
 
 console.log('\nContents of prices[]:');
 console.table(prices);
@@ -53,3 +54,4 @@ const reversedArray = prices.reverse();
 console.log('\tThe prices[] Array Sorted in Reverse Order:');
 
 console.table(reversedArray);
+*/
