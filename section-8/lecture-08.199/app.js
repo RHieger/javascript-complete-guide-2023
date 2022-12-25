@@ -1,19 +1,24 @@
 /**
  * 
- * Lecture 8.198: Where Arrow Functions Shine!
+ * Lecture 8.199: The Important reduce() Method
  * 
  * Robert Hieger
  * 12/25/2022
  * 
- * Objective: Refactor prices.filter() to take further
- * advantage of the arrow function as follows:
+ * Objective: Demonstrate the utility of the reduce
+ * method and its ability to condense calculation
+ * of a sum of number elements in an array.
  * 
- * 1) Pass only the relevant argument to the function
- * (in this case, price).
+ * Without reduce(), it would be possible to get the
+ * sum of prices[] below using a for...of loop as
+ * follows:
  * 
- * 2) Since there is only one argument, remove the
- * parentheses and dispense with the curly braces,
- * which are no longer necessary.
+ * const sum = 0;
+ * prices.forEach(price => sum+= price);
+ * console.log(sum);  // expected result 27.56
+ * 
+ * As demonstrated herein, the reduce() method is a
+ * more succinct and efficient algorithm.
  * 
  */
 
