@@ -26,3 +26,10 @@ const filteredArray = prices
   .filter( (price, index, prices) => {
   return price > 6;
 });
+
+// Log new filteredArray[] to console:
+console.log(
+  '\nCreate filteredArray[] Using filter() Method:'
+);
+
+console.table(filteredArray);
