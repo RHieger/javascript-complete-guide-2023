@@ -1,24 +1,11 @@
 /**
  * 
- * Lecture 8.201: Arrays & Strings--split() and join()
+ * Lecture 8.202: The Spread Operator (...)
  * 
  * Robert Hieger
  * 12/26/2022
  * 
- * Objective: Demonstrate the split() and join() methods.
- * 
- * As the split() method is a String method that splits
- * a string into elements using a specified separator that
- * exists within the string (e.g. space, tab, semicolon),
- * declare a string constant with data that has separated
- * substrings with a specified separator (e.g. 'Joe,Schmo').
- * Then use the split() method to create an array from the
- * substrings within the string.
- * 
- * As the join() method is an Array Method that joins elements
- * elements of an array into a string using a specified separator
- * (e.g. space, newline), declare an array constant with at
- * least two elements to be joined by a specified separator.
+ * Objective: TBD.
  * 
  */
 
