@@ -16,8 +16,16 @@ const nameFragments = [ 'Robert', 'Hieger' ];
 console.log('\n\n\tDEMONSTRATION OF spread(...) Method:');
 console.log('\t------------------------------------\n');
 
+console.log('\n\nContents of nameFragments[] Array:');
+console.table(nameFragments);
+
 // Create a copy of the nameFragments[] array using
 // the spread(...) Operator:
 
-console.log('\n\nContents of nameFragments[] Array:');
-console.table(nameFragments);
+const copiedNameFragments = [...nameFragments];
+
+console.log(
+  '\nHere is copiedNameFragments[] Created using Spread' +
+  ' (...) Operator:'
+);
+console.table(copiedNameFragments);
