@@ -29,3 +29,18 @@ console.log(
   ' (...) Operator:'
 );
 console.table(copiedNameFragments);
+
+// Demonstrate that elements added to copiedNameFragments[]
+// are not also copied to nameFragments[] as they are two
+// separate objects at two different memory addresses:
+
+console.log(
+  '\nNOTE: nameFragments[] and copiedNameFragments[] ' +
+  'are two distinct objects with different memory ' +
+  'addresses. Now let\'s prove that! Let\'s add \'Mr.\' ' +
+  'to copiedNameFragments[]!\n'
+);
+
+copiedNameFragments.push('Mr.');
+
+console.table(copiedNameFragments);
