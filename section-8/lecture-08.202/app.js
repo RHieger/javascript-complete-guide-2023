@@ -45,6 +45,8 @@ console.table(copiedNameFragments);
 // nameFragments[] as they are two separate objects at
 // two different memory addresses:
 
+console.log('\nUSE CASE #2: Making a Deep Clone of an Array:')
+
 console.log(
   '\nNOTE: nameFragments[] and copiedNameFragments[] ' +
   'are two distinct objects\n\t  with different memory ' +
@@ -73,6 +75,28 @@ console.log(
   '\n*********************************************' +
   '********************'
 );
+
+// OBJECTIVE #3: Use spread operator in conjunction with Math.min()
+// to pull the elements from numbers[] as individual values, which
+// are the only allowed data type for Math.min(). These elements are
+// then analyzed my Math.min() and the smallest number is returned. 
+
+const numbers = [10.99, 5.99, 3.99, 6.59];
+
+console.log(
+  '\nUSE CASE #3: Using the Spread Operator to Find the ' +
+  'Lowest Value:'
+);
+
+console.log('\nRemember our numbers[] Array below?\n');
+console.table(numbers);
+
+console.log(
+  '\nLet\'s use the spread operator to get the ' +
+  'lowest value in numbers[]:'
+);
+
+console.log(`\nLowest Value in numbers[]: ${Math.min(...numbers)}\n`);
 
 // Instructional Message:
 console.log(
