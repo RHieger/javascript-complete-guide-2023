@@ -5,8 +5,18 @@
  * Robert Hieger
  * 12/30/2022
  * 
- * Objective: TBD.
+ * Objective: Demonstrate the use of array destructuring.
+ * For the purposes of this simple demo, reuse the
+ * nameFragments[] array from Lecture 8.202, adding to
+ * it two extra elements of additional data.
+ * 
+ * In the destructuring statement, create variables to
+ * represent the first two elements, and then the rest
+ * operator to contain the two remaining elements. Log
+ * the results to the console.
+ * 
  */
+
 
 const nameFragments = [ 'Sam', 'Rogers', 'Mr.', 42  ];
 
