@@ -6,7 +6,8 @@
  * 12/30/2022
  * 
  * Objective: TBD.
- * 
  */
 
-const nameFragments = [ 'Robert', 'Hieger' ];
+const nameFragments = [ 'Sam', 'Rogers', 'Mr.', 42  ];
+
+console.table(nameFragments);
