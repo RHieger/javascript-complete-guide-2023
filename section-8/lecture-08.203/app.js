@@ -1,33 +1,11 @@
 /**
  * 
- * Lecture 8.202: The Spread Operator (...)
+ * Lecture 8.203: Understanding Array Destructuring
  * 
  * Robert Hieger
- * 12/28/2022
+ * 12/30/2022
  * 
- * Objective: Demonstrate several different use cases
- * for the spread operator (...).
- * 
- * OBJECTIVE #1: Create a copy of an array using
- * the spread operator (...).
- * 
- * OBJECTIVE #2: Demonstrate that elements added to a
- * copy of an array have no affect on the original array
- * as the arrays occupy distinct memory addresses.
- * 
- * OBJECTIVE #3: Find and output the smallest value
- * within an array of numbers using the spread operator
- * in conjunction with the Math.min() method.
- * 
- * OBJECTIVE #4: Demonstrate that copying an array of
- * objects using the spread operator (...) does not
- * copy the objects within the array as they are
- * reference values.
- * 
- * OBJECTIVE #5: Demonstrate creating a deep clone
- * of an array of objects such that the objects
- * themselves rather than solely their memory addresses,
- * are copied.
+ * Objective: TBD.
  * 
  */
 
