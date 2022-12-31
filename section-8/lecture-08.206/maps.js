@@ -31,3 +31,16 @@ const personData = new Map(
 );
 
 console.log(personData);
+
+// Use the get() method:
+console.log( personData.get(person1) );
+
+// Add person2 to personData:
+personData.set(
+  person2,
+  [
+    { date: '2022-12-16', price: 100 }
+  ]
+);
+
+console.log(personData);
