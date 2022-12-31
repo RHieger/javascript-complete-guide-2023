@@ -24,4 +24,23 @@ console.log(
 
 console.log(ids);
 
-console.log(`\n1 is contained in set?\t${ids.has(1)}`);
+console.log(`\n1 is contained in set?\t${ids.has(1)}\n\n`);
+
+// OBJECTIVE #2: Add duplicate value to set and
+// demonstrate that the duplicate value is ignored
+// and not added to list.
+
+console.log(
+  'OBJECTIVE #2: Add a duplicate and show that ' +
+  '\nduplicate value is ignored and not added.\n\n'
+);
+
+ids.add(2);
+
+console.log('ADDED VALUE OF 2 T0 SET...\n');
+console.log('\nHere is our ids {} Set again!\n');
+console.log(ids);
+console.log(
+  '\nAs you can see, no duplicate value of 2 was added.'
+);
+
