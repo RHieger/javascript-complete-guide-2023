@@ -18,3 +18,16 @@ const person2 = { name: 'Bobby' };
 
 console.log('Created two objects--person1 and person2:\n');
 console.log(person1, person2);
+
+const personData = new Map(
+  [
+    [
+      person1,
+      [
+        { date: '2022-12-31', price: 10 }
+      ]
+    ]
+  ]  
+);
+
+console.log(personData);
