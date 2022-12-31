@@ -76,3 +76,16 @@ console.log('Entries in ids {} Set:\n');
 for (entry of ids.entries()) {
   console.log(`Entry Value: ${entry[0]}`)
 };
+
+// OBJECTIVE #4: Delete an entry using the
+// delete() method.
+
+console.log(
+  '\n\nOBJECTIVE #4: Delete an Entry with delete() Method.'
+);
+
+ids.delete(3);
+
+console.log('\nDELETED ENTRY AT INDEX 2...\n\n');
+console.log('Here is our ids {} Set again!\n\n');
+console.log(ids);
