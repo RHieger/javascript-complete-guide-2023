@@ -44,3 +44,24 @@ personData.set(
 );
 
 console.log(personData);
+
+// 4 Algorithms for looping through information in Map:
+// Method #1 Using entries() Method
+for ( const entry of personData.entries() ) {
+  console.log(entry);
+};
+
+// Method #2 Using Array Destructuring
+for ( const [key, value] of personData.entries() ) {
+  console.log(key, value);
+}
+
+// Method #3 Using the keys() Method
+for ( const key of personData.keys() ) {
+  console.log(key);
+};
+
+// Method #4 Using the values() Method
+for ( const value of personData.values() ) {
+  console.log(value);
+};
