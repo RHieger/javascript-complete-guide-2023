@@ -3,9 +3,28 @@
  * Lecture 8.105: Working with Sets
  * 
  * Robert Hieger
- * December 30, 2022
+ * December 31, 2022
  * 
- * OBJECTIVE: TBD.
+ * OBJECTIVE: Demonstrate the utility of the Set
+ * data structure, highlighting its most frequently
+ * used methods.
+ * 
+ * OBJECTIVE #1: Declare a Set and test whether a
+ * specified value is contained within it.
+ * 
+ * OBJECTIVE #2: Add a duplicate entry to the Set
+ * and demonstrate that duplicates are not added
+ * to the set when the add() method is used.
+ * 
+ * OBJECTIVE #3: Loop through all entries in the
+ * set using the entries() method. Then loop
+ * through all entries accessing only index 0 of
+ * each entry. This is to show that the awkward
+ * double entry returned by entries() can be left
+ * out for cleaner and clearer output.
+ * 
+ * OBJECTIVE #4: Delete a specified entry from the
+ * Set using the delete() method.
  * 
  */
 
@@ -57,7 +76,6 @@ console.log(
 );
 
 // Loop over all entries of ids {}
-
 console.log('Entries in ids {} Set:\n')
 for ( let entry of ids.entries() ) {
   console.log(entry);
