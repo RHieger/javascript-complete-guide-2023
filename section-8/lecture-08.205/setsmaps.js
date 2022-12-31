@@ -41,6 +41,38 @@ console.log('ADDED VALUE OF 2 T0 SET...\n');
 console.log('\nHere is our ids {} Set again!\n');
 console.log(ids);
 console.log(
-  '\nAs you can see, no duplicate value of 2 was added.'
+  '\nAs you can see, no duplicate value of 2 was added.\n\n'
 );
 
+// OBJECTIVE #3: View all entries of a set with the
+// entries method and log to console with for...of
+// loop. Demonstrate that to avoid the odd output of
+// each entry being array of the value listed twice,
+// it is also possible to do the for...of loop and 
+// reference only the 0 index of each entry.
+
+console.log(
+  'OBJECTIVE #3: Iterate Over All Entries in' +
+  ' ids {} Set Using entries Method.\n\n'
+);
+
+// Loop over all entries of ids {}
+
+console.log('Entries in ids {} Set:\n')
+for ( let entry of ids.entries() ) {
+  console.log(entry);
+};
+
+console.log(
+  '\nWhy is each entry comprised of the same value ' +
+  '\nrepeated twice in an array? This is because the ' +
+  '\nentries() method returns an array of the value of' +
+  '\neach entry twice. But we can solve this by ' +
+  'accessing\nonly the 0 index of each entry.\n\n' +
+  'Here is a more meaningful output:\n\n'
+);
+
+console.log('Entries in ids {} Set:\n');
+for (entry of ids.entries()) {
+  console.log(`Entry Value: ${entry[0]}`)
+};
