@@ -8,3 +8,8 @@
  * OBJECTIVE: TBD.
  * 
  */
+
+// Object for use with WeakSet:
+// NOTE: Sets are also capable of containing objects,
+// not just strings.
+let person = { name: 'Bobby' };
