@@ -5,9 +5,19 @@
  * Robert Hieger
  * December 31, 2022
  * 
- * OBJECTIVE: TBD.
+ * OBJECTIVE: Demonstrate the utility of Map Objects
+ * 
+ * OBJECTIVE #1: Create and log to console personData()
+ * based on person1() and person2() objects.
+ * 
+ * OBJECTIVE #2: Use the get method to return a value by
+ * key (in this case person1 and person2).
+ * 
+ * OBJECTIVE #3: Demonstrate 4 algorithms for extracting
+ * different parts of the Map() object.
  * 
  */
+
 
 console.log('\n\n\tDEMONSTRATE MAPS:');
 console.log('\t----------------\n\n');
