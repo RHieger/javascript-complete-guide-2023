@@ -62,6 +62,7 @@ mappedArray.forEach(
 );
 
 // Operation 4: Reduce filteredArray[].
+
 console.log(
   '\n\nOperation 4: Reduce filteredArray[]--' +
   '(product of all elements):\n\n'
@@ -74,5 +75,22 @@ const reducedNumber = filteredArray.reduce(
   newValue *= addativeValue
 );
 
-console.log('Reduced Value of filteredArray[]\n');
-console.log(reducedNumber);
+console.log(
+  `Product of numbers in filteredArray[]: ` +
+  `${reducedNumber}`
+);
+
+// Operation #5: Iterate Over myNumbers to get
+// maximum number in array.
+
+const getMaxNum = (...data) => {
+  let maxNum = myNumbers[0];
+  for (const num of data) {
+    if (num > maxNum) {
+      maxNum = num;
+    } 
+  }
+  return maxNum;
+};
+
+console.log(getMaxNum(...myNumbers));
