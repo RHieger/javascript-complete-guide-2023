@@ -25,3 +25,7 @@ const person = {
     alert('Hi, there!');
   }
 };
+
+// Greet user:
+
+person.greet();
