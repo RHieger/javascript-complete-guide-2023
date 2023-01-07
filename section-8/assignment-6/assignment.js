@@ -31,7 +31,7 @@ console.table(myNumbers);
 // > 5 are included. Log to console.
 
 const filteredArray = myNumbers
-  .filter( number => number >5 );
+  .filter(number => number > 5);
 
 console.log('\n\nOperation #2: Create filteredArray[]\n\n');
 
@@ -43,7 +43,7 @@ console.table(filteredArray);
 // property of which has the value of that element.
 
 const mappedArray = filteredArray
-  .map( (number, idx, filteredArray) => {
+  .map((number, idx, filteredArray) => {
     const filteredNumber =
     {
       index: idx,
@@ -51,13 +51,13 @@ const mappedArray = filteredArray
       index: idx
     }
     return filteredNumber;
-});
+  });
 
 console.log(
   '\n\nOperation #3: Map filteredArray[] to Array ' +
   'of Objects:\n\n')
 console.log('Contents of New mappedArray\n');
-mappedArray.forEach( 
+mappedArray.forEach(
   (element) => console.log(element)
 );
 
@@ -71,14 +71,14 @@ console.log(
 let newValue = 0;
 
 const reducedNumber = filteredArray.reduce(
-  (addativeValue, newValue) => 
-  newValue *= addativeValue
+  (addativeValue, newValue) =>
+    newValue *= addativeValue
 );
 
 console.log(
-  `Product of numbers in filteredArray[]: ` +
-  `${reducedNumber}`
+  'Product of numbers in filteredArray[]:\n\n'
 );
+console.log(reducedNumber);
 
 // Operation #5: Iterate Over myNumbers to get
 // maximum number in array.
@@ -88,9 +88,47 @@ const getMaxNum = (...data) => {
   for (const num of data) {
     if (num > maxNum) {
       maxNum = num;
-    } 
+    }
   }
   return maxNum;
 };
 
+console.log(
+  '\nOperation #5: Iterate over myNumbers[]\n' +
+  'to Get Maximum Number\n\n'
+);
+console.log('\nMaximum Number in myNumbers[]:\n');
 console.log(getMaxNum(...myNumbers));
+
+// Operation #6: Get Minimum and Maximum Values
+// from myNumbers[].
+
+const getMaxMinNum = (...data) => {
+  // Stores current value for max and min
+  let currentMax = myNumbers[0];
+  let currentMin = myNumbers[0];
+
+  for (const num of data) {
+    if (num > currentMax) {
+      currentMax = num;
+    }
+    if (num < currentMin) {
+      currentMin = num;
+    }
+  }
+  return [currentMax, currentMin];
+};
+
+console.log(
+  '\n\nOperation #6: Get Minimum and Maximum\n' +
+  'Values from myNumbers[]\n\n'
+);
+
+const maxMin = getMaxMinNum(...myNumbers);
+
+console.log(
+  'Minimum and Maximum Values from myNumbers[]:\n'
+);
+console.table(maxMin);
+console.log(`\nMaximum Value: ${maxMin[0]}`);
+console.log(`Minimum Value: ${maxMin[1]}\n\n`);
