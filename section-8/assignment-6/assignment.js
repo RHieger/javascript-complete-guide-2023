@@ -3,7 +3,7 @@
  * Section 8, Assignment #6
  * 
  * Robert Hieger
- * January 2, 2023
+ * January 6, 2023
  * 
  * OBJECTIVES: Review Arrays and Iterables.
  * 
@@ -80,7 +80,7 @@ console.log(
 );
 console.log(reducedNumber);
 
-// Operation #5: Iterate Over myNumbers to get
+// Operation #5: Iterate Over myNumbers[] to get
 // maximum number in array.
 
 const getMaxNum = (...data) => {
@@ -132,3 +132,32 @@ console.log(
 console.table(maxMin);
 console.log(`\nMaximum Value: ${maxMin[0]}`);
 console.log(`Minimum Value: ${maxMin[1]}\n\n`);
+
+// Operation #7: Create a list that rejects any
+// duplicate values that are added.
+
+const users = new Set();
+
+users.add('Angela Brown');
+users.add('Joey Anderson');
+users.add('Emily Norton');
+
+console.log(
+  'Operation #7: Create List and Prove that It\n' +
+  'Will Not Allow Duplicate Entries:\n\n'
+);
+
+console.log('Contents of users {}:');
+console.log(users);
+
+// Attempt to add duplicate value:
+users.add('Joey Anderson');
+
+// Prove that no duplicate value is allowed.
+console.log('\nAdding Duplicate of Joey Anderson...\n');
+console.log('\nAnd here is users Set Again:');
+
+console.log(users);
+console.log(
+  '\nAs you can see, the duplicate entry is discarded.'
+);
