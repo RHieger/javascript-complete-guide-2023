@@ -13,6 +13,8 @@
  * Objective #2: Demonstrate Modifying a Property of
  * the person() Object.
  * 
+ * Objective #3: Demonstrate Deleting a Property of
+ * the person() Object.
  * 
  */
 
@@ -49,6 +51,20 @@ console.log('Adding isAdmin Property...\n\n');
 
 // Add new property to person()
 person.isAdmin = true;
+
+console.log('Here\'s the person() Object Again:');
+console.log('--------------------------------\n\n');
+displayObject();
+
+// Objective #2: Update the age property.
+
+console.log('\n\nOBJECTIVE #2: Update the age Property:');
+console.log('-------------------------------------\n\n');
+
+console.log('Updating age Property...\n\n');
+
+// Update age property:
+person.age = 28;
 
 console.log('Here\'s the person() Object Again:');
 console.log('--------------------------------\n\n');
