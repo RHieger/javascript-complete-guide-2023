@@ -40,3 +40,16 @@ console.log('\t---------------------------------------\n\n');
 console.log('Here is the original person() Object:\n\n');
 displayObject();
 
+// Objective #1: Add isAdmin boolean to person().
+
+console.log('\n\nOBJECTIVE #1: Add isAdmin to person():');
+console.log('-------------------------------------\n\n');
+
+console.log('Adding isAdmin Property...\n\n');
+
+// Add new property to person()
+person.isAdmin = true;
+
+console.log('Here\'s the person() Object Again:');
+console.log('--------------------------------\n\n');
+displayObject();
