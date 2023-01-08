@@ -52,8 +52,8 @@ console.log('Adding isAdmin Property...\n\n');
 // Add new property to person()
 person.isAdmin = true;
 
-console.log('Here\'s the person() Object Again:');
-console.log('--------------------------------\n\n');
+console.log('Here\'s the Updated person() Object:');
+console.log('----------------------------------\n\n');
 displayObject();
 
 // Objective #2: Update the age property.
@@ -66,6 +66,19 @@ console.log('Updating age Property...\n\n');
 // Update age property:
 person.age = 28;
 
-console.log('Here\'s the person() Object Again:');
-console.log('--------------------------------\n\n');
+console.log('Here\'s the Updated person() Object:');
+console.log('----------------------------------\n\n');
+displayObject();
+
+// Objective #3: Delete a property from person().
+
+console.log('\n\nOBJECTIVE #3: Delete age Property:\n\n');
+
+console.log('Deleting age Property...\n\n');
+
+// Delete age property:
+delete person.age;
+
+console.log('Here\'s the Updated person() Object:');
+console.log('----------------------------------\n\n');
 displayObject();
