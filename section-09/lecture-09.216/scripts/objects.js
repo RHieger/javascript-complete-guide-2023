@@ -1,16 +1,18 @@
 /**
  * 
- * Lecture 9.215: Objects Recap
+ * Lecture 9.216: Adding, Modifying & Deleting Properties
  * 
  * Robert Hieger
  * January 7, 2023
  * 
- * OBJECTIVE: Demonstrate creation of an object,
- * including a method to display alert box with
- * message 'Hi, there!'
+ * OBJECTIVE: Explore manipulation of Object properties.
  * 
- * Demonstrate how to access properties and/or
- * methods in the Object.
+ * Objective #1: Demonstrate Adding a Property to the
+ * person() Object.
+ * 
+ * Objective #2: Demonstrate Modifying a Property of
+ * the person() Object.
+ * 
  * 
  */
 
@@ -26,6 +28,15 @@ const person = {
   }
 };
 
-// Greet user:
+const displayObject = () => {
+  for (const property in person) {
+    console.log(`${property}: ${person[property]}`);
+  }
+};
 
-person.greet();
+console.log('\n\n\tAdding, Modifying & Deleting Properties');
+console.log('\t---------------------------------------\n\n');
+
+console.log('Here is the original person() Object:\n\n');
+displayObject();
+
