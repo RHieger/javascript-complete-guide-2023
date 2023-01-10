@@ -11,7 +11,7 @@
  * console, they are rendered, using the DOM, to the
  * web page.
  * 
- * Task #1: Code the renderMovie() function.
+ * Single Objective Task: Code the renderMovie() function.
  *  
  */
 
@@ -27,6 +27,34 @@ const movies = [];
 // Movie Functions:
 
 const renderMovie = () => {
+  // Capture required DOM element.
+  const movieList = document
+    .getElementById('movie-list');
+  
+  // Clear movie list if populated.
+  // NOTE: Not ideal approach as it will result
+  // in processing overhead every time the
+  // function is called. Used here merely as
+  // an expedient.
+  movieList.innerHTML = '';
+
+  // Reveal movieList if movies have been entered:
+  if (movies.length === 0) {
+    movieList.classList.remove('visible');
+    return; // allow escape from conditional
+            // enabling setting of movieList
+            // to empty string.
+  } else {
+    movieList.classList.add('visible');
+  }
+  movieList.innerHTML = '';
+
+  // Append new movies:
+  movies.forEach( movie => {
+    const movieElement = document.createElement('li');
+    movieElement.textContent = movie.info.title;
+    movieList.append(movieElement);
+  });
 
 };
 
@@ -56,8 +84,8 @@ const addMovieHandler = () => {
     id: Math.trunc(Math.random() * 1000) + 1000
   };
   movies.push(newMovie);
-  // FOR DIAGNOSTIC PURPOSES ONLY:
-  console.log(movies);
+  // Display rendered movies:
+  renderMovie();
 };
 
 // EVENT LISTENERS:
