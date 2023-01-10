@@ -55,7 +55,8 @@ const renderMovie = () => {
   // Append new movies:
   movies.forEach( movie => {
     const movieElement = document.createElement('li');
-    movieElement.textContent = movie.info.title;
+    let text = movie.info.title + ' - ';
+    }
     movieList.append(movieElement);
   });
 
