@@ -1,22 +1,17 @@
 /**
  * 
- * Lecture 9.220: Demo App & Shorthand Property Syntax
+ * Lecture 9.221: Rendering Elements Based on Objects
  * 
  * Robert Hieger
- * January 9, 2023
+ * January 10, 2023
  * 
- * OBJECTIVE: Create a demo application that allows a
- * user to enter the name and additional information
- * about a favorite movie. Additionally, search
- * functionality will be included to enable a user to
- * search for a movie (ostensibly already entered).
+ * OBJECTIVE: In this lecture, the overall aim is to
+ * refactor the logic from Lecture 9.220 so that rather
+ * than logging the movie items to the JavaScript
+ * console, they are rendered, using the DOM, to the
+ * web page.
  * 
- * Task #1: Capture the nodes necessary to reference
- * the two buttons--Add Movie and Search.
- * 
- * Task #2: Code the addMovieHandler() function.
- * 
- * Task #3: Add an event listener to "Add Movie" Button.
+ * Task #1: Code the renderMovie() function.
  *  
  */
 
