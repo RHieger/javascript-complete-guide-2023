@@ -26,6 +26,10 @@ const movies = [];
 
 // Movie Functions:
 
+const renderMovie = () => {
+
+};
+
 const addMovieHandler = () => {
   
   // Capture required nodes:
