@@ -1,17 +1,20 @@
 /**
  * 
- * Lecture 9.221: Rendering Elements Based on Objects
+ * Lecture 9.222: for-in Loops &
+ * Outputting Dynamic Properties
  * 
  * Robert Hieger
  * January 10, 2023
  * 
- * OBJECTIVE: In this lecture, the overall aim is to
- * refactor the logic from Lecture 9.220 so that rather
- * than logging the movie items to the JavaScript
- * console, they are rendered, using the DOM, to the
- * web page.
+ * OBJECTIVE: In Lecture 9.222, the aim is to refactor the
+ * code from Lecture 9.221 such that the additional info
+ * entered by the user will be appended to each movie list
+ * item as well.
  * 
- * Single Objective Task: Code the renderMovie() function.
+ * Task #1: Declare a private variable within the
+ * renderMovie() function that references the title
+ * property of the newMovie() object exposed by the
+ * addMovieHandler() function.
  *  
  */
 
