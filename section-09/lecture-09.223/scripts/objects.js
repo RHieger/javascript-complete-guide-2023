@@ -1,23 +1,15 @@
 /**
  * 
- * Lecture 9.222: for-in Loops &
- * Outputting Dynamic Properties
+ * Lecture 9.223: Adding the Filter Functionality
  * 
  * Robert Hieger
  * January 10, 2023
  * 
- * OBJECTIVE: In Lecture 9.222, the aim is to refactor the
- * code from Lecture 9.221 such that the additional info
- * entered by the user will be appended to each movie list
- * item as well.
- * 
- * Task #1: Declare a private variable within the
- * renderMovie() function that references the title
- * property of the newMovie() object exposed by the
- * addMovieHandler() function.
- * 
- * Task #2 Implement for...in loop to append completed
- * movie list item to DOM and output to web page.
+ * OBJECTIVE: In Lecture 9.223, now that movies are
+ * output to the web page correctly, the objective of
+ * this lecture assignment is to implement a filtering
+ * functionality that will display only the movies
+ * that contain the keywords provided by the user.
  *  
  */
 
