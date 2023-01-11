@@ -15,6 +15,9 @@
  * renderMovie() function that references the title
  * property of the newMovie() object exposed by the
  * addMovieHandler() function.
+ * 
+ * Task #2 Implement for...in loop to append completed
+ * movie list item to DOM and output to web page.
  *  
  */
 
