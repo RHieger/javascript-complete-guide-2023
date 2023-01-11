@@ -24,7 +24,7 @@ const movies = [];
 
 // Movie Functions:
 
-const renderMovie = () => {
+const renderMovies = () => {
   // Capture required DOM element.
   const movieList = document
     .getElementById('movie-list');
@@ -90,7 +90,11 @@ const addMovieHandler = () => {
   };
   movies.push(newMovie);
   // Display rendered movies:
-  renderMovie();
+  renderMovies();
+};
+
+const searchMovieHandler = () => {
+  // TBD.
 };
 
 // EVENT LISTENERS:
