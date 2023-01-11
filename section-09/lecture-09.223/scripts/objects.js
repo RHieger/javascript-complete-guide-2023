@@ -10,6 +10,12 @@
  * this lecture assignment is to implement a filtering
  * functionality that will display only the movies
  * that contain the keywords provided by the user.
+ * 
+ * Task #1: Capture the DOM element for user entry
+ * of search keyword.
+ * 
+ * Task #2: Pass keyword to renderMovies() within
+ * new searchMovieHandler() function.
  *  
  */
 
@@ -94,7 +100,10 @@ const addMovieHandler = () => {
 };
 
 const searchMovieHandler = () => {
-  // TBD.
+  // Capture filter input element.
+  const keyword = document
+    .getElementById('filter-title').value;
+  renderMovies(keyword);
 };
 
 // EVENT LISTENERS:
