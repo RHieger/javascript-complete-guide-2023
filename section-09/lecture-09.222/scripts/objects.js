@@ -56,7 +56,13 @@ const renderMovie = () => {
   movies.forEach( movie => {
     const movieElement = document.createElement('li');
     let text = movie.info.title + ' - ';
+    // Get additional input for movie list item:
+    for (key in movie.info) {
+      if (key !== 'title') {
+        text += `${key}: ${movie.info[key]}`;
+      }
     }
+    movieElement.textContent = text;
     movieList.append(movieElement);
   });
 
