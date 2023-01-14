@@ -16,6 +16,14 @@
  * 
  * Task #2: Pass keyword to renderMovies() within
  * new searchMovieHandler() function.
+ * 
+ * Task #3: Add default argument to renderMovies()
+ * and create event listener for the search button.
+ * 
+ * Task #4: Add ternary expression in renderMovies()
+ * function to check whether a filter has been applied
+ * to the movies[] array, or if all movies should be
+ * listed in the web page output.
  *  
  */
 
@@ -30,7 +38,7 @@ const movies = [];
 
 // Movie Functions:
 
-const renderMovies = () => {
+const renderMovies = (filter = '') => {
   // Capture required DOM element.
   const movieList = document
     .getElementById('movie-list');
@@ -52,6 +60,12 @@ const renderMovies = () => {
     movieList.classList.add('visible');
   }
   movieList.innerHTML = '';
+
+  const filtered = !filter
+    ? movies
+    : movies.filter(
+      movie => movie.info.title.includes(filter)
+    );
 
   // Append new movies:
   movies.forEach( movie => {
@@ -109,3 +123,4 @@ const searchMovieHandler = () => {
 // EVENT LISTENERS:
 
 addMovieBtn.addEventListener('click', addMovieHandler);
+searchBtn.addEventListener('click', searchMovieHandler);
