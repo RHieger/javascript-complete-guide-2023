@@ -24,6 +24,11 @@
  * function to check whether a filter has been applied
  * to the movies[] array, or if all movies should be
  * listed in the web page output.
+ * 
+ * Task #5: Refactor movies.forEach() loop so that it
+ * points instead to filteredMovies. Thus it is renamed
+ * filteredMovies.forEach() so as to enable filtering
+ * if any is present when the search button is clicked.
  *  
  */
 
@@ -61,14 +66,14 @@ const renderMovies = (filter = '') => {
   }
   movieList.innerHTML = '';
 
-  const filtered = !filter
+  const filteredMovies = !filter
     ? movies
     : movies.filter(
       movie => movie.info.title.includes(filter)
     );
 
   // Append new movies:
-  movies.forEach( movie => {
+  filteredMovies.forEach( movie => {
     const movieElement = document.createElement('li');
     let text = movie.info.title + ' - ';
     // Get additional input for movie list item:
