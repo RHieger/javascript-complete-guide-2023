@@ -1,34 +1,14 @@
 /**
  * 
- * Lecture 9.223: Adding the Filter Functionality
+ * Lecture 9.227: Object Destructuring
  * 
  * Robert Hieger
- * January 10, 2023
+ * January 15, 2023
  * 
- * OBJECTIVE: In Lecture 9.223, now that movies are
- * output to the web page correctly, the objective of
- * this lecture assignment is to implement a filtering
- * functionality that will display only the movies
- * that contain the keywords provided by the user.
- * 
- * Task #1: Capture the DOM element for user entry
- * of search keyword.
- * 
- * Task #2: Pass keyword to renderMovies() within
- * new searchMovieHandler() function.
- * 
- * Task #3: Add default argument to renderMovies()
- * and create event listener for the search button.
- * 
- * Task #4: Add ternary expression in renderMovies()
- * function to check whether a filter has been applied
- * to the movies[] array, or if all movies should be
- * listed in the web page output.
- * 
- * Task #5: Refactor movies.forEach() loop so that it
- * points instead to filteredMovies. Thus it is renamed
- * filteredMovies.forEach() so as to enable filtering
- * if any is present when the search button is clicked.
+ * OBJECTIVE: In Lecture 9.227, the objective is to
+ * refactor the renderMovies() function such that it
+ * takes advantage of object destructuring so code
+ * is streamlined and more adherent to DRY.
  *  
  */
 
