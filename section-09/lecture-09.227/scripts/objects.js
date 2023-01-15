@@ -55,11 +55,12 @@ const renderMovies = (filter = '') => {
   // Append new movies:
   filteredMovies.forEach( movie => {
     const movieElement = document.createElement('li');
-    let text = movie.info.title + ' - ';
+    const { info } = movie;
+    let text = info.title + ' - ';
     // Get additional input for movie list item:
-    for (key in movie.info) {
+    for (key in info) {
       if (key !== 'title') {
-        text += `${key}: ${movie.info[key]}`;
+        text += `${key}: ${info[key]}`;
       }
     }
     movieElement.textContent = text;
