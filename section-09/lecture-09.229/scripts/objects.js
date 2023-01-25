@@ -1,14 +1,11 @@
 /**
  * 
- * Lecture 9.227: Object Destructuring
+ * Lecture 9.229: Introducing "this"
  * 
  * Robert Hieger
- * January 15, 2023
+ * January 24, 2023
  * 
- * OBJECTIVE: In Lecture 9.227, the objective is to
- * refactor the renderMovies() function such that it
- * takes advantage of object destructuring so code
- * is streamlined and more adherent to DRY.
+ * OBJECTIVE: TBD
  *  
  */
 
