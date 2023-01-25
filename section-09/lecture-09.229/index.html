@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Working with Objects</title>
+    <link rel="stylesheet" href="styles/app.css" />
+    <script src="scripts/objects.js" defer></script>
+  </head>
+  <body>
+    <section id="user-input" class="card">
+      <div class="control">
+        <label for="title">Favorite Movie</label>
+        <input type="text" id="title" />
+      </div>
+      <div class="inline-controls">
+        <div class="control">
+          <label for="extra-name">Extra Information (Name)</label>
+          <input type="text" id="extra-name" />
+        </div>
+        <div class="control">
+          <label for="extra-value">Extra Information (Value)</label>
+          <input type="text" id="extra-value" />
+        </div>
+      </div>
+      <button id="add-movie-btn">Add Movie</button>
+    </section>
+    <section id="filter" class="card">
+      <label for="filter-title">Filter by Title</label>
+      <input type="text" id="filter-title" />
+      <button id="search-btn">Search</button>
+    </section>
+    <ul id="movie-list" class="card"></ul>
+  </body>
+</html>
