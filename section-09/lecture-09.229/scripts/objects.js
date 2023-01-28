@@ -91,7 +91,11 @@ const addMovieHandler = () => {
       [extraName]: extraValue
     },
     // Assures that ID number is integer minimum of 1000.
-    id: Math.trunc(Math.random() * 1000) + 1000
+    id: Math.trunc(Math.random() * 1000) + 1000,
+    getFormattedTitle: function() {
+      // Make movie title all caps.
+      return this.info.title.toUpperCase();
+    }
   };
   movies.push(newMovie);
   // Display rendered movies:
