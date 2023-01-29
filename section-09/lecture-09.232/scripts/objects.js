@@ -1,13 +1,13 @@
 /**
  * 
- * Lecture 9.229: Introducing "this"
+ * Lecture 9.232: call() and apply()
  * 
  * Robert Hieger
- * January 28, 2023
+ * January 29, 2023
  * 
- * OBJECTIVE: This lecture explores the nature of the
- * "this" keyword, which sets the context of what
- * object is referenced within a function.
+ * OBJECTIVE: This lecture demonstrates the use
+ * of the call() and apply() methods exposed by
+ * the Function() object.
  *  
  */
 
