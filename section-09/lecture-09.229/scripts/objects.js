@@ -3,9 +3,11 @@
  * Lecture 9.229: Introducing "this"
  * 
  * Robert Hieger
- * January 24, 2023
+ * January 28, 2023
  * 
- * OBJECTIVE: TBD
+ * OBJECTIVE: This lecture explores the nature of the
+ * "this" keyword, which sets the context of what
+ * object is referenced within a function.
  *  
  */
 
@@ -54,8 +56,7 @@ const renderMovies = (filter = '') => {
     const movieElement = document.createElement('li');
     const { info, ...otherProperties } = movie;
     console.log(otherProperties);
-    const { title: movieTitle } = info;
-    let text = movieTitle + ' - ';
+    let text = movie.getFormattedTitle() + ' - ';
     // Get additional input for movie list item:
     for (key in info) {
       if (key !== 'title') {
