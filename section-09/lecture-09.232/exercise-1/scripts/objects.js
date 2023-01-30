@@ -8,6 +8,10 @@
  * OBJECTIVE: This lecture demonstrates the use
  * of the call() and apply() methods exposed by
  * the Function() object.
+ *
+ * Exercise #1--
+ *  
+ * This exercise concentrates on the call() method.
  *  
  */
 
