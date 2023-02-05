@@ -1,13 +1,12 @@
 /**
  * 
- * Lecture 9.229: Introducing "this"
+ * Lecture 9.236: Getters & Setters
  * 
  * Robert Hieger
- * January 28, 2023
+ * February 4, 2023
  * 
- * OBJECTIVE: This lecture explores the nature of the
- * "this" keyword, which sets the context of what
- * object is referenced within a function.
+ * OBJECTIVE: This lecture introduces the concept
+ * of getters and setters in JavaScript objects.
  *  
  */
 
