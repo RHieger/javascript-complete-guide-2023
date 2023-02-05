@@ -58,7 +58,7 @@ const renderMovies = (filter = '') => {
     let text = movie.getFormattedTitle() + ' - ';
     // Get additional input for movie list item:
     for (key in info) {
-      if (key !== 'title') {
+      if (key !== 'title' && key !== '_title') {
         text += `${key}: ${info[key]}`;
       }
     }
@@ -79,7 +79,6 @@ const addMovieHandler = () => {
   
   // Validate user input:
   if (
-      title.trim() === '' ||
       extraName.trim() === '' ||
       extraValue.trim() === ''
     ) {
@@ -87,7 +86,17 @@ const addMovieHandler = () => {
   }
   const newMovie = {
     info: {
-      title,
+      set title(value) {
+        if ( value.trim() === ' ' ) {
+          this._title = 'DEFAULT';
+          return; // prevent fall-through to
+                  // assignment of "this"
+        }
+        this._title = value;
+      },
+      get title() {
+        return this._title;
+      },
       [extraName]: extraValue
     },
     // Assures that ID number is integer minimum of 1000.
@@ -97,6 +106,13 @@ const addMovieHandler = () => {
       return this.info.title.toUpperCase();
     }
   };
+
+  // Set title value
+  newMovie.info.title = title;
+
+  // Get title value
+  console.log(newMovie.info.title);
+
   movies.push(newMovie);
   // Display rendered movies:
   renderMovies();
