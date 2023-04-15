@@ -53,5 +53,30 @@ const = productList {
     
     // Add styling
     prodList.className = 'product-list';
+    
+    // Assemble List of products:
+    for (const prod of this.products) {
+    
+      const prodEl = document.createElement('li');
+      prodEl.className = 'product-item';
+      
+      // Set content for prodEl:
+      prodEl.innerHTML = `
+        <div>
+          <img src="${prod.imgUrl}" alt="${prod.title}">
+          <div class="product-item__content">
+            <h2>${prod.title}</h2>
+            <h3>\$${prod.price}</h3>
+            <p>${prod.description}</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      `
+      // Add product to product list.
+      prodList.append(prodEl);
+    }
+    // Append product list to root node 'app';
+    renderHook.append(prodList);
   }
 };
+
