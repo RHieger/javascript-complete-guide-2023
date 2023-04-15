@@ -28,3 +28,7 @@ const products = [
     description: 'A carpet which you might like - or not.'
   }
 ];
+
+const = productList {
+  // TBD 
+};
