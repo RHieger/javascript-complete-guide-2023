@@ -2,6 +2,9 @@
  *
  *  Lecture 10.241: Getting Started with OOP Code
  *
+ *  Robert Hieger
+ *  04/15/2023
+ *
  *  This lecture introduces the concepts behind object-oriented
  *  programming (OOP) and introduces the project for this module.
  *  This module builds from the ground up a front-end for an
@@ -17,6 +20,12 @@
  *
  *  3. Refactor products Object, moving it into productList and making
  *  the object into a property of productList.
+ *
+ *  4. Create stub for productList.render() Method.
+ *
+ *  5. Complete logic for render() Method:
+ *    a. Create prodList node.
+ *    b. Apply product-list CSS Class to prodList node.
  *
 */
 
@@ -35,6 +44,14 @@ const = productList {
     }
   ],
   render() {
-    // TBD
+    
+    // Capture node for root element of product list
+    const renderHook = document.getElementById('app');
+    
+    // productList node
+    const prodList = document.createElement('ul');
+    
+    // Add styling
+    prodList.className = 'product-list';
   }
 };
