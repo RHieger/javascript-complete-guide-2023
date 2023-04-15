@@ -27,6 +27,12 @@
  *    a. Create prodList node.
  *    b. Apply product-list CSS Class to prodList node.
  *
+ *  6. Create prodEl node and specify how each product component
+ *  is structured, including its innerHTML.
+ *
+ *  7. Append each prodEl node to prodList.
+ *
+ *  8. Append prodList to app node using renderHook.
 */
 
 const productList = {
