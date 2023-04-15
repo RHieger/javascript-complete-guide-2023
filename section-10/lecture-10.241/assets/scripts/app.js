@@ -33,5 +33,8 @@ const = productList {
       price: 89.99,
       description: 'A carpet which you might like - or not.'
     }
-  ] 
+  ],
+  render() {
+    // TBD
+  }
 };
