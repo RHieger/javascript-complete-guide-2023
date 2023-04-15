@@ -29,7 +29,7 @@
  *
 */
 
-const = productList {
+const productList = {
   
   products:[
     {
@@ -63,7 +63,7 @@ const = productList {
       // Set content for prodEl:
       prodEl.innerHTML = `
         <div>
-          <img src="${prod.imgUrl}" alt="${prod.title}">
+          <img src="${prod.imageUrl}" alt="${prod.title}">
           <div class="product-item__content">
             <h2>${prod.title}</h2>
             <h3>\$${prod.price}</h3>
@@ -80,3 +80,4 @@ const = productList {
   }
 };
 
+productList.render();
