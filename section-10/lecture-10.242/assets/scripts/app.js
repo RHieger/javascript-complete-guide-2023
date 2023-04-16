@@ -22,7 +22,11 @@ class Product {
   
 }
 
+console.log(new Product());
+
 const productList = {
+
+  // const product = new Product();
   
   products:[
     {
