@@ -15,20 +15,12 @@
 
 class Product {
   
-  // Declare class fields:  
-  title = 'DEFAULT';
-  imageUrl;
-  description;
-  price;
   
+    
 }
-
-console.log(new Product());
 
 const productList = {
 
-  // const product = new Product();
-  
   products:[
     {
       title: 'A Pillow', imageUrl: 'http://www.clker.com/cliparts/b/0/b/d/13444048401912257549buckwheat-pillow-hi.png',
