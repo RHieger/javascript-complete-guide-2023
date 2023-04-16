@@ -1,12 +1,13 @@
 /**
  *
- *  Lecture 10.242: Defining & Using a First Class
+ *  Lecture 10.243: Working with Constructor Methods
  *
  *  Robert Hieger
- *  04/15/2023
+ *  04/16/2023
  *
- *  This lecture introduces the concepts behind classes as
- *  blueprints for JavaScript objects and class inheritance.
+ *  This lecture introduces the concept behind class constructors
+ *  and starts the process of further development on the
+ *  Section 10 project—"Mini-Shop."
  *
  *  Tasks for this lecture: TBA
  *
