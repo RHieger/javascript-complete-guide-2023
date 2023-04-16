@@ -13,7 +13,13 @@
 */
 
 class Product {
-  // TBD
+  
+  // Declare class fields:  
+  title = 'DEFAULT';
+  imageUrl;
+  description;
+  price;
+  
 }
 
 const productList = {
