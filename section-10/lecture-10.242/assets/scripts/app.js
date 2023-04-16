@@ -8,7 +8,11 @@
  *  This lecture introduces the concepts behind classes as
  *  blueprints for JavaScript objects and class inheritance.
  *
- *  Tasks for this lecture: TBA
+ *  Tasks for this lecture:
+ *
+ *  1. Create new Product Class with First Iteration Fields.
+ *
+ *  2. Demonstrate instantiation of Product Class Instance.
  *
 */
 
