@@ -9,7 +9,12 @@
  *  and starts the process of further development on the
  *  Section 10 project—"Mini-Shop."
  *
- *  Tasks for this lecture: TBA
+ *  Tasks for this lecture:
+ *
+ *  1. Refactor products property of productList Object such that the
+ *  array containing individual products makes calls to the constructor
+ *  of the Product class in order to build each product appended to
+ *  the array.
  *
 */
 
