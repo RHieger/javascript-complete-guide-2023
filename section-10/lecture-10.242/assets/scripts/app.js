@@ -33,7 +33,6 @@
  *  7. Append each prodEl node to prodList.
  *
  *  8. Append prodList to app node using renderHook.
- *
 */
 
 const productList = {
