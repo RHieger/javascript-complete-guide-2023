@@ -12,6 +12,10 @@
  *
 */
 
+class Product {
+  // TBD
+}
+
 const productList = {
   
   products:[
