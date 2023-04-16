@@ -15,7 +15,9 @@
 
 class Product {
   
-  
+  constructor(title, image, desc, price) {
+    // TBD
+  }
     
 }
 
