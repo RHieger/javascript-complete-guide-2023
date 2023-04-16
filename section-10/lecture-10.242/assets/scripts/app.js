@@ -1,38 +1,15 @@
 /**
  *
- *  Lecture 10.241: Getting Started with OOP Code
+ *  Lecture 10.242: Defining & Using a First Class
  *
  *  Robert Hieger
  *  04/15/2023
  *
- *  This lecture introduces the concepts behind object-oriented
- *  programming (OOP) and introduces the project for this module.
- *  This module builds from the ground up a front-end for an
- *  online store with product lists, individual products for sale
- *  and the functionality to allow a user to order product(s).
+ *  This lecture introduces the concepts behind classes as
+ *  blueprints for JavaScript objects and class inheritance.
  *
- *  Tasks for this lecture:
+ *  Tasks for this lecture: TBA
  *
- *  1. Create a dummy array of two product objects containing titles,
- *  prices and an image url for product photo.
- *
- *  2. Create stub for productList object.
- *
- *  3. Refactor products Object, moving it into productList and making
- *  the object into a property of productList.
- *
- *  4. Create stub for productList.render() Method.
- *
- *  5. Complete logic for render() Method:
- *    a. Create prodList node.
- *    b. Apply product-list CSS Class to prodList node.
- *
- *  6. Create prodEl node and specify how each product component
- *  is structured, including its innerHTML.
- *
- *  7. Append each prodEl node to prodList.
- *
- *  8. Append prodList to app node using renderHook.
 */
 
 const productList = {
