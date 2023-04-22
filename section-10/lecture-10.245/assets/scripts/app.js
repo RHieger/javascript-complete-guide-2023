@@ -32,6 +32,10 @@ class Product {
 
 }
 
+class ProductList {
+  // TBD
+}
+
 const productList = {
 
   products: [
