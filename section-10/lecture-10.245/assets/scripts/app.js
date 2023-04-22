@@ -1,20 +1,23 @@
 /**
  *
- *  Lecture 10.243: Working with Constructor Methods
- *
+ *  Lecture 10.245: Using & "Connecting" Multiple Classes
  *  Robert Hieger
- *  04/16/2023
+ *  04/22/2023
  *
- *  This lecture introduces the concept behind class constructors
- *  and starts the process of further development on the
- *  Section 10 project—"Mini-Shop."
+ *  This lecture introduces the ideas behind class inheritance and how
+ *  instantiated objects can also inherit properties from one another.
+ *  The overall purpose of the lecture is to demonstrate breaking out
+ *  the logic of the application into more atomic classes and, therefore,
+ *  instantiated objects.
  *
  *  Tasks for this lecture:
  *
- *  1. Refactor products property of productList Object such that the
- *  array containing individual products makes calls to the constructor
- *  of the Product class in order to build each product appended to
- *  the array.
+ *  1. Refactor productList object by creating ProductList() class comprised
+ *  of the logic contained within productList.
+ *
+ *  2. Create new ProductItem class to model the presentation of individual
+ *  products to be included in the product list on screen.
+ *
  *
 */
 
