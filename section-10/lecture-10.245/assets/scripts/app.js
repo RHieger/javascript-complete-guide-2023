@@ -2,7 +2,7 @@
  *
  *  Lecture 10.245: Using & "Connecting" Multiple Classes
  *  Robert Hieger
- *  04/22/2023
+ *  04/23/2023
  *
  *  This lecture introduces the ideas behind class inheritance and how
  *  instantiated objects can also inherit properties from one another.
@@ -86,8 +86,11 @@ class ProductList {
       // Add product to product list.
       prodList.append(prodEl);
 
+    }
+	renderHook.append(prodList);
   }
 
 }
 
+const productList = new ProductList();
 productList.render();
