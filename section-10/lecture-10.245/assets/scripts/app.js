@@ -33,12 +33,8 @@ class Product {
 }
 
 class ProductList {
-  // TBD
-}
 
-const productList = {
-
-  products: [
+  products = [
   	new Product(
   	  'A Pillow',
   	  'http://www.clker.com/cliparts/b/0/b/d/13444048401912257549buckwheat-pillow-hi.png',
@@ -51,7 +47,17 @@ const productList = {
 	  'A carpet which you might like - or not.',
 	  89.99
   	)
-  ],
+  ];
+
+  // EXPERIMENTAL CODE
+  constructor() {
+  	// TBD
+  }
+
+}
+
+const productList = {
+
   render() {
 
     // Capture node for root element of product list
