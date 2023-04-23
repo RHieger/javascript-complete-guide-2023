@@ -33,7 +33,11 @@ class Product {
 }
 
 class ProductItem {
-  // TBD
+
+  constructor(product) {
+  	this.product = product;
+  }
+
 }
 
 class ProductList {
