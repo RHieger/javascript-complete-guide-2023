@@ -32,6 +32,10 @@ class Product {
 
 }
 
+class ProductItem {
+  // TBD
+}
+
 class ProductList {
 
   products = [
