@@ -54,6 +54,12 @@ class ProductList {
   	// TBD
   }
 
+  render() {
+
+  	// TBD
+
+  }
+
 }
 
 const productList = {
