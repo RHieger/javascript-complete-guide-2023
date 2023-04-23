@@ -56,17 +56,7 @@ class ProductList {
 
   render() {
 
-  	// TBD
-
-  }
-
-}
-
-const productList = {
-
-  render() {
-
-    // Capture node for root element of product list
+  	// Capture node for root element of product list
     const renderHook = document.getElementById('app');
 
     // productList node
@@ -95,10 +85,9 @@ const productList = {
       `
       // Add product to product list.
       prodList.append(prodEl);
-    }
-    // Append product list to root node 'app';
-    renderHook.append(prodList);
+
   }
-};
+
+}
 
 productList.render();
