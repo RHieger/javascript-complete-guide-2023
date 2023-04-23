@@ -18,6 +18,7 @@
  *  2. Create new ProductItem class to model the presentation of individual
  *  products to be included in the product list on screen.
  *
+ *  3. Complete logic for render() method in ProductList class.
  *
 */
 
@@ -95,6 +96,8 @@ class ProductList {
     // Assemble List of products:
     for (const prod of this.products) {
 
+	  const productItem = new ProductItem(prod);
+	  const prodEl = productItem.render();
 
       // Add product to product list.
       prodList.append(prodEl);
