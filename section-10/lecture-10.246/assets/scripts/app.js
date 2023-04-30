@@ -29,7 +29,9 @@ class ProductItem {
   }
 
   addToCart() {
-  	// TBD
+  	// FOR DIAGNOSTIC PURPOSES ONLY
+  	console.log('Adding product to cart...');
+  	console.log(this.product);
   }
 
   render() {
@@ -49,7 +51,7 @@ class ProductItem {
         </div>
       `
     const addCartButton = prodEl.querySelector('button');
-    addCartButton.addEventListener('click', this.addToCart);
+    addCartButton.addEventListener('click', this.addToCart.bind(this));
     return prodEl;
   }
 
