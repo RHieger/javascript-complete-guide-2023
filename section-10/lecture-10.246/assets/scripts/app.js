@@ -44,6 +44,7 @@ class ProductItem {
           </div>
         </div>
       `
+    const addCartButton = prodEl.querySelector('button');
     return prodEl;
   }
 
