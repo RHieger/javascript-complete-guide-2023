@@ -17,7 +17,7 @@
  *  3. Add render() Method to ShoppingCart().
  *
  *  4. Create stub for Shop class, which joins the content
- *     of individual products to the ShoppingCart content.
+ *     of individual products to the ProductList content.
  *
 */
 
@@ -93,7 +93,18 @@ class ProductItem {
 }
 
 class Shop {
-  // TBD
+
+    // Render combined content of ShoppingCart and Shop
+  	render() {
+
+			// Instantiate ShoppingCart & render productList.
+			const cart = new ShoppingCart();
+			cart.render();
+			const productList = new ProductList();
+			productList.render();
+
+  	}
+
 }
 
 class ProductList {
@@ -115,7 +126,8 @@ class ProductList {
 
   // EXPERIMENTAL CODE
   constructor() {
-  	// TBD
+
+
   }
 
   render() {
@@ -143,6 +155,3 @@ class ProductList {
   }
 
 }
-
-const productList = new ProductList();
-productList.render();
