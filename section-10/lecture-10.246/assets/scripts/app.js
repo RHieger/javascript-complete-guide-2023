@@ -7,7 +7,7 @@
  *  This lecture introduces the concept of class methods and the
  *  convoluted logic behind the "this" keyword.
  *
- *  Tasks for this lecture: TBD
+ *  Tasks for this lecture:
  *
  *  1. Within ProductItem.render(), capture <button> within
  *     productEl node.

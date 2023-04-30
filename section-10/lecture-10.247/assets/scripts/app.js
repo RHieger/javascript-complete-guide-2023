@@ -1,21 +1,14 @@
 /**
  *
- *  Lecture 10.246: Building Class Methods & Working with "this"
+ *  Lecture 10.247: Adding a Cart & Shop Class
  *  Robert Hieger
  *  04/30/2023
  *
- *  This lecture introduces the concept of class methods and the
- *  convoluted logic behind the "this" keyword.
+ *  In this lecture, the instructor begins to build the infrastructure
+ *  to accomodate having a shopping cart and enabling users to add
+ *  items to that shopping cart.
  *
  *  Tasks for this lecture: TBD
- *
- *  1. Within ProductItem.render(), capture <button> within
- *     productEl node.
- *
- *  2. Add 'click' event listener to addCartButton node.
- *
- *  3. Create stub for addToCart() method and link to event listener
- *     as callback.
  *
 */
 
