@@ -26,7 +26,12 @@ class Product {
 }
 
 class ShoppingCart {
-	// TBD
+
+	// Datastore for individual products
+	items = [];
+
+
+
 }
 
 class ProductItem {
