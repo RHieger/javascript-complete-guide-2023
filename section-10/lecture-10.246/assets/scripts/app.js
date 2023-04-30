@@ -49,7 +49,7 @@ class ProductItem {
         </div>
       `
     const addCartButton = prodEl.querySelector('button');
-    addCartButton.addEventListener('click', );
+    addCartButton.addEventListener('click', this.addToCart);
     return prodEl;
   }
 
