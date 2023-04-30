@@ -26,6 +26,11 @@
  *			b) Instantiate object of type ProductList and render.
  *
  *  6. Capture root node for productList (renderHook object).
+ *
+ *  7. Populate Shop class as follows:
+ *
+ *		 a) Append cartEl to 'app' node.
+ *		 b) Append prodListEl to 'app' node.
 */
 
 class Product {
@@ -104,18 +109,21 @@ class Shop {
     // Render combined content of ShoppingCart and Shop
   	render() {
 
-			// Instantiate ShoppingCart & render productList.
-			const cart = new ShoppingCart();
-			cart.render();
-			const productList = new ProductList();
-			productList.render();
-
 			// Capture node for root element of product list
 	    const renderHook = document.getElementById('app');
 
+			// Instantiate ShoppingCart & render productList.
+			const cart = new ShoppingCart();
+			const cartEl = cart.render();
+			const productList = new ProductList();
+			const prodListEl = productList.render();
+
+			// Append Shopping Cart and List to root node
+			renderHook.append(cartEl);
+			renderHook.append(prodListEl);
 
   	}
-
+		return prodList;
 }
 
 class ProductList {
