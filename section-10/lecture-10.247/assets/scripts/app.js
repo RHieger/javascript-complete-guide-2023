@@ -19,6 +19,13 @@
  *  4. Create stub for Shop class, which joins the content
  *     of individual products to the ProductList content.
  *
+ *  5. Add render method to Shop class including the
+ *     following functionality:
+ *
+ *		 	a) Instantiate object of type ShoppingCart and render.
+ *			b) Instantiate object of type ProductList and render.
+ *
+ *  6. Capture root node for productList (renderHook object).
 */
 
 class Product {
@@ -103,6 +110,10 @@ class Shop {
 			const productList = new ProductList();
 			productList.render();
 
+			// Capture node for root element of product list
+	    const renderHook = document.getElementById('app');
+
+
   	}
 
 }
@@ -132,8 +143,6 @@ class ProductList {
 
   render() {
 
-  	// Capture node for root element of product list
-    const renderHook = document.getElementById('app');
 
     // productList node
     const prodList = document.createElement('ul');
