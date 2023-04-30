@@ -1,24 +1,13 @@
 /**
  *
- *  Lecture 10.245: Using & "Connecting" Multiple Classes
+ *  Lecture 10.246: Building Class Methods & Working with "this"
  *  Robert Hieger
- *  04/23/2023
+ *  04/30/2023
  *
- *  This lecture introduces the ideas behind class inheritance and how
- *  instantiated objects can also inherit properties from one another.
- *  The overall purpose of the lecture is to demonstrate breaking out
- *  the logic of the application into more atomic classes and, therefore,
- *  instantiated objects.
+ *  This lecture introduces the concept of class methods and the
+ *  convoluted logic behind the "this" keyword.
  *
- *  Tasks for this lecture:
- *
- *  1. Refactor productList object by creating ProductList() class comprised
- *  of the logic contained within productList.
- *
- *  2. Create new ProductItem class to model the presentation of individual
- *  products to be included in the product list on screen.
- *
- *  3. Complete logic for render() method in ProductList class.
+ *  Tasks for this lecture: TBD
  *
 */
 
