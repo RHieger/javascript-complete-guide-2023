@@ -9,6 +9,14 @@
  *
  *  Tasks for this lecture: TBD
  *
+ *  1. Within ProductItem.render(), capture <button> within
+ *     productEl node.
+ *
+ *  2. Add 'click' event listener to addCartButton node.
+ *
+ *  3. Create stub for addToCart() method and link to event listener
+ *     as callback.
+ *
 */
 
 class Product {
