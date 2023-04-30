@@ -12,6 +12,8 @@
  *
  *  1. Create stub for new ShoppingCart class.
  *
+ *  2. Add items[] Datastore to ShopingCart().
+ *
 */
 
 class Product {
@@ -30,7 +32,23 @@ class ShoppingCart {
 	// Datastore for individual products
 	items = [];
 
+	render() {
 
+	  // Root element for shopping cart
+	  cartEl = document.createElement('section');
+
+	  // Content for cartEl (provisional code)
+	  cartEl.innerHTML = `
+	    <h2>Total: \$${0}</h2>
+	    <button>Order Now!</button>
+	  `;
+
+	  // Apply styling
+	  cartEl.className = 'cart';
+
+	  return cartEl;
+
+	}
 
 }
 
