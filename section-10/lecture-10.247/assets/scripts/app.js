@@ -14,6 +14,11 @@
  *
  *  2. Add items[] Datastore to ShopingCart().
  *
+ *  3. Add render() Method to ShoppingCart().
+ *
+ *  4. Create stub for Shop class, which joins the content
+ *     of individual products to the ShoppingCart content.
+ *
 */
 
 class Product {
@@ -85,6 +90,10 @@ class ProductItem {
     return prodEl;
   }
 
+}
+
+class Shop {
+  // TBD
 }
 
 class ProductList {
