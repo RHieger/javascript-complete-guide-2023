@@ -8,7 +8,9 @@
  *  to accomodate having a shopping cart and enabling users to add
  *  items to that shopping cart.
  *
- *  Tasks for this lecture: TBD
+ *  Tasks for this lecture:
+ *
+ *  1. Create stub for new ShoppingCart class.
  *
 */
 
@@ -21,6 +23,10 @@ class Product {
     this.price = price;
   }
 
+}
+
+class ShoppingCart {
+	// TBD
 }
 
 class ProductItem {
