@@ -31,6 +31,11 @@
  *
  *		 a) Append cartEl to 'app' node.
  *		 b) Append prodListEl to 'app' node.
+ *
+ *	8. Instantiate object of type Shop (named shop).
+ *
+ *	9. Call render() method on shop().
+ *
 */
 
 class Product {
@@ -104,28 +109,6 @@ class ProductItem {
 
 }
 
-class Shop {
-
-    // Render combined content of ShoppingCart and Shop
-  	render() {
-
-			// Capture node for root element of product list
-	    const renderHook = document.getElementById('app');
-
-			// Instantiate ShoppingCart & render productList.
-			const cart = new ShoppingCart();
-			const cartEl = cart.render();
-			const productList = new ProductList();
-			const prodListEl = productList.render();
-
-			// Append Shopping Cart and List to root node
-			renderHook.append(cartEl);
-			renderHook.append(prodListEl);
-
-  	}
-		return prodList;
-}
-
 class ProductList {
 
   products = [
@@ -172,3 +155,28 @@ class ProductList {
   }
 
 }
+
+
+class Shop {
+
+    // Render combined content of ShoppingCart and Shop
+  	render() {
+
+			// Capture node for root element of product list
+	    const renderHook = document.getElementById('app');
+
+			// Instantiate ShoppingCart & render productList.
+			const cart = new ShoppingCart();
+			const cartEl = cart.render();
+			const productList = new ProductList();
+			const prodListEl = productList.render();
+
+			// Append Shopping Cart and List to root node
+			renderHook.append(cartEl);
+			renderHook.append(prodListEl);
+
+  	}
+		return prodList;
+}
+
+const shop = new Shop();
