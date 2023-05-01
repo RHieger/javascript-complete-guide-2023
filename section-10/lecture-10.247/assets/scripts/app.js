@@ -57,7 +57,7 @@ class ShoppingCart {
 	render() {
 
 	  // Root element for shopping cart
-	  cartEl = document.createElement('section');
+	  const cartEl = document.createElement('section');
 
 	  // Content for cartEl (provisional code)
 	  cartEl.innerHTML = `
@@ -151,7 +151,7 @@ class ProductList {
       prodList.append(prodEl);
 
     }
-	renderHook.append(prodList);
+	return prodList;
   }
 
 }
@@ -176,7 +176,8 @@ class Shop {
 			renderHook.append(prodListEl);
 
   	}
-		return prodList;
+
 }
 
 const shop = new Shop();
+shop.render()
