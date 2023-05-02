@@ -1,40 +1,14 @@
 /**
  *
- *  Lecture 10.247: Adding a Cart & Shop Class
+ *  Lecture 10.248: Communicating Can be Challenging!
  *  Robert Hieger
- *  04/30/2023
+ *  05/02/2023
  *
- *  In this lecture, the instructor begins to build the infrastructure
- *  to accomodate having a shopping cart and enabling users to add
- *  items to that shopping cart.
+ *  In this lecture, the instructor covers the difficulties of
+ *  communicating between classes and shows some approaches to
+ *  the problem.
  *
- *  Tasks for this lecture:
- *
- *  1. Create stub for new ShoppingCart class.
- *
- *  2. Add items[] Datastore to ShopingCart().
- *
- *  3. Add render() Method to ShoppingCart().
- *
- *  4. Create stub for Shop class, which joins the content
- *     of individual products to the ProductList content.
- *
- *  5. Add render method to Shop class including the
- *     following functionality:
- *
- *		 	a) Instantiate object of type ShoppingCart and render.
- *			b) Instantiate object of type ProductList and render.
- *
- *  6. Capture root node for productList (renderHook object).
- *
- *  7. Populate Shop class as follows:
- *
- *		 a) Append cartEl to 'app' node.
- *		 b) Append prodListEl to 'app' node.
- *
- *	8. Instantiate object of type Shop (named shop).
- *
- *	9. Call render() method on shop().
+ *  Tasks for this lecture: TBD
  *
 */
 
