@@ -1,20 +1,16 @@
 /**
  *
- *  Lecture 10.248: Communicating Can be Challenging!
+ *  Lecture 10.249: Static Methods & Properties
  *  Robert Hieger
- *  05/02/2023
+ *  05/03/2023
  *
- *  In this lecture, the instructor covers the difficulties of
- *  communicating between classes and shows some approaches to
- *  the problem.
+ *  In this lecture, the instructor introduces the concept of static
+ *	methods and properties, which may be used where global values are
+ *	needed, e.g. settings and configuration tasks. The static method or
+ *	property may only be accessed from within the class itself.
  *
- *  Tasks for this lecture:
  *
- *  1. Create stub for addCart() method with one argument called product,
- *		 and tasked with adding a product to the items[] array.
- *
- *	2. Refactor rendor() method by capturing the <h2> element within the
- *		 cartEl node.
+ *  Tasks for this lecture: TBD
  *
 */
 
