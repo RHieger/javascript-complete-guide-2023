@@ -8,7 +8,13 @@
  *  communicating between classes and shows some approaches to
  *  the problem.
  *
- *  Tasks for this lecture: TBD
+ *  Tasks for this lecture:
+ *
+ *  1. Create stub for addCart() method with one argument called product,
+ *		 and tasked with adding a product to the items[] array.
+ *
+ *	2. Refactor rendor() method by capturing the <h2> element within the
+ *		 cartEl node.
  *
 */
 
@@ -28,6 +34,17 @@ class ShoppingCart {
 	// Datastore for individual products
 	items = [];
 
+	addProduct(product) {
+
+		// Add individual product to list
+		this.items.push(product);
+
+		// Preliminary logic to display total amount of shopping cart,
+		// not yet dynamic.
+		this.totalOutput = `<h2>Total: \$${1}</h2>`;
+
+	}
+
 	render() {
 
 	  // Root element for shopping cart
@@ -41,6 +58,9 @@ class ShoppingCart {
 
 	  // Apply styling
 	  cartEl.className = 'cart';
+
+		// Make cartEl <h2> available to addProduct() method
+		this.totalOutput = cartEl.querySelector('h2');
 
 	  return cartEl;
 
