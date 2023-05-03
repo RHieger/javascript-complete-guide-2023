@@ -170,8 +170,13 @@ class Shop {
 }
 
 class App {
-	// TBD
+
+	static init() {
+		const shop = new Shop();
+		shop.render();
+	}
+
 }
 
-const shop = new Shop();
-shop.render()
+App.init();
+
