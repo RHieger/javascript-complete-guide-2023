@@ -169,5 +169,9 @@ class Shop {
 
 }
 
+class App {
+	// TBD
+}
+
 const shop = new Shop();
 shop.render()
