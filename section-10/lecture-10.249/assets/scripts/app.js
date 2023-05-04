@@ -156,8 +156,8 @@ class Shop {
 	    const renderHook = document.getElementById('app');
 
 			// Instantiate ShoppingCart & render productList.
-			const cart = new ShoppingCart();
-			const cartEl = cart.render();
+			this.cart = new ShoppingCart();
+			const cartEl = this.cart.render();
 			const productList = new ProductList();
 			const prodListEl = productList.render();
 
@@ -173,6 +173,8 @@ class App {
 
 	static init() {
 		const shop = new Shop();
+		// Refers to cart contained within shop object
+		this.cart = shop.cart;
 		shop.render();
 	}
 
