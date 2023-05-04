@@ -10,7 +10,17 @@
  *	property may only be accessed from within the class itself.
  *
  *
- *  Tasks for this lecture: TBD
+ *  Tasks for this lecture:
+ *
+ *	1. Create App class and move and creat static init() method, moving
+ *		 instantiation of shop object and call to shop.render() method
+ *		 into init().
+ *
+ *	2. Initialize App by calling static App.init() method.
+ *
+ *	3. Creat static method addProductToCart() and reference the
+ *		 shop.cart property.
+ *
  *
 */
 

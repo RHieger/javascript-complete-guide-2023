@@ -4,3 +4,4 @@ lecture-10.242-classes-and-instances.pdf filter=lfs diff=lfs merge=lfs -text
 lecture-10.244-class-properties-fields-methods.pdf filter=lfs diff=lfs merge=lfs -text
 lecture-10.249-statie-fields-methods.pdf filter=lfs diff=lfs merge=lfs -text
 lecture-10.249-static-fields-methods.pdf filter=lfs diff=lfs merge=lfs -text
+lecture-10.250-classes-vs-object-literals.pdf filter=lfs diff=lfs merge=lfs -text
