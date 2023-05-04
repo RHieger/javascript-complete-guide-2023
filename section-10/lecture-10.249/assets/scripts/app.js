@@ -178,6 +178,13 @@ class App {
 		shop.render();
 	}
 
+	addProductToCart(product) {
+
+		// Refers to cart in instance object shop
+		this.cart.addProduct(product);
+
+	}
+
 }
 
 App.init();
