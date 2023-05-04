@@ -71,9 +71,8 @@ class ProductItem {
   }
 
   addToCart() {
-  	// FOR DIAGNOSTIC PURPOSES ONLY
-  	console.log('Adding product to cart...');
-  	console.log(this.product);
+  	// References static method in App class
+  	App.addProductToCart(this.product);
   }
 
   render() {
@@ -178,7 +177,7 @@ class App {
 		shop.render();
 	}
 
-	addProductToCart(product) {
+	static addProductToCart(product) {
 
 		// Refers to cart in instance object shop
 		this.cart.addProduct(product);
