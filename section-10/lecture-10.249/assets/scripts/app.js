@@ -37,7 +37,7 @@ class ShoppingCart {
 
 		// Preliminary logic to display total amount of shopping cart,
 		// not yet dynamic.
-		this.totalOutput = `<h2>Total: \$${1}</h2>`;
+		this.totalOutput.innerHTML = `<h2>Total: \$${1}</h2>`;
 
 	}
 
@@ -170,16 +170,19 @@ class Shop {
 
 class App {
 
+	// Explicit initialization of static cart property
+	static cart;
+
 	static init() {
 		const shop = new Shop();
-		// Refers to cart contained within shop object
-		this.cart = shop.cart;
 		shop.render();
+		// References cart contained within shop object
+		this.cart = shop.cart;
 	}
 
 	static addProductToCart(product) {
 
-		// Refers to cart in instance object shop
+		// References cart in instance object shop
 		this.cart.addProduct(product);
 
 	}
