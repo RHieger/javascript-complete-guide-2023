@@ -32,6 +32,10 @@ class ShoppingCart {
 	// Datastore for individual products
 	items = [];
 
+	set cartItems(value) {
+		// TBD
+	}
+
 	get totalAmount() {
 
 		// Calculate ShoppingCart total
@@ -202,4 +206,3 @@ class App {
 }
 
 App.init();
-
