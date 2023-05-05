@@ -33,27 +33,27 @@ class ShoppingCart {
 	items = [];
 
 	set cartItems(value) {
-		// TBD
+		this.items = value;
+
+		// Logic to display total amount of shopping cart
+		this.totalOutput.innerHTML = `<h2>Total: \$${this.totalAmount}</h2>`;
+
 	}
 
 	get totalAmount() {
 
 		// Calculate ShoppingCart total
-		this.items.reduce(
+		const sum = this.items.reduce(
 			(prevValue, curItem) => revValue + curItem.price),
 			0
 		);
-
+		return sum;
 	}
 
 	addProduct(product) {
 
 		// Add individual product to list
 		this.items.push(product);
-
-		// Preliminary logic to display total amount of shopping cart,
-		// not yet dynamic.
-		this.totalOutput.innerHTML = `<h2>Total: \$${this.totalAmount}</h2>`;
 
 	}
 
