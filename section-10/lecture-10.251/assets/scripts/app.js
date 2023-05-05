@@ -1,25 +1,17 @@
 /**
  *
- *  Lecture 10.249: Static Methods & Properties
+ *  Lecture 10.251: Getters & Setters
  *  Robert Hieger
- *  05/03/2023
+ *  05/04/2023
  *
- *  In this lecture, the instructor introduces the concept of static
- *	methods and properties, which may be used where global values are
- *	needed, e.g. settings and configuration tasks. The static method or
- *	property may only be accessed from within the class itself.
+ *  In this lecture, the instructor introduces the concept of
+ *	Getters & Setters within objects. Getters & Setters are
+ *	special methods which allow us to "get" the value of an
+ *	object property and return it to the calling function, or
+ *	"set" the value of an object property, either changing its
+ *	current value or initializing it if no value is present.
  *
- *
- *  Tasks for this lecture:
- *
- *	1. Create App class and move and creat static init() method, moving
- *		 instantiation of shop object and call to shop.render() method
- *		 into init().
- *
- *	2. Initialize App by calling static App.init() method.
- *
- *	3. Creat static method addProductToCart() and reference the
- *		 shop.cart property.
+ *  Tasks for this lecture: TBD
  *
  *
 */
