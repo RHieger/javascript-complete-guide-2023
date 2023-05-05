@@ -49,7 +49,7 @@ class ShoppingCart {
 
 		// Preliminary logic to display total amount of shopping cart,
 		// not yet dynamic.
-		this.totalOutput.innerHTML = `<h2>Total: \$${1}</h2>`;
+		this.totalOutput.innerHTML = `<h2>Total: \$${this.totalAmount}</h2>`;
 
 	}
 
