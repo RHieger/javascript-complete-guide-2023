@@ -32,6 +32,10 @@ class ShoppingCart {
 	// Datastore for individual products
 	items = [];
 
+	get totalAmount() {
+		// TBD
+	}
+
 	addProduct(product) {
 
 		// Add individual product to list
