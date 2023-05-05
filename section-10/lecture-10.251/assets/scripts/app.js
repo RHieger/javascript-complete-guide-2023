@@ -33,7 +33,13 @@ class ShoppingCart {
 	items = [];
 
 	get totalAmount() {
-		// TBD
+
+		// Calculate ShoppingCart total
+		this.items.reduce(
+			(prevValue, curItem) => revValue + curItem.price),
+			0
+		);
+
 	}
 
 	addProduct(product) {
