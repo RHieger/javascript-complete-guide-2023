@@ -13,6 +13,11 @@
  *
  *  Tasks for this lecture: TBD
  *
+ *	1. Add getter totalAmount() method to total all prices in the
+ *		 ShoppingCart() class.
+ *
+ *	2. Add setter cartItems method to set display of total prices
+ *		 in the shopping cart.
  *
 */
 
@@ -36,7 +41,7 @@ class ShoppingCart {
 		this.items = value;
 
 		// Logic to display total amount of shopping cart
-		this.totalOutput.innerHTML = `<h2>Total: \$${this.totalAmount}</h2>`;
+		this.totalOutput.innerHTML = `<h2>Total: \$${this.totalAmount.toFixed(2)}</h2>`;
 
 	}
 
@@ -44,7 +49,7 @@ class ShoppingCart {
 
 		// Calculate ShoppingCart total
 		const sum = this.items.reduce(
-			(prevValue, curItem) => revValue + curItem.price),
+			(prevValue, curItem) => prevValue + curItem.price,
 			0
 		);
 		return sum;
@@ -52,8 +57,14 @@ class ShoppingCart {
 
 	addProduct(product) {
 
-		// Add individual product to list
-		this.items.push(product);
+		// References this.items in cartItems method
+		const updatedItems = [...this.items];
+
+		// Add product item to updatedItems array
+		updatedItems.push(product);
+
+		// Set contents of cartItems to updatedItems[]
+		this.cartItems = updatedItems;
 
 	}
 
