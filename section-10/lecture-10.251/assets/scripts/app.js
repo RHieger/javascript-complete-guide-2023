@@ -11,7 +11,7 @@
  *	"set" the value of an object property, either changing its
  *	current value or initializing it if no value is present.
  *
- *  Tasks for this lecture: TBD
+ *  Tasks for this lecture:
  *
  *	1. Add getter totalAmount() method to total all prices in the
  *		 ShoppingCart() class.
