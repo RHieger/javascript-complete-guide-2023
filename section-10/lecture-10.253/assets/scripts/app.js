@@ -22,6 +22,10 @@ class Product {
 
 }
 
+class Component {
+	// TBD
+}
+
 class ShoppingCart {
 
 	// Datastore for individual products
