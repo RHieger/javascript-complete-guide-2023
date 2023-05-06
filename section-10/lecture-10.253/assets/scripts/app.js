@@ -1,23 +1,13 @@
 /**
  *
- *  Lecture 10.251: Getters & Setters
+ *  Lecture 10.253: Implementing Inheritance
  *  Robert Hieger
- *  05/04/2023
+ *  05/06/2023
  *
- *  In this lecture, the instructor introduces the concept of
- *	Getters & Setters within objects. Getters & Setters are
- *	special methods which allow us to "get" the value of an
- *	object property and return it to the calling function, or
- *	"set" the value of an object property, either changing its
- *	current value or initializing it if no value is present.
+ *  In this lecture, the instructor delves deeper into what is
+ *	possible to do with class-based inheritance.
  *
  *  Tasks for this lecture: TBD
- *
- *	1. Add getter totalAmount() method to total all prices in the
- *		 ShoppingCart() class.
- *
- *	2. Add setter cartItems method to set display of total prices
- *		 in the shopping cart.
  *
 */
 
