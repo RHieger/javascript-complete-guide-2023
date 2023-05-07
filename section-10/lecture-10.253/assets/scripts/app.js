@@ -7,7 +7,10 @@
  *  In this lecture, the instructor delves deeper into what is
  *	possible to do with class-based inheritance.
  *
- *  Tasks for this lecture: TBD
+ *  Tasks for this lecture:
+ *
+ *	1. Create new Component class designed to model different
+ *		 segments of the page that share common features.
  *
 */
 
@@ -23,7 +26,12 @@ class Product {
 }
 
 class Component {
-	// TBD
+
+	// Set the root node for Product List
+	createRootElement(tag, cssClasses, attributes) {
+		// TBD
+	}
+
 }
 
 class ShoppingCart {
