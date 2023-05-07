@@ -25,6 +25,10 @@ class Product {
 
 }
 
+class ElementAttribute {
+	// TBD
+}
+
 class Component {
 
 	// Set the root node for Product List
@@ -37,8 +41,13 @@ class Component {
 			rootElement.className = cssClasses;
 		}
 
-		// Add attributes if present
+		// Add attributes if specified
 		if (attributes && attributes.length > 0) {
+
+			// Loop through and assign any attributes
+			for (const attr of attributes) {
+				rootElement.setAttribute(attr.name, attr.value);
+			}
 
 		}
 
