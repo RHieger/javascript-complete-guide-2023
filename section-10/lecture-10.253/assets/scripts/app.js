@@ -26,10 +26,19 @@ class Product {
 }
 
 class ElementAttribute {
-	// TBD
+
+	constructor(attrName, attrValue) {
+		this.name = attrName;
+		this.value = attrValue;
+	}
+
 }
 
 class Component {
+
+	constructor(renderHookId) {
+		this.hookId = renderHookId;
+	}
 
 	// Set the root node for Product List
 	createRootElement(tag, cssClasses, attributes) {
@@ -50,12 +59,13 @@ class Component {
 			}
 
 		}
-
+		document.getElementById(this.hookId).append(rootElement);
+		return this.rootElement;
 	}
 
 }
 
-class ShoppingCart {
+class ShoppingCart extends Component {
 
 	// Datastore for individual products
 	items = [];
