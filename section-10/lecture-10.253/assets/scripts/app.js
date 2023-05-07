@@ -29,7 +29,19 @@ class Component {
 
 	// Set the root node for Product List
 	createRootElement(tag, cssClasses, attributes) {
-		// TBD
+
+		const rootElement = document.createElement(tag);
+
+		// Add styling if specified
+		if (cssClasses) {
+			rootElement.className = cssClasses;
+		}
+
+		// Add attributes if present
+		if (attributes && attributes.length > 0) {
+
+		}
+
 	}
 
 }
