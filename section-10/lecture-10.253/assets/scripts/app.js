@@ -2,7 +2,7 @@
  *
  *  Lecture 10.253: Implementing Inheritance
  *  Robert Hieger
- *  05/06/2023
+ *  05/07/2023
  *
  *  In this lecture, the instructor delves deeper into what is
  *	possible to do with class-based inheritance.
@@ -11,6 +11,13 @@
  *
  *	1. Create new Component class designed to model different
  *		 segments of the page that share common features.
+ *
+ *	2. Refactor ShoppingCart class:
+ *		a) ShoppingCart now extends Component class.
+ *		b) Add constructor to ShoppingCart class.
+ *		c) Call super() method to reference constructor in Component.
+ *		d) Pass Component.renderHookId to ShoppingCart constructor.
+ *		e) Remove superfluous code now handled by call to super() method.
  *
 */
 
@@ -37,6 +44,7 @@ class ElementAttribute {
 class Component {
 
 	constructor(renderHookId) {
+		console.log('Component constructor called!');
 		this.hookId = renderHookId;
 	}
 
@@ -60,7 +68,7 @@ class Component {
 
 		}
 		document.getElementById(this.hookId).append(rootElement);
-		return this.rootElement;
+		return rootElement;
 	}
 
 }
@@ -88,6 +96,11 @@ class ShoppingCart extends Component {
 		return sum;
 	}
 
+	constructor(renderHookId) {
+		// References Component.renderHookId
+		super(renderHookId);
+	}
+
 	addProduct(product) {
 
 		// References this.items in cartItems method
@@ -103,8 +116,9 @@ class ShoppingCart extends Component {
 
 	render() {
 
-	  // Root element for shopping cart
-	  const cartEl = document.createElement('section');
+	  // Root element for shopping cart—-
+	  // refers to Component.createRootElement().
+	  const cartEl = this.createRootElement('section', 'cart',);
 
 	  // Content for cartEl (provisional code)
 	  cartEl.innerHTML = `
@@ -112,13 +126,8 @@ class ShoppingCart extends Component {
 	    <button>Order Now!</button>
 	  `;
 
-	  // Apply styling
-	  cartEl.className = 'cart';
-
-		// Make cartEl <h2> available to addProduct() method
+	  // Make cartEl <h2> available to addProduct() method
 		this.totalOutput = cartEl.querySelector('h2');
-
-	  return cartEl;
 
 	}
 
@@ -215,13 +224,12 @@ class Shop {
 	    const renderHook = document.getElementById('app');
 
 			// Instantiate ShoppingCart & render productList.
-			this.cart = new ShoppingCart();
-			const cartEl = this.cart.render();
+			this.cart = new ShoppingCart('app');
+			this.cart.render();
 			const productList = new ProductList();
 			const prodListEl = productList.render();
 
 			// Append Shopping Cart and List to root node
-			renderHook.append(cartEl);
 			renderHook.append(prodListEl);
 
   	}
