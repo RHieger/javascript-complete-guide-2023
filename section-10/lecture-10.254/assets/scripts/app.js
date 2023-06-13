@@ -126,7 +126,7 @@ class ShoppingCart extends Component {
 
 }
 
-class ProductItem {
+class ProductItem extends Component {
 
   constructor(product) {
   	this.product = product;
