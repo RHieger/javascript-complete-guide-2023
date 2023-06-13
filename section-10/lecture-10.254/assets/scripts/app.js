@@ -1,25 +1,18 @@
 /**
  *
- *  Lecture 10.253: Implementing Inheritance
+ *  Lecture 10.254: Using Inheritance Everywhere
  *  Robert Hieger
- *  05/07/2023
+ *  06/12/2023
  *
- *  In this lecture, the instructor delves deeper into what is
- *	possible to do with class-based inheritance.
+ *  Now that inheritance has been used in creation of the ShoppingCart
+ *	class, through the extension of the Component class, the aim of
+ *	this lecture is to explore using this inheritance wherever appropriate
+ *	throughout this application.
  *
- *  Tasks for this lecture:
- *
- *	1. Create new Component class designed to model different
- *		 segments of the page that share common features.
- *
- *	2. Refactor ShoppingCart class:
- *		a) ShoppingCart now extends Component class.
- *		b) Add constructor to ShoppingCart class.
- *		c) Call super() method to reference constructor in Component.
- *		d) Pass Component.renderHookId to ShoppingCart constructor.
- *		e) Remove superfluous code now handled by call to super() method.
+ *  Tasks for this lecture: TBD
  *
 */
+
 
 class Product {
 
