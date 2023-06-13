@@ -138,9 +138,8 @@ class ProductItem extends Component {
   }
 
   render() {
-    const prodEl = document.createElement('li');
-    prodEl.className = 'product-item';
-
+  	// Set root element for ProductItem.
+    const prodEl = this.createRootElement('li', 'product-item');
     // Set content for prodEl:
     prodEl.innerHTML = `
       <div>
@@ -155,7 +154,6 @@ class ProductItem extends Component {
       `
     const addCartButton = prodEl.querySelector('button');
     addCartButton.addEventListener('click', this.addToCart.bind(this));
-    return prodEl;
   }
 
 }
