@@ -22,7 +22,12 @@
  *		a. Remove hard-coded declaration of prodEl object adding a product
  *			 to the product list.
  *		b. Add temporary object whose sole property is an id that corresponds
- 				 to the root element the to which the product will be append.
+ *			 to the root element the to which the product will be append.
+ *
+ *	4. Refactor ProductItem.constructor():
+ *		a. Add renderHookId as second argument.
+ *		b. Call super(renderHookId) to reference root element provided
+ *			 by Component, our base class.
  *
  *
 */
@@ -142,7 +147,8 @@ class ShoppingCart extends Component {
 
 class ProductItem extends Component {
 
-  constructor(product) {
+  constructor(product, renderHookId) {
+  	super(renderHookId);
   	this.product = product;
   }
 
