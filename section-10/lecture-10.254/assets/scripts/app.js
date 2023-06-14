@@ -2,7 +2,7 @@
  *
  *  Lecture 10.254: Using Inheritance Everywhere
  *  Robert Hieger
- *  06/12/2023
+ *  06/14/2023
  *
  *  Now that inheritance has been used in creation of the ShoppingCart
  *	class, through the extension of the Component class, the aim of
@@ -38,8 +38,14 @@
  *		e. Remove superfluous return prodList statement.
  *		f. In ProductList.constructor(), add renderHookId as its single
  *			 argument.
- 			g. Call super() on Component class with argument of renderHookId.
+ * 		g. Call super() on Component class with argument of renderHookId.
  *
+ *	6. Refactor Shop class:
+ *		a. Remove superfluous append statement that appends productList.
+ *		b. Remove superfluous creation of prodListEl.
+ *		c. Remove superfluous declaration of renderHook.
+ *		d. In Shop.render(), add 'app' as argument to declaration of
+ *			 productList object.
  *
 */
 
@@ -64,6 +70,7 @@ class ElementAttribute {
 
 }
 
+/* Base Class */
 class Component {
 
 	constructor(renderHookId) {
@@ -212,9 +219,8 @@ class ProductList extends Component {
 
   render() {
 
-
     // productList node
-    prodList = this.createRootElement(
+    const prodList = this.createRootElement(
     	'ul', 'product-list',
     	[new ElementAttribute('id', 'prod-list')]
     );
@@ -237,17 +243,11 @@ class Shop {
     // Render combined content of ShoppingCart and Shop
   	render() {
 
-			// Capture node for root element of product list
-	    const renderHook = document.getElementById('app');
-
 			// Instantiate ShoppingCart & render productList.
 			this.cart = new ShoppingCart('app');
 			this.cart.render();
-			const productList = new ProductList();
-			const prodListEl = productList.render();
-
-			// Append Shopping Cart and List to root node
-			renderHook.append(prodListEl);
+			const productList = new ProductList('app');
+			productList.render();
 
   	}
 
