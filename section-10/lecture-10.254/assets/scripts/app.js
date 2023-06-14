@@ -9,7 +9,21 @@
  *	this lecture is to explore using this inheritance wherever appropriate
  *	throughout this application.
  *
- *  Tasks for this lecture: TBD
+ *  Tasks for this lecture:
+ *
+ *
+ *	1. Refactor ProductItem by extending Component class.
+ *
+ *	2. Refactor ProductItem.render():
+ *		a. Remove hard-coded root element creation using createElement
+ *			 method, and instead reference Component.createRootElement().
+ *
+ *	3. Refactor ProductList class:
+ *		a. Remove hard-coded declaration of prodEl object adding a product
+ *			 to the product list.
+ *		b. Add temporary object whose sole property is an id that corresponds
+ 				 to the root element the to which the product will be append.
+ *
  *
 */
 
@@ -187,20 +201,20 @@ class ProductList {
     // productList node
     const prodList = document.createElement('ul');
 
+    // Set id to identify prodList as root element of class.
+    prodList.id = 'product-list';
+
     // Add styling
     prodList.className = 'product-list';
 
     // Assemble List of products:
     for (const prod of this.products) {
 
-	  const productItem = new ProductItem(prod);
-	  const prodEl = productItem.render();
-
-      // Add product to product list.
-      prodList.append(prodEl);
+	  const productItem = new ProductItem(prod, 'prod-list');
+	  productItem.render();
 
     }
-	return prodList;
+		return prodList;
   }
 
 }
