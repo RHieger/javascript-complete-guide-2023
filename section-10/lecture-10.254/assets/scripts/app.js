@@ -11,7 +11,6 @@
  *
  *  Tasks for this lecture:
  *
- *
  *	1. Refactor ProductItem by extending Component class.
  *
  *	2. Refactor ProductItem.render():
@@ -28,6 +27,18 @@
  *		a. Add renderHookId as second argument.
  *		b. Call super(renderHookId) to reference root element provided
  *			 by Component, our base class.
+ *
+ *	5. Refactor ProductList class:
+ *		a. Set ProductList to extend our base class, Component.
+ *		b. Add third argument to CreateRootElement by instantiating
+ *			 an object of type ElementAttribute where the attribute is
+ *			 'id' and the value is 'prod-list'.
+ *		c. Remove hard-coded id attribute.
+ *		d. Remove hard-coded style of 'product-list'.
+ *		e. Remove superfluous return prodList statement.
+ *		f. In ProductList.constructor(), add renderHookId as its single
+ *			 argument.
+ 			g. Call super() on Component class with argument of renderHookId.
  *
  *
 */
@@ -178,7 +189,7 @@ class ProductItem extends Component {
 
 }
 
-class ProductList {
+class ProductList extends Component {
 
   products = [
   	new Product(
@@ -195,23 +206,18 @@ class ProductList {
   	)
   ];
 
-  // EXPERIMENTAL CODE
-  constructor() {
-
-
+  constructor(renderHookId) {
+		super(renderHookId);
   }
 
   render() {
 
 
     // productList node
-    const prodList = document.createElement('ul');
-
-    // Set id to identify prodList as root element of class.
-    prodList.id = 'product-list';
-
-    // Add styling
-    prodList.className = 'product-list';
+    prodList = this.createRootElement(
+    	'ul', 'product-list',
+    	[new ElementAttribute('id', 'prod-list')]
+    );
 
     // Assemble List of products:
     for (const prod of this.products) {
@@ -220,7 +226,7 @@ class ProductList {
 	  productItem.render();
 
     }
-		return prodList;
+
   }
 
 }
