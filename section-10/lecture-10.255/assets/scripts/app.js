@@ -1,51 +1,14 @@
 /**
  *
- *  Lecture 10.254: Using Inheritance Everywhere
+ *  Lecture 10.255: Overriding Methods and the super() Constructor
  *  Robert Hieger
- *  06/14/2023
+ *  06/17/2023
  *
- *  Now that inheritance has been used in creation of the ShoppingCart
- *	class, through the extension of the Component class, the aim of
- *	this lecture is to explore using this inheritance wherever appropriate
- *	throughout this application.
+ *  Now that inheritance has been used for all remaining classes
+ *	in which it made sense to do so, this lecture turns its attention
+ *	to overriding methods and use of the super() constructor.
  *
- *  Tasks for this lecture:
- *
- *	1. Refactor ProductItem by extending Component class.
- *
- *	2. Refactor ProductItem.render():
- *		a. Remove hard-coded root element creation using createElement
- *			 method, and instead reference Component.createRootElement().
- *
- *	3. Refactor ProductList class:
- *		a. Remove hard-coded declaration of prodEl object adding a product
- *			 to the product list.
- *		b. Add temporary object whose sole property is an id that corresponds
- *			 to the root element the to which the product will be append.
- *
- *	4. Refactor ProductItem.constructor():
- *		a. Add renderHookId as second argument.
- *		b. Call super(renderHookId) to reference root element provided
- *			 by Component, our base class.
- *
- *	5. Refactor ProductList class:
- *		a. Set ProductList to extend our base class, Component.
- *		b. Add third argument to CreateRootElement by instantiating
- *			 an object of type ElementAttribute where the attribute is
- *			 'id' and the value is 'prod-list'.
- *		c. Remove hard-coded id attribute.
- *		d. Remove hard-coded style of 'product-list'.
- *		e. Remove superfluous return prodList statement.
- *		f. In ProductList.constructor(), add renderHookId as its single
- *			 argument.
- * 		g. Call super() on Component class with argument of renderHookId.
- *
- *	6. Refactor Shop class:
- *		a. Remove superfluous append statement that appends productList.
- *		b. Remove superfluous creation of prodListEl.
- *		c. Remove superfluous declaration of renderHook.
- *		d. In Shop.render(), add 'app' as argument to declaration of
- *			 productList object.
+ *  Tasks for this lecture: TBD
  *
 */
 
