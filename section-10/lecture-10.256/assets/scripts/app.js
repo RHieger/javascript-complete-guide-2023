@@ -1,24 +1,14 @@
 /**
  *
- *  Lecture 10.255: Overriding Methods and the super() Constructor
+ *  Lecture 10.256: super() Constructor Execution, Order & "this"
  *  Robert Hieger
  *  06/17/2023
  *
- *  Now that inheritance has been used for all remaining classes
- *	in which it made sense to do so, this lecture turns its attention
- *	to overriding methods and use of the super() constructor.
+ *  The previous lecture left an error in the code, causing a message
+ *  that states "this.products is not an iterable". This lecutre will
+ *	fix that error.
  *
- *  Tasks for this lecture:
- *
- *	1. Address redundancy of calls to render() method in Shop class by
- *		 removing calls to the method within this class.
- *
- *	2. Address redundancy of calls to render() method in ProductList class
- *		 by removing calls to the method within this class.
- *
- *	3. Add constructor to Shop class calling this.render() to render the
- *		 base element for the application. Throws error this.products is
- *		 not iterable.
+ *  Tasks for this lecture: TBD
  *
 */
 
