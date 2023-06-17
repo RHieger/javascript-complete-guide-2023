@@ -16,6 +16,10 @@
  *	2. Address redundancy of calls to render() method in ProductList class
  *		 by removing calls to the method within this class.
  *
+ *	3. Add constructor to Shop class calling this.render() to render the
+ *		 base element for the application. Throws error this.products is
+ *		 not iterable.
+ *
 */
 
 
@@ -43,9 +47,13 @@ class ElementAttribute {
 class Component {
 
 	constructor(renderHookId) {
-		console.log('Component constructor called!');
 		this.hookId = renderHookId;
+		this.render();
 	}
+
+	// Empty method present only for reference to this
+	// method present in subclasses of Component.
+	render() {}
 
 	// Set the root node for Product List
 	createRootElement(tag, cssClasses, attributes) {
@@ -208,14 +216,18 @@ class ProductList extends Component {
 
 class Shop {
 
-    // Render combined content of ShoppingCart and Shop
-  	render() {
+	constructor() {
+		this.render();
+	}
 
-			// Instantiate ShoppingCart & render productList.
-			this.cart = new ShoppingCart('app');
-			new ProductList('app');
+	// Render combined content of ShoppingCart and Shop
+	render() {
 
-  	}
+		// Instantiate ShoppingCart & render productList.
+		this.cart = new ShoppingCart('app');
+		new ProductList('app');
+
+  }
 
 }
 
