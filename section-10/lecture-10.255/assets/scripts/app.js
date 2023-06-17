@@ -8,7 +8,10 @@
  *	in which it made sense to do so, this lecture turns its attention
  *	to overriding methods and use of the super() constructor.
  *
- *  Tasks for this lecture: TBD
+ *  Tasks for this lecture:
+ *
+ *	1. Address redundancy of calls to render() method in Shop class by
+ *		 removing calls to the method within this class.
  *
 */
 
@@ -208,9 +211,7 @@ class Shop {
 
 			// Instantiate ShoppingCart & render productList.
 			this.cart = new ShoppingCart('app');
-			this.cart.render();
-			const productList = new ProductList('app');
-			productList.render();
+			new ProductList('app');
 
   	}
 
