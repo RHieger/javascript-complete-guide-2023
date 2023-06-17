@@ -13,6 +13,9 @@
  *	1. Address redundancy of calls to render() method in Shop class by
  *		 removing calls to the method within this class.
  *
+ *	2. Address redundancy of calls to render() method in ProductList class
+ *		 by removing calls to the method within this class.
+ *
 */
 
 
@@ -194,8 +197,7 @@ class ProductList extends Component {
     // Assemble List of products:
     for (const prod of this.products) {
 
-	  const productItem = new ProductItem(prod, 'prod-list');
-	  productItem.render();
+	  	new ProductItem(prod, 'prod-list');
 
     }
 
