@@ -218,12 +218,17 @@ class ProductList extends Component {
     const prodList = this.createRootElement(
     	'ul', 'product-list',
     	[new ElementAttribute('id', 'prod-list')]
-    );
 
+    	// Check for presence of product items to render:
+    	if (this.products && this.products.length > 0) {
+    		// Render products within product list.
+    		// First time will only render root element.
+    		this.renderProducts();
+    	}
+    );
   }
 
 }
-
 
 class Shop {
 
