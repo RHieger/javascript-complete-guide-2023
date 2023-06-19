@@ -19,6 +19,9 @@
  *	3. Within ProductList.constructor(), call new fetchProducts() method
  *		 using this keyword—-this.fetchProducts();
  *
+ *	4. Create new renderProducts() method and move iteration over new product
+ *		 items to be rendered to the list into the new method.
+ *
 */
 
 
@@ -202,6 +205,13 @@ class ProductList extends Component {
 		];
   }
 
+  renderProducts() {
+		// Assemble List of products:
+    for (const prod of this.products) {
+	  	new ProductItem(prod, 'prod-list');
+    }
+  }
+
   render() {
 
     // productList node
@@ -209,13 +219,6 @@ class ProductList extends Component {
     	'ul', 'product-list',
     	[new ElementAttribute('id', 'prod-list')]
     );
-
-    // Assemble List of products:
-    for (const prod of this.products) {
-
-	  	new ProductItem(prod, 'prod-list');
-
-    }
 
   }
 
