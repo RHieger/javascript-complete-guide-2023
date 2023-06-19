@@ -2,13 +2,22 @@
  *
  *  Lecture 10.256: super() Constructor Execution, Order & "this"
  *  Robert Hieger
- *  06/17/2023
+ *  06/19/2023
  *
  *  The previous lecture left an error in the code, causing a message
  *  that states "this.products is not an iterable". This lecutre will
  *	fix that error.
  *
- *  Tasks for this lecture: TBD
+ *  Tasks for this lecture:
+ *
+ *	1. Declare empty products[] array to contain product items rendered
+ *		 by ProductList class.
+ *
+ *	2. Move mock datastore of this.products() array into new fetchProducts()
+ *		 method, which specifies product items to be rendered.
+ *
+ *	3. Within ProductList.constructor(), call new fetchProducts() method
+ *		 using this keyword—-this.fetchProducts();
  *
 */
 
@@ -165,23 +174,32 @@ class ProductItem extends Component {
 
 class ProductList extends Component {
 
-  products = [
-  	new Product(
-  	  'A Pillow',
-  	  'http://www.clker.com/cliparts/b/0/b/d/13444048401912257549buckwheat-pillow-hi.png',
-  	  'A soft pillow!',
-  	  19.99
-  	),
-  	new Product(
-  	  'A Carpet',
-  	  'https://secure.img1-fg.wfcdn.com/im/47722856/resize-h800-w800%5Ecompr-r85/1317/131735735/Serapi+Hand-Knotted+Oriental+Area+Rug+in+Rust%2FIvory%2FNavy.jpg',
-	  'A carpet which you might like - or not.',
-	  89.99
-  	)
-  ];
+	// Declare products array to hold product items.
+	products = [];
 
   constructor(renderHookId) {
 		super(renderHookId);
+		this.fetchProducts();
+  }
+
+  // STOP-GAP CODE UNTIL HTTP REQUESTS ARE COVERED:
+
+  fetchProducts() {
+
+		this.products = [
+			new Product(
+  		  'A Pillow',
+  		  'http://www.clker.com/cliparts/b/0/b/d/13444048401912257549buckwheat-pillow-hi.png',
+  	  	'A soft pillow!',
+  	  19.99
+	  	),
+  		new Product(
+  	  	'A Carpet',
+  	  	'https://secure.img1-fg.wfcdn.com/im/47722856/resize-h800-w800%5Ecompr-r85/1317/131735735/Serapi+Hand-Knotted+Oriental+Area+Rug+in+Rust%2FIvory%2FNavy.jpg',
+	  		'A carpet which you might like - or not.',
+	  		89.99
+  		)
+		];
   }
 
   render() {
@@ -243,3 +261,4 @@ class App {
 }
 
 App.init();
+
