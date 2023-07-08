@@ -188,6 +188,16 @@ class ProductList extends Component {
 
   }
 
+  renderProducts() {
+  	// Assemble List of products:
+    for (const prod of this.products) {
+
+	  	new ProductItem(prod, 'prod-list');
+
+    }
+
+  }
+
   render() {
 
     // productList node
@@ -196,12 +206,6 @@ class ProductList extends Component {
     	[new ElementAttribute('id', 'prod-list')]
     );
 
-    // Assemble List of products:
-    for (const prod of this.products) {
-
-	  	new ProductItem(prod, 'prod-list');
-
-    }
 
   }
 
