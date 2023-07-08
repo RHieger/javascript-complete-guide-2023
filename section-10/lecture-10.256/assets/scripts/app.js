@@ -172,7 +172,7 @@ class ProductList extends Component {
   }
 
   fetchProducts() {
-		this.products =
+		this.products = [
 			new Product(
   	  	'A Pillow',
   	  	'http://www.clker.com/cliparts/b/0/b/d/13444048401912257549buckwheat-pillow-hi.png',
@@ -184,7 +184,9 @@ class ProductList extends Component {
   	  	'https://secure.img1-fg.wfcdn.com/im/47722856/resize-h800-w800%5Ecompr-r85/1317/131735735/Serapi+Hand-Knotted+Oriental+Area+Rug+in+Rust%2FIvory%2FNavy.jpg',
 	  		'A carpet which you might like - or not.',
 	  		89.99
-  		);
+  		)
+  	];
+		this.renderProducts();
 
   }
 
