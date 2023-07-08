@@ -167,8 +167,7 @@ class ProductList extends Component {
   products = [];
 
   constructor(renderHookId) {
-		super(renderHookId);
-		this.products =
+			this.products =
 			new Product(
   	  	'A Pillow',
   	  	'http://www.clker.com/cliparts/b/0/b/d/13444048401912257549buckwheat-pillow-hi.png',
@@ -181,6 +180,7 @@ class ProductList extends Component {
 	  		'A carpet which you might like - or not.',
 	  		89.99
   		);
+  		super(renderHookId);
 
   }
 
