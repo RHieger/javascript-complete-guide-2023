@@ -206,6 +206,10 @@ class ProductList extends Component {
     	[new ElementAttribute('id', 'prod-list')]
     );
 
+		// Check for presence of array
+		if (this.products && this.products.length > 0) {
+			this.renderProducts();
+		}
 
   }
 
